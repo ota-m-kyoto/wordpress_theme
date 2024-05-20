@@ -1,0 +1,134 @@
+<?php
+  $category = get_the_category();
+  $cat_id   = $category[0]->cat_ID;
+  $cat_name = $category[0]->cat_name;
+  $cat_slug = $category[0]->category_nicename;
+?>
+
+<?php 
+
+$slug_name = basename(get_permalink());
+
+$spot_csv = csv_return_Func($slug_name,'spot');
+$hotel_csv = csv_return_Func($slug_name,'hotel');
+$price_csv = csv_return_Func($slug_name,'price');
+$school_data_csv = csv_return_Func($slug_name,'school_data');
+
+$filepath = dirname(__FILE__).'/school/'.$slug_name;
+ ?>
+
+<?php get_header(); ?>
+
+<!--page-->
+
+
+<div id="wholeContents" class="wholeContents singleSchool" role="main">
+  <div id="mainContents" class="mainContents">
+
+
+
+
+
+    <div id="contentsWrapper" class="contentsWrapper maxWidth flex fWrap_wrap">
+      <div class="breadcrumbWrapper">&nbsp;</div>
+      <!--sidebar-->
+      <div id="sidebar" class="col1of4Pc">
+        <div class="sidebarWrapper">
+        <?php
+          if (is_page()) {
+            $parent_id = $post->post_parent; // 親ページのIDを取得
+            $parent_slug = get_post($parent_id)->post_name; // 親ページのスラッグを取得
+            }
+            dynamic_sidebar( $parent_slug.'-sidebar' );
+          ?>
+        </div>
+      </div>
+      <!--main-->
+      <div id="main" class="mainContent col3of4Pc">
+        <?php
+        // ループ開始
+        while ( have_posts() ) : the_post();
+
+          // content-page.phpをロード
+          get_template_part( 'template-parts/content', 'page' );//
+
+          // コメント表示がオンになっていて、1つ以上のコメントがついている場合表示する
+          if ( comments_open() || get_comments_number() ) :
+            comments_template();
+          endif;
+        // ループ終わり
+        endwhile;
+        ?>
+        <?php
+        //html読み込み例
+        echo "<h2>html読み込み例</h2>";
+        readfile($filepath.'/test.html');
+        ?>
+        <div>
+          <h2>スポットのCSV</h2>
+          <div>
+          <?php
+          for($i = 1; $i < count($spot_csv); $i++){
+            echo $spot_csv[$i][0]."<br><br><br>\n";
+            echo $spot_csv[$i][1]."<br><br><br>\n";
+            echo $spot_csv[$i][2]."<br><br><br>\n";
+            echo $spot_csv[$i][3]."<br><br><br>\n";
+          }
+          ?>
+          </div>
+        </div>
+        <div>
+          <h2>ホテルのCSV</h2>
+          <div>
+          <?php
+          for($j = 1; $j < count($hotel_csv); $j++){
+            for($jj = 0; $jj < count($hotel_csv[$j]); $jj++){
+              echo $hotel_csv[$j][$jj]."\n";
+            }
+          }
+          ?>
+          </div>
+        </div>
+        <div>
+          <h2>プライスのCSV</h2>
+          <div>
+          <?php
+          // echo "<pre>";
+          // var_dump($price_csv);
+          // echo "</pre>";
+          for($k = 0; $k < count($price_csv); $k++){
+            for($kk = 1; $kk < count($price_csv[$k]); $kk++){
+              // echo $price_csv[$k][$kk]."\n";
+            }
+          }
+          echo $price_csv[0][1]."\n";
+          echo $price_csv[1][1]."\n";
+          ?>
+          </div>
+        </div>
+        <div>
+          <h2>schooldataのCSV</h2>
+          <div>
+          <?php
+          // echo "<pre>";
+          // var_dump($school_data_csv);
+          // echo "</pre>";
+          for($l = 0; $l < count($school_data_csv); $l++){//1行目と2行目回まわす
+            for($ll = 1; $ll < count($school_data_csv[$l]); $ll++){//列数回まわすヘッダ飛ばす
+              if(!empty($price_csv[$l][$ll]))echo $school_data_csv[$l][$ll]."\n";
+            }
+          }
+          ?>
+          </div>
+        </div>
+      </div>
+    </div><!--contentsWrapper-->
+
+
+  </div><!--#mainContents-->
+</div><!--#wholeContents-->
+
+<?php echo do_shortcode('[csv2table table_id="sample-table"]'); ?>
+
+
+<?php get_footer(); ?>

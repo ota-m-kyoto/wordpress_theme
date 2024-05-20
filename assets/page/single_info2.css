@@ -1,0 +1,1186 @@
+@charset "utf-8";
+
+.scheduleTableInner {
+    display: none;
+}
+.otokuText{
+  margin: 0.4rem 0 1rem;
+  font-size: .9rem;
+}
+.secTitleA{
+    margin-bottom: 0.4rem;
+}
+@media screen and (max-width:768px){
+  .otokuText{
+    margin:0.5rem 0;
+  }
+}
+
+
+
+.price-tbl{
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.price-tbl-col > div,
+.price_label > div{
+  height: 4rem;
+  padding:0.5rem;
+}
+.price-tbl.titleSmall .price-tbl-col > div,
+.price-tbl.titleSmall .price_label > div{
+  height:10rem
+}
+.price-tbl.titleSmall .price_label > div.hotelPlanTitle3_0,
+.price-tbl.titleSmall .price-tbl-col > div.hotelPlan4_0,
+.price-tbl.titleSmall .price-tbl-col > div.hotelPlan5_0,
+.price-tbl.titleSmall .price-tbl-col > div.hotelPlan6_0,
+.price-tbl.titleSmall .price-tbl-col > div.hotelPlan7_0,
+.price-tbl.titleSmall .price-tbl-col > div.hotelPlan8_0 {
+  height:6rem;
+}
+.price-tbl-col > div{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+.set_col .price_label,
+.set_col .price-tbl-col{
+  width:100%;
+}
+.set_col:nth-child(1) .price-tbl-col{
+  background-color:#EDF8FD;
+}
+.set_col:nth-child(2) .price-tbl-col{
+  background-color:#FEF0D7;
+}
+.set_col:nth-child(3) .price-tbl-col{
+  background-color:#E9F3E3;
+}
+.set_col:nth-child(4) .price-tbl-col{
+  background-color:#FDF3F7;
+}
+.set_col:nth-child(5) .price-tbl-col{
+  background-color:#ECEAF5;
+}
+.set_col:nth-child(6) .price-tbl-col{
+  background-color:#FFFDE0;
+}
+.set_col .price_label > div{
+  font-size:0.9rem;
+  display:flex;
+  align-items:center;
+}
+.price-tbl-col > div:first-child{
+  font-size:0.85rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.atCarText{
+  font-size:0.9rem;
+}
+.normalprice{
+  font-weight:bold;
+  color:#D20101;
+  font-size: 1rem;
+}
+.taxInc{
+  font-size: 0.7rem;
+  color:#676767;
+}
+.ryokinhyoHeader .taxInc{
+  color: #0076d4;
+  font-size:0.8rem;
+  font-weight:bold;
+}
+  .ryokinhyoFooter p{
+    font-size:.8rem;
+  }
+@media screen and (min-width: 769px){
+  .price-tbl{
+    margin-bottom:0.3rem;
+  }
+  .ryokinhyoFooter p{
+    font-size:.8rem;
+  }
+  .ryokinhyoFooter p:first-child{
+    margin-bottom:1rem;
+  }
+  .ryokinhyoFooter br{
+    display:none
+  }
+  .set_col .price_label{
+    display:none;
+  }
+  .set_col:first-child .price_label{
+    display:block;
+  }
+  /*6*/
+  .set_col:first-child:nth-last-child(6),
+  .set_col:first-child:nth-last-child(6) ~ div{
+    width:calc((100% / 8) * 1 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(6){
+    width:calc((100% / 8) * 3 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(6) .price-tbl-col{
+    width:50%;
+   }
+
+  /*5*/
+  .set_col:first-child:nth-last-child(5),
+  .set_col:first-child:nth-last-child(5) ~ div{
+    width:calc((100% / 7) * 1 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(5){
+    width: calc((100% / 7) * 3 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(5) .price-tbl-col{
+    width:50%;
+   }
+
+  /*4*/
+  .set_col:first-child:nth-last-child(4),
+  .set_col:first-child:nth-last-child(4) ~ div{
+    width:calc((100% / 6) * 1 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(4){
+    width:calc((100% / 6) * 3 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(4) .price-tbl-col{
+    width:50%;
+   }
+
+  /*3*/
+  .set_col:first-child:nth-last-child(3),
+  .set_col:first-child:nth-last-child(3) ~ div{
+    width:calc((100% / 5) * 1 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(3){
+    width:calc((100% / 5) * 3 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(3) .price-tbl-col{
+    width:50%;
+   }
+
+  /*2*/
+  .set_col:first-child:nth-last-child(2),
+  .set_col:first-child:nth-last-child(2) ~ div{
+    width:calc((100% / 4) * 1 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(2){
+    width:calc((100% / 4) * 3 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(2) .price-tbl-col{
+    width:50%;
+   }
+
+  /*1*/
+  .set_col:first-child:nth-last-child(1),
+  .set_col:first-child:nth-last-child(1) ~ div{
+    width:calc((100% / 3) * 1 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(1){
+    width:calc((100% / 3) * 3 - 0.01px);
+  }
+  .set_col:first-child:nth-last-child(2) .price-tbl-col{
+    width:50%;
+   }
+
+
+
+  .set_col .upprice{
+    display:none;
+  }
+}
+
+@media screen and (max-width:768px){
+  .price-tbl-col > div,
+  .price_label > div{
+    height: 5rem;
+  }
+.price-tbl.titleSmall .price-tbl-col > div, .price-tbl.titleSmall .price_label > div {
+    height: 16rem;
+}
+  #priceTable{
+    /* margin-bottom:0; */
+  }
+  .set_col .price_label{
+    display:none;
+  }
+  .set_col:nth-child(odd) .price_label{
+    display:block;
+  }
+  .upprice{
+    width: 300%;
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0;
+  }
+  .upprice br:first-child{
+    display:none;
+  }
+
+  .price-tbl-wrap .set_col{
+    width:calc((100% / 3) * 1 - 0.01px);
+    position: relative;
+  }
+  .price-tbl-wrap .set_col:nth-child(odd){
+    width:calc((100% / 3) * 2 - 0.01px);
+  }
+  .price-tbl-wrap .set_col:first-child:last-child{
+    width:calc((100% / 3) * 3 - 0.01px);
+  }
+  .set_col:nth-child(odd) .price_label > div{
+    border-left:none;
+  }
+  .set_col:nth-child(odd) .price_label > div p{
+  }
+  
+  .taxInc {
+    font-size: 0.9rem;
+    color: #676767;
+}
+.normalprice {
+    font-weight: bold;
+    color: #D20101;
+    font-size: 1.3rem;
+}
+.price-tbl-col > div:first-child {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+}
+
+@media screen and (min-width:769px){
+  .price-tbl .set_col{
+    border-top:1px solid #aaa;
+    border-right:1px solid #aaa;
+    border-bottom:1px solid #aaa;
+  }
+  .price-tbl .set_col:first-child{
+    border-left:1px solid #aaa;
+  }
+  .price-tbl .set_col:first-child > .price_label{
+    border-right:1px solid #aaa;
+  }
+  .price-tbl .set_col > div > div{
+    border-bottom:1px solid #aaa;
+  }
+  .price-tbl .set_col > div > div:last-child{
+    border-bottom:none;
+  }
+}
+@media screen and (max-width:768px){
+  .price-tbl .set_col{
+    border-right:1px solid #aaa;
+    border-bottom:1px solid #aaa;
+    border-top:1px solid #aaa;
+  }
+  .price-tbl .set_col .price_label{
+    border-right:1px solid #aaa;
+    border-left:1px solid #aaa;
+  }
+  .price-tbl .set_col > div > div{
+    border-bottom:1px solid #aaa;
+  }
+  .price-tbl .set_col > div > div:last-child{
+    border-bottom:none;
+  }
+}
+
+@media screen and (max-width:768px){
+  .set_col{
+    margin-bottom: 4rem;
+  }
+  .upprice{
+    bottom: -3rem;
+  }
+  .set_col:last-child .upprice{
+    display:none;
+  }
+  .ryokinhyoFooter{
+    margin-top:-3.5rem;
+  }
+  .ryokinhyoFooter > p:first-child{
+    margin-bottom:1rem;
+  }
+}
+
+@media screen and (max-width:480px){
+  .set_col{
+    margin-bottom: 1rem;
+  }
+  .ryokinhyoFooter{
+    margin-top: 0;
+  }
+  .upprice{
+    bottom: -4rem;
+    width: calc(100vw - 1.2rem);
+  }
+}
+
+
+#campaignSection{
+  margin-bottom:1rem;
+}
+
+
+#happyOtoku{
+  /* margin-bottom:1rem; */
+}
+.otokuTitle{
+  margin-bottom:1rem;
+}
+
+/*start otoku_wrap*/
+.otoku_wrap{
+  background-color:#F48549;
+  /* padding:1rem; */
+  color:#fff;
+}
+.otoku_inner{
+  margin:0 -0.5rem;
+}
+.otoku_co{
+  padding:0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.otoku_co1{
+  width:calc((100% / 4) * 1 - 0.01px);
+}
+.otoku_co2{
+  width:calc((100% / 4) * 3 - 0.01px);
+  font-size: 1.2rem;
+  line-height:1.3;
+  font-weight:bold;
+  padding: 1rem 1rem 1rem 0;
+}
+@media screen and (max-width:768px){
+  .otoku_wrap{
+    margin:0 -0.5rem;
+  }
+  .otoku_inner{
+    margin:0;
+  }
+  .otoku_co2{
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  .otoku_co1,
+  .otoku_co2{
+    width:100%;
+  }
+  .otoku_co1 .image{
+    width: calc(100% / 2);
+  }
+  .otoku_co2{
+    font-weight:normal;
+    font-size:1.1rem;
+  }
+}
+/*end otoku_wrap*/
+
+.campaign_inner{
+  margin: 0 -1rem;
+}
+.nocampaign{
+  padding:0 1rem;
+}
+.campaign_co{
+  width:calc((100% / 3) * 1 - 0.01px);
+  padding: 0 1rem;
+  margin-bottom:2rem;
+}
+
+.campaignCo_inner{
+  border:1px solid #D3D3D3;
+  height:100%;
+}
+.campaignNameWrapper{
+  background-color:#F6F9C9;
+  text-align:center;
+  padding:0.5rem 0;
+  line-height:1.5
+}
+
+.campaignPriceWrapper{
+  padding:0rem;
+  border-bottom: 1px solid #D3D3D3;
+}
+.campaignPrice_co{
+  width:100%;
+  text-align:center;
+  padding: .5rem 0;
+}
+.Circle{
+  font-size:0.75rem;
+}
+.Price{
+  font-weight:bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.campaign_co.campaign .atPrice{
+  color:#D20101;
+}
+.campaign_co.campaign .mtPrice{
+  color:#014ED2;
+}
+.PriceTaxInc{
+  font-size:0.75rem;
+  color:#676767;
+}
+.campaignDetailWrapper{
+  padding:0.5rem;
+  font-size:0.9rem;
+  line-height: 1.5;
+}
+
+p.condition2 {
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.campaignDetailWrapper a{
+  font-weight:bold;
+  color:#2196F3;
+}
+ a.checkCampaign{
+  font-size: 0.8rem;
+  padding: 0.8rem .4rem;
+  color:#fff;
+  border-radius:.2rem;
+  background-color: #429bec;
+  border: 1px solid #429bec;
+  font-weight:normal;
+  background-image: linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,.01) 100%);
+  margin-right: .5rem;
+  line-height: 0;
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+
+ a.checkPlan{
+  font-size: 10px;
+  padding: 0rem .4rem;
+  margin-left:2px;
+  color:#fff;
+  border-radius:.2rem;
+  background-color:#ff9e00;
+  border:1px solid #ff9e00;
+  font-weight:normal;
+  background-image: linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,.01) 100%);
+  margin-left: 0.4rem;
+  display: inline-block;
+}
+ a.checkCalendar{
+  font-size:.7rem;
+  padding:.2rem .4rem;
+  margin-left:2px;
+  color:#fff;
+  border-radius:.2rem;
+  background-color:#ff9e00;
+  border:1px solid #ff9e00;
+  font-weight:normal;
+  background-image: linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,.01) 100%);
+  display: inline-block;
+}
+.Pc .campaignDetailWrapper a.checkCalendar:hover{
+    background-color:#fff;
+  color:#ff9e00;
+
+}
+.waribikiWrapper,
+.waribikihosoku{
+  line-height:1.5
+}
+.waribikiWrapper .waribikiBtn{
+  margin-right:1rem;
+}
+.waribikiWrapper > .wpb_wrapper{
+  display:flex;
+  align-items:center;
+}
+.ryokinhyoHeader{
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+}
+@media screen and (max-width:768px){
+  #campaignSection{
+    margin-bottom:1.5rem;
+  }
+  .campaign_co{
+    width:50%;
+  }
+  .campaign_co:nth-child(odd){
+    padding-right:.5rem;
+  }
+  .campaign_co:nth-child(even){
+    padding-left:.5rem;
+  }
+  .campaign_inner{
+    margin: 0 -0.5rem;
+    display: flex;
+  }
+   a.checkCalendar{
+     display:block;
+     width: 60%;
+     text-align:center;
+     margin: 1rem auto 0.3rem;
+     padding: .6rem 0rem;
+     font-size: 1rem;
+   }
+   p.condition2 {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  p.campaignName {
+    font-size: 1.2rem;
+  }
+  .Circle {
+      font-size: 1rem;
+  }
+  .atPrice,
+  .mtPrice{
+    font-size:1.5rem;
+  }
+  .PriceTaxInc{
+    font-size:1rem;
+  }
+  #campaignSection .waribikiWrapper > .wpb_wrapper{
+    width:calc(100% - 4rem);
+  }
+}
+@media screen and (max-width:480px){
+  .campaign_co{
+    width:100%;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+}
+
+.hosyou_co{
+  width:50%;
+}
+.hosyou_co > .flex{
+  height:100%;
+}
+.hosyou_label{
+  background-color:#F1F1F1;
+  font-size: 0.9rem;
+}
+.hosyou_content{
+  width: 70%;
+  padding: 0.5rem 0.2rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hosyou_label{
+  width: 30%;
+  padding: 0.5rem 0.2rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hosyou_content > span{
+  display:block;
+  width:100%;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+
+.hosyou_inner{
+  border:1px solid #707070;
+}
+.hosyou_label{
+  border-right: 1px solid #707070;
+}
+.hosyou_co:nth-child(even) .hosyou_label{
+  border-left:1px solid #707070;
+}
+.hosyou_co:not(:nth-last-child(-n+2)){
+  border-bottom:1px solid #707070;
+}
+
+@media screen and (max-width:768px){
+  .hosyou_co{
+    width:100%;
+  }
+  .hosyou_co:nth-child(even) .hosyou_label{
+    border-left:none;
+  }
+  #hoshou .marginBottom1{
+    margin-bottom:0.5rem;
+  }
+  #hoshou .marginBottom2{
+    margin-bottom:1rem;
+  }
+  #hoshou{
+    margin-bottom:2rem;
+    max-width:100%;
+    overflow:hidden;
+  }
+  .hosyou_co{
+    border-bottom:1px solid #707070;
+  }
+  .hosyou_co:last-child{
+    border-bottom:none
+  }
+}
+
+
+
+.slideCalendarSwitch{
+  position:relative;
+}
+.calendarMTAT {
+    position: absolute;
+    width: 27%;
+    right: 7rem;
+    z-index: 10;
+    padding: 0 0rem 0 0.5rem;
+    font-size: 0.9rem;
+}
+.nichi,
+.do{
+  background-color:#FAFFC9;
+}
+.scheduleTableContentInnder{
+  padding-top:3rem;
+}
+
+.circleNotice{
+  padding-bottom:1rem;
+}
+.circleNotice span{
+  padding-top: 0.2rem;
+  font-size: .9rem;
+  display: inline-block;
+}
+.circleNotice span:last-child{
+  margin-right:0;
+}
+
+.scheduleTableContentInnder > .title{
+  font-weight:bold;
+  font-size:2rem;
+  position:absolute;
+  top:0;
+  left:0;
+  right: 0;
+  width: 7rem;
+  margin:auto;
+  /* width: 60%; */
+  text-align: center;
+}
+.calendarSwipe{
+  background-image:none;
+  top: 0;
+  bottom:auto;
+  width:auto;
+  height: 2.3rem;
+  margin: 0;
+  background-color: #fff;
+  transition: background-color .3s ease;
+}
+.calendarSwipe:hover{
+  background-color: #757575;
+}
+.calendarSwipe:before{
+  content:">";
+  /* display:inline-block; */
+  font-size: 0.9rem;
+  border: 1px solid #757575;
+  line-height:2.2rem;
+  padding:0rem 0.7rem;
+  height:2.2rem;
+  transition: color .3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calendarSwipe:hover:before{
+  color:#fff;
+}
+.swiper-button-prev{
+  left:0;
+}
+.swiper-button-next{
+  right:0;
+}
+.swiper-button-prev:before{
+  content:"< 前の月へ";
+}
+.swiper-button-next:before{
+  content:"次の月へ >";
+}
+@media screen and (max-width:480px){
+  .calendarSwipe:before{
+    padding:0 0.2rem;
+  }
+}
+
+.scheduleTableCalendar .bgcolor {
+    padding: 0.2rem;
+    height:6rem;
+    text-align: center;
+}
+.scheduleTableCalendar .bgcolor > a{
+  display:inline-block;
+  font-size: 0.7rem;
+  padding:0.3rem 0.5rem;;
+  margin: 0 -0.25rem;
+}
+.scheduleTableCalendar .bgcolor > a.dblArrow_right:after{
+  margin-left: 0.2rem;
+}
+.youbi .bgcolor{
+  height:2rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.youbi,
+.scheduleTableCalendar{
+}
+.youbi > div{
+  border-left:1px solid #757575;
+  border-bottom:1px solid #757575;
+  border-top:1px solid #757575;
+}
+.scheduleTableCalendar > div {
+    border-left:1px solid #757575;
+    border-bottom:1px solid #757575;
+}
+.scheduleTableCalendar > div:last-child{
+  border-right:1px solid #757575;
+}
+.scheduleTableCalendar > div:nth-child(7n){
+  border-right:1px solid #757575;
+}
+.campaignMark {
+    width: 100%;
+    height:1rem; 
+    margin: auto;
+    margin-bottom: 0.5rem;
+}
+
+.campaignMark > span{
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius:100%;
+  margin: 0 .3rem;
+}
+@media screen and (max-width: 480px){
+
+.campaignMark > span {
+    display: inline-block;
+    width: auto;
+    height: 1rem;
+    border-radius: 100%;
+    margin: 0 .1rem;
+    font-size: 12px;
+}
+}
+@media screen and (max-width: 370px){
+
+.campaignMark > span {
+    display: inline-block;
+    width: auto;
+    height: 1rem;
+    border-radius: 100%;
+    margin: 0 .1rem;
+    font-size: 10px;
+}
+}
+.atEntryDate,
+.mtEntryDate{
+  font-weight:bold;
+}
+.gradLabel,
+.gradDate{
+  float:left;
+  font-size:0.8rem;
+}
+
+.gradLabel{
+  width:60%;
+  text-align:right;
+}
+.gradDate{
+  width:40%;
+  text-align:left;
+}
+
+
+.eachCampaign{
+  font-size:1.2rem;
+}
+.eachCampaign > span{
+  margin-right:1rem;
+}
+.calendarSlideMT,
+.calendarSlideAT{
+  padding-bottom:0.5rem;
+}
+@media screen and (max-width: 768px){
+  .scheduleTableCalendar .bgcolor{
+    height: 7.5rem;
+    padding: 0.1rem;
+  }
+  .gradDate,
+  .gradLabel{
+    width:auto;
+    text-align:center;
+    float:none;
+  }
+  .scheduleTableCalendar .bgcolor > a{
+    padding: 0.3rem 0.1rem;
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+  .scheduleTableCalendar .bgcolor > a.dblArrow_right:after {
+    margin-left: 0.2rem;
+  }
+}
+@media screen and (max-width: 480px){
+  .scheduleTableContentInnder > .title{
+    left: auto;
+    right: calc(3.3rem + 50%);
+    width: auto;
+    font-size: 1.7rem;
+    top: 0.2rem;
+  }
+  .calendarMTAT{
+  /* margin-right:20%; */
+  width: 41%;
+  right: 5.5rem;
+  }
+  a.checkCampaign {
+    font-size: 0.8rem;
+    padding: 0.7rem .4rem;
+    color: #fff;
+    border-radius: .2rem;
+    background-color: #429bec;
+    border: 1px solid #429bec;
+    font-weight: normal;
+    background-image: linear-gradient(to bottom,rgba(255,255,255,.2) 0,rgba(255,255,255,.01) 100%);
+    margin-right: .5rem;
+    line-height: 0;
+    display: inline-block;
+    margin-top: 0.4rem;
+}
+}
+
+@media screen and (max-width:400px){
+  .scheduleTableCalendar .bgcolor > a{
+    letter-spacing: 0px;
+    font-size: 10px;
+    padding: 0.3rem 0;
+  }
+  .scheduleTableCalendar .bgcolor > a.dblArrow_right:after {
+    margin-left: 0rem;
+}
+}
+
+
+.bgcolor.bgcolor_29 {
+    background: #EDF8FD;
+}
+
+ .bgcolor.bgcolor_30 {
+    background: #fef0d7;
+}
+
+.bgcolor.bgcolor_31 {
+    background: #e9f3e3;
+}
+
+.bgcolor.bgcolor_32 {
+    background: #fdf3f7;
+}
+
+
+.bgcolor.bgcolor_33 {
+    background: #ECEAF5;
+}
+
+.bgcolor.bgcolor_34 {
+    background: #fffde0;
+}
+
+
+
+/*campaignの色   */
+
+.bgcolor span.campaign.co_4 {
+    /*限定割*/
+    background: #009944;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_5 {
+    /*サマー*/
+    background: #FF9800;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_6 {
+    /*●：スプリング*/
+    background: #c3f;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_7 {
+    /*●：リミテッド*/
+    background: #2196F3;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_8 {
+    /*●：エクストラ*/
+    background: #d00f0f;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_9 {
+    /*●：年末一時帰宅*/
+    background: #c3f;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_10 {
+    /*●：●：特割(I)*/
+    background: #c3f;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_11 {
+    /*●：特割I・II*/
+    background: #c3f;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_12 {
+    /*●：特割II*/
+    background: #6a9a33;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_13 {
+    /*●：学生特割／特割*/
+    background: #ff699c;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_14 {
+    /*●：学生特割*/
+    background: #eac32c;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_15 {
+    /*●：シングル特割*/
+    background: #0072bc;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_16 {
+    /*●：曜日限定シングル特割*/
+    background: #ff699c;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_17 {
+    /*●：自炊シングル特割・シングル特割*/
+    background: #7ca1b3;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_18 {
+    /*●：曜日限定特割*/
+    background: #0055B1;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_19 {
+    /*●：シングルオフ特*/
+    background: #a639a2;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_20 {
+    /*●：限定割／特割*/
+    color: #ff699c;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_21 {
+    /*●：一時帰宅（一時帰宅交通費支給）*/
+    background: #3F51B5;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_22 {
+    /*●：一時帰宅（一時帰宅交通費自己負担）*/
+    background: #735821;
+    color: transparent;
+}
+
+.bgcolor span.campaign.co_23 {
+    /*●：二輪同時特別*/
+    background: #00BCD4;
+    color: transparent;
+}
+
+
+/*campaignの色   */
+
+span.campaign.co_4 {
+    /*限定割*/
+    color: #009944;
+}
+
+span.campaign.co_5 {
+    /*サマー*/
+    color: #FF9800;
+}
+
+span.campaign.co_6 {
+    /*●：スプリング*/
+    color: #c3f;
+}
+
+span.campaign.co_7 {
+    /*●：リミテッド*/
+    color: #2196F3;
+}
+
+span.campaign.co_8 {
+    /*●：エクストラ*/
+    color: #d00f0f;
+}
+
+span.campaign.co_9 {
+    /*●：年末一時帰宅*/
+    color: #c3f;
+}
+
+span.campaign.co_10 {
+    /*●：●：特割(I)*/
+    color: #c3f;
+}
+
+span.campaign.co_11 {
+    /*●：特割I・II*/
+    color: #c3f;
+}
+
+span.campaign.co_12 {
+    /*●：特割II*/
+    color: #6a9a33;
+}
+
+span.campaign.co_13 {
+    /*●：学生特割／特割*/
+    color: #ff699c;
+}
+
+span.campaign.co_14 {
+    /*●：学生特割*/
+    color: #eac32c;
+}
+
+span.campaign.co_15 {
+    /*●：シングル特割*/
+    color: #0072bc;
+}
+
+span.campaign.co_16 {
+    /*●：曜日限定シングル特割*/
+    color: #ff699c;
+}
+
+span.campaign.co_17 {
+    /*●：自炊シングル特割・シングル特割*/
+    color: #7ca1b3;
+}
+
+span.campaign.co_18 {
+    /*●：曜日限定特割*/
+    color: #0055B1;
+}
+
+span.campaign.co_19 {
+    /*●：シングルオフ特*/
+    color: #a639a2;
+}
+
+span.campaign.co_20 {
+    /*●：限定割／特割*/
+    color: #ff699c;
+}
+
+span.campaign.co_21 {
+    /*●：一時帰宅（一時帰宅交通費支給）*/
+    color: #3F51B5;
+}
+
+span.campaign.co_22 {
+    /*●：一時帰宅（一時帰宅交通費自己負担）*/
+    color: #735821;
+}
+span.campaign.co_23 {
+    /*●：二輪同時特別*/
+    color: #00BCD4;
+}
+
+
+
+/* .ATSelected,
+.MTSelected{
+  display:none;
+} */
+
+.ATSelected.active,
+.MTSelected.active{
+  display:block;
+}
+
+
+#happyOtoku{
+  /*display: none*/
+}
+
+#scheduleSlide{
+  overflow:hidden;
+}
+#scheduleSlide div{
+  user-select:none;
+}
+#scheduleSlide div.do{
+border-right:1px solid #757575;
+}
+
+
+.youbi.flex>div{
+  width: calc(100% / 7 - .1px);
+}
+.scheduleTableCalendar.flex.fWrap_wrap>div {
+  width: calc(100% / 7 - .1px);
+}
+.scheduleTableCalendar.flex.fWrap_wrap>div:nth-child(7n):last-child {
+  width:calc(100% / 7 - 0.1px );
+}

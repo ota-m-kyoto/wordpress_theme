@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@media screen and (max-width:768px){
+    #wholeContents.twoColumnpage .entry-content section:last-child{
+        margin-bottom:0;
+    }
+    table,tbody,tr,th,td{
+        display:block;
+    }
+    #wholeContents.twoColumnpage th{
+        font-weight:bold;
+        border:none;
+    }
+    #wholeContents.twoColumnpage td{
+        border:none;
+    }
+    .tokusyouhou-sec-table{
+        border:1px solid #e1e1e1;
+    }
+}

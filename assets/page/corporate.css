@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+
+.mb20 { margin-bottom: 1.25rem; }
+.mt10 { margin-top: 0.625rem; }
+.mt15 { margin-top: 0.9375rem; }
+.mt20 { margin-top: 1.2rem;}
+.mt25 { margin-top: 1.5625em; }
+.mt30 { margin-top: 1.875em; }
+
+.policy_block ~ div {
+    padding: 0 0.3rem;
+}
+
+
+
+#wholeContents.twoColumnpage .message p {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+#wholeContents.twoColumnpage  p i{
+    display: inline-block;
+    margin:0 .3rem; 
+    font-size: 0.65rem;
+}
+
+
+#wholeContents.twoColumnpage table { margin-top: 1.25rem; }
+#wholeContents.twoColumnpage th { font-weight: normal; font-size: 0.875rem; vertical-align: baseline; letter-spacing: 0; }
+#wholeContents.twoColumnpage td { font-weight: normal; font-size: 0.875rem; vertical-align: baseline; letter-spacing: 0; padding: 0.8rem!important; }
+#wholeContents.twoColumnpage table:last-of-type { margin-bottom: 1.25rem; }
+#wholeContents.twoColumnpage table .corporate-sec-list li:nth-child(n+2) { margin-top: 0.3125rem; }
+ 
+
+.maru { display: inline-block; vertical-align: middle; font-size: 0.625rem; margin-right: 5px; }
+
+
+/***************TB****************/
+
+@media screen and (max-width:768px) {
+    table,tbody,tr,th,td{
+        display:block;
+    }
+    #wholeContents.twoColumnpage th{
+        font-weight:bold;
+        border:none;
+    }
+    #wholeContents.twoColumnpage td{
+        border:none;
+    }
+    .pay-table01{
+        border:1px solid #e1e1e1;
+    }
+    section{
+        margin-bottom:1rem;
+    }
+}
+
+
+/***************TB****************/
+
+
+/***************SP****************/
+
+/*
+@media screen and (max-width:480px) {
+#wholeContents.twoColumnpage th{
+    width: 22%;
+}
+
+}
+
+
+
+*/

@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+
+
+#main .questionBlock{
+    border:1px solid #EBEBEB;
+    border-radius:0.5rem;
+    margin:auto;
+    margin-bottom:1rem;
+    padding:1rem;
+    width:calc(100% - 2rem);
+}
+.questionTitle{
+    padding-bottom:1.5rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items:center;
+}
+.questionTitle:before{
+    content:url(/wp-content/uploads/2018/03/icon_q.png);
+    display:inline-block;
+    margin-right:0.5rem;
+}
+.questionTitle h4{
+    font-size:1.2rem;
+    font-weight:bold;
+    line-height:1;
+}
+
+.questionContent{
+    display:flex;
+    padding-left:3rem;
+}
+.questionContent:before{
+    content:url(/wp-content/uploads/2018/03/icon_a.png);
+    display:inline-block;
+    margin-right:1rem;
+}
+
+#main .marginBottom1{
+    margin-bottom:1rem;
+}
+
+div#wholeContents.twoColumnpage th{
+    background-color:#F2F2F2;
+    width:50%;
+}
+/***************TB****************/
+
+@media screen and (max-width:768px) {
+    #main .questionBlock{
+        width: calc(100% - 0.6rem);
+    }
+    .questionContent{
+        padding-left:0;
+    }
+    .questionTitle{
+        padding-left: 0;
+    }
+    .questionContent:before{
+        margin-right:0.6rem;
+    }
+
+    .qa-a-table,
+    .qa-a-table tbody,
+    .qa-a-table tr,
+    .qa-a-table th,
+    .qa-a-table td{
+        display:block;
+        table-layout:fixed;
+    }
+    .qa-a-table{
+        border:1px solid #e1e1e1;
+    }
+    div#wholeContents.twoColumnpage th,
+    div#wholeContents.twoColumnpage td{
+        width:100%;
+        border:none;
+    }
+    div#wholeContents.twoColumnpage th{
+        font-weight:bold;
+    }
+
+}
+
+
+/***************TB****************/
+
+
+/***************SP****************/
+
+
+@media screen and (max-width:480px) {
+
+div#wholeContents.twoColumnpage table {
+    margin: 1rem auto .5rem;
+}
+}
+
+
+

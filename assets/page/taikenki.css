@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+.taiken_title .h2Style3{
+	font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    padding-left: 1rem;
+    padding-right: 0;
+    text-align: left;
+}
+.taiken_title .h2Style3:before{
+	content:url(/wp-content/uploads/2018/03/icon_message.png);
+	display:inline-block;
+	margin-right:0.5rem;
+	transform:translateY(0.2rem);
+}
+.borderBox{
+	border:1px solid #e1e1e1;
+	border-radius:1rem;
+	overflow:hidden;
+}
+#wholeContents .taiken_Image{
+	margin-bottom:1rem;
+}
+
+.vc_section > div{
+	margin-bottom: 2.5rem;
+}
+.vc_section > div:last-child{
+	margin-bottom:0;
+}
+.vc_section > div.nvc_secTitleA_oldTag{
+	margin-bottom:0;
+}
+.to,
+.user,
+.orangeBtn {
+	padding:0 1rem;
+}
+.user_content,
+.to_content{
+	padding:0.5rem 0;
+}
+.orangeBtn{
+	width:100%;
+	text-align:center;
+	margin-bottom:3rem;
+}
+.orangeBtn > button.vc_btn3.vc_btn3-style-modern,
+.orangeBtn > a.vc_btn3.vc_btn3-style-modern,
+.orangeBtn > button.vc_btn3.vc_btn3-style-modern:focus,
+.orangeBtn > a.vc_btn3.vc_btn3-style-modern:focus{
+	background-color:#FF9D00;
+	color:#fff;
+	width:50%;
+	min-width:250px;
+	position:relative;
+	border:1px solid #FF9D00;
+	transition: background .2s ease, color .2s ease,border .2s ease;
+}
+
+.orangeBtn > button.vc_btn3.vc_btn3-style-modern:hover,
+.orangeBtn > a.vc_btn3.vc_btn3-style-modern:hover{
+	background-color:#fff;
+	color:#FF9D00;
+	border:1px solid #FF9D00;
+}
+
+.orangeBtn button:after,
+.orangeBtn a:after{
+	content:"";
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	right:1rem;
+	display:block;
+	margin:auto;
+	transform:rotate(45deg);
+	border-top:2px solid #fff;
+	border-right:2px solid #fff;
+	width:0.6rem;
+	height:0.6rem;
+}
+.orangeBtn button:hover:after,
+.orangeBtn a:hover:after{
+	border-top:2px solid #FF9D00;
+	border-right:2px solid #FF9D00;
+}
+
+
+.taiken_Image img{
+	border:1px solid #e1e1e1;
+}
+
+.text_content{
+	padding:0 1rem
+}

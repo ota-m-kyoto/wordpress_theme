@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+.mb20 { margin-bottom: 1.25rem; }
+.mt10 { margin-top: 0.625rem; }
+.mt15 { margin-top: 0.9375rem; }
+.mt20 { margin-top: 1.25rem; }
+.mt25 { margin-top: 1.5625em; }
+.mt30 { margin-top: 1.875em; }
+
+.policy_block ~ div {
+    padding: 0 1rem;
+}
+
+#main .paddingBox {
+    padding: 0 1rem;
+}
+
+.ttl04 {
+    font-size: 1.125rem;
+    margin-bottom: .5em !important;
+    color: #009bec;
+    font-weight: bold;
+}
+
+div#wholeContents.twoColumnpage th {font-weight: normal;font-size: 0.875rem;vertical-align: baseline;letter-spacing: 0;}
+div#wholeContents.twoColumnpage td {font-weight: normal;font-size: 0.875rem;vertical-align: baseline;letter-spacing: 0;padding: 0.8rem 0.5rem!important;}
+div#wholeContents.twoColumnpage table:last-of-type { margin-bottom: 1.25rem; }
+
+.pay-box-border {
+    border: 1px solid #e1e1e1;
+    padding: 15px 20px;
+}
+
+div#wholeContents.twoColumnpage .wpb_single_image { margin-right: 1rem; margin-left: 1rem; }
+.pay-box-img {
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    padding: 15px 20px !important;
+}
+.pay-box-img img {
+    height: auto;
+    line-height: 1.0;
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+.pay-table02 { width: 100%; }
+div#wholeContents.twoColumnpage .pinkWrapper th {
+    background: #ffedf6;
+    text-align: left;
+    padding: 1rem 1rem !important;
+    border: 1px solid #e1e1e1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: normal;
+    color: #555;
+}
+div#wholeContents.twoColumnpage .pinkWrapper td {
+    text-align: left;
+    padding: 1rem 1rem !important;
+    border: 1px solid #e1e1e1;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+@media screen and (max-width:768px){
+    .policy_block ~ div {
+        padding: 0 0.3rem;
+    }
+    table{
+        table-layout:fixed;
+    }
+    .pay-table02{
+        table-layout:auto;
+    }
+    #wholeContents.twoColumnpage .wpb_text_column.wpb_content_element .pay-box-border{
+        padding:0.5rem;
+    }
+}

@@ -1,0 +1,167 @@
+.vc_section{
+  margin-bottom:2rem;
+}
+
+.titleImg figure{
+  width: 90%;
+  margin:1rem auto;
+}
+
+.titleImg{
+margin-bottom:1rem;   
+}
+
+.labelImg{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#wholeContents.twoColumnpage .left .vc_column-inner {
+    padding-right: .5rem;
+}
+#wholeContents.twoColumnpage .right .vc_column-inner {
+    padding-left: .5rem;
+}
+
+div#wholeContents.twoColumnpage .wpb_single_image {
+    margin:0rem 0;
+    padding: 0 0rem;
+}
+
+
+.soukiMonth li {
+  background: #ED6D1F;
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 2rem;
+  text-align: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+.soukiMonth li:last-child {
+   margin-bottom: 0; 
+ }
+ div#wholeContents.twoColumnpage .soukiMonth li  h4 {
+    font-size: 1.9rem;
+    font-weight: normal;
+    padding: 0;
+    display: inline-block;
+    color: #ffffff;
+    position: relative;
+    /* border-bottom: 1px solid #ffffff; */
+    font-weight: bold;
+    margin: .5rem;
+}
+ div#wholeContents.twoColumnpage .soukiMonth li  h4:before {
+  content:none;
+}
+.soukiMonth li:nth-child(2){
+    background: #ED6D1F;
+}
+.soukiMonth li:nth-child(3){
+    background: #FFDDC1;
+}
+.soukiMonth li:nth-child(3){
+    background: #FFDDC1;
+    color:#000;
+}
+div#wholeContents.twoColumnpage .soukiMonth li:nth-child(3) h4{
+   color:#000;
+}
+.soukiMonth li:nth-child(4){
+    background: #FFDDC1;
+    color:#000;
+}
+div#wholeContents.twoColumnpage .soukiMonth li:nth-child(4) h4{
+   color:#000;
+} 
+.soukiMonth li:nth-child(5) {
+    background: #FFDDC1; 
+    color:#000;
+}
+div#wholeContents.twoColumnpage .soukiMonth li:nth-child(5) h4{
+   color:#000;
+}
+
+
+body .titleImg{
+  background-image:url(/wp-content/uploads/2018/03/souki_bg.gif);
+  border-radius:1rem;
+  width:100%;
+  margin-top:1rem;
+  margin-bottom:1rem;
+  padding:0.3rem;
+}
+body .titleImg img{
+  max-width:500px;
+  margin-top:-2.3rem;
+  width: 100%;
+}
+body .titleImg + div{
+  /* margin:0 -0.5rem; */
+}
+body .titleImg + div > div{
+  padding:0 0.5rem;
+}
+.wpb_text_column .reqFlowTitle {
+  font-size:1.5rem;
+  font-weight:bold;
+  color:#ED6D1F;
+  padding-bottom:0.5rem;
+  margin-bottom:1.5rem;
+  border-bottom:1px solid #E1E1E1;
+}
+.soukiMonth{
+  /* padding:0 1rem; */
+}
+
+/* div#wholeContents.twoColumnpage .btn a{
+  display: none;
+}
+ */
+ #wholeContents.twoColumnpage #step2,
+ #wholeContents.twoColumnpage #step2 .btn{
+  margin-bottom:0;
+}
+
+/***************TB****************/
+
+@media screen and (max-width:768px) {
+  
+  #wholeContents.twoColumnpage .left .vc_column-inner {
+      padding-right: 0;
+  }
+  #wholeContents.twoColumnpage .right .vc_column-inner {
+      padding-left: 0;
+  }
+}
+
+
+/***************TB****************/
+
+@media screen and (max-width:480px) {
+  body .titleImg + div > div{
+    margin-bottom:1rem;
+    padding:0;
+  }
+  body .titleImg + div{
+    margin:0;
+  }
+
+  .wpb_text_column .reqFlowTitle{
+    font-size:1.2rem;
+  }
+  div#wholeContents.twoColumnpage .soukiMonth li h4{
+    font-size:1.3rem;
+  }
+  .soukiMonth{
+    padding:0 0.3rem;
+  }
+  .soukiMonth li{
+    padding:1rem 1rem 2rem 1rem;
+  }
+  #wholeContents.twoColumnpage .btn a{
+    font-size:1.2rem;
+  }
+}
+

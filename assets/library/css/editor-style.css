@@ -1,0 +1,391 @@
+/*
+@import url("../../wacu/css/wacuCm.css");
+@import url("../../wacu/css/wacuPc.css");
+@import url("style.css");
+*/
+
+
+   body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video,button {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+/*    background:transparent;*/
+    font-family:'Open Sans','メイリオ' , Meiryo , "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "游ゴシック体", "Yu Gothic", YuGothic, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+     -webkit-tap-highlight-color: transparent;
+     tap-highlight-color: transparent;
+     /*box-sizing: border-box;*/
+}
+
+
+strong{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    font-weight: bold;
+    font-family:'Open Sans','メイリオ' , Meiryo , "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "游ゴシック体", "Yu Gothic", YuGothic, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+     -webkit-tap-highlight-color: transparent;
+     tap-highlight-color: transparent;
+     box-sizing: border-box;
+}
+#poststuff .stuffbox>h3, #poststuff h2, #poststuff h3.hndle{
+    font-weight: normal;
+}
+
+.postbox .inside h1 {
+    font-size: 2.4rem;
+}
+#poststuff .inside h2 {
+    font-size: 2.2rem;
+    padding: 0;
+}
+.postbox .inside h3 {
+    font-size: 1.8rem;
+}
+.postbox .inside h4 {
+    font-size: 1.6rem;
+}
+.postbox .inside h4.wpb_element_title {
+    font-size: 1rem;
+}
+
+.postbox .inside h5 {
+    font-size: 1.4rem;
+}
+
+.postbox .inside h6 {
+    font-size: 1.2rem;
+}
+
+
+/*カスタム投稿タイプ 教習所*/
+.acf_postbox > .inside > div[id^="acf-image_title"]{
+
+}
+.acf_postbox > .inside > div[id^="acf-image_title"]{
+    border-top: transparent;
+}
+
+.acf_postbox > .inside > .field {
+    padding: 15px 10px;
+    border-top: #dcdcdc dashed 1px;
+    /* box-sizing:content-box; */
+}
+.acf_postbox > .inside > .field li{
+    padding: .8rem .5rem;
+}
+.acf_postbox .field input[type="text"], 
+.acf_postbox .field input[type="number"], 
+.acf_postbox .field input[type="password"],
+.acf_postbox .field input[type="email"], 
+.acf_postbox .field textarea
+{
+    /* box-sizing:content-box; */
+    padding: 0.4rem .5rem!important;
+}
+
+
+.acf-button-add, .acf-button-remove, .acf-button-edit, .acf-button-delete {
+    display: block;
+    height: 24px;
+    width: 24px;
+    border-radius: 21px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    color: #2196f3;
+    background-position: -13px -113px;
+    border: 1px solid #607D8B;
+}
+
+.acf-button-remove:hover {
+    background-position: -63px -163px;
+}
+
+.acf-button-add:hover {
+    background-position: -13px -163px;
+}
+
+.acf-table-top-cont {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.acf-table-top-cell {
+    position: relative;
+    display: table-cell;
+    padding: 4px 8px;
+    border: 1px solid #2196F3;
+    background-color: #03A9F4;
+    cursor: move;
+    min-width: 68px;
+}
+.acf-table-body-left {
+    position: relative;
+    display: table-cell;
+    border: 1px solid #68a91d;
+    padding: 11px 8px 4px 16px;
+    background-color: #8BC34A;
+    height: 40px;
+    cursor: move;
+    text-align: right;
+    color: #fff;
+    font-size: 1rem;
+}
+
+        .acf-table-header-cell {
+            position: relative;
+            display: table-cell;
+            padding: 4px 8px;
+            border: 1px solid #e1e1e1;
+            background-color: #ffe7c4;
+            height: 28px;
+        }
+ul.wicked-tree .wicked-folder .wicked-icon {
+    width: 1.2rem;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    font-size: .8rem;
+    margin-right: 0.2rem;
+}
+ul.wicked-tree .wicked-folder .wicked-icon:before {
+    font-size: .8rem;
+}
+ul.wicked-tree .wicked-folder {
+    font-size: .8rem;
+    padding: 0 .3rem 0rem 0;
+}
+ul.wicked-tree a.wicked-toggle:before {
+    content: "\f07c";
+    display: inline-block;
+    width:  1.2rem;
+    text-align: center;
+    font-family: 'WickedFontAwesome';
+    /* content: "\f196"; */
+    content: "\f0da";
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+ul.wicked-tree .wicked-selected > .wicked-folder {
+    padding-left: 0.4rem;
+    background: #009688;
+}
+
+ul.wicked-tree a {
+     color: #009688;
+}
+/* 
+.post-type-school #postdivrich{
+    display: none;
+}
+
+div#acf-address {
+    width: 100%;
+}
+
+.acf_postbox p.label {
+    font-size: 12px;
+    line-height: 0;
+    margin: 0rem;
+    padding: 0.7rem 0 0 0;
+    color: #666666;
+    text-shadow: 0 1px 0 #FFFFFF;
+    display: block;
+    width: 260px;
+    transform: translateY(0px);
+    padding-right: 1rem;
+    height: 100%;
+    text-shadow: 0 0 0;
+    max-width: 260px;
+}
+ul.acf-radio-list.horizontal, ul.acf-checkbox-list.horizontal{
+    display:inline-block;
+    margin-top: 0.3rem;
+}
+.acf_postbox .field_type-checkbox p.label label{
+    display: block;
+    height: 100%;
+}
+.acf_postbox p.label label{
+    font-size: 1rem;
+}
+.acf-input-wrap {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: calc(100% - 100px);
+}
+
+.acf_postbox .inside, #poststuff .acf_postbox .inside {
+    display: flex;
+    flex-wrap: wrap;
+}
+div#acf-at,
+div#acf-mt,
+div#acf-tenimotsu {
+    width: 50%;
+}
+div#acf-at{
+    border-right:none;
+}
+div#acf-at p ,
+div#acf-mt p {
+    width: inherit;
+    min-width: calc(100% - 260px);
+}
+
+div#acf-at .acf-input-wrap ,
+div#acf-mt .acf-input-wrap {
+    width: inherit;
+    min-width: calc(100% - 260px);
+}
+div#acf-tenimotsu p.label{width:auto;transform: translateY(0);}
+
+
+div#acf-tenimotsu ul.acf-checkbox-list{
+    width:30px;
+}
+ul.acf-checkbox-list.true_false{
+    display:inline-block;
+}
+
+div#acf-ovewview1 {
+    width: 100%;
+}
+
+div#acf-overview2 {
+    width: 100%;
+}
+div#acf-overview2 p{
+    transform: translateY(-70px);
+}
+
+.acf_postbox .field textarea {
+    display: inline-block;
+    width: calc(100% - 100px);
+}
+
+
+div#acf-ovewview1 {
+    width: 100%;
+}
+
+div#acf-overview2 {
+    width: 100%;
+    padding-bottom: 0;
+}
+div#acf-overview2 p{
+    transform: translateY(-70px);
+}
+
+.acf_postbox .field textarea {
+    display: inline-block;
+    width: calc(100% - 100px);
+}
+div#acf-overview2::after {
+    content: "ã€ç”»åƒã€‘";
+    font-size: 1.8rem;
+    margin-top: .5rem;
+    padding-top: 1rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.inside>div[id^="acf-"].field_type-image+div{
+    padding-top: 0!important;
+ }
+div#acf-image1 p.label,
+div#acf-image2 p.label,
+div#acf-image3 p.label,
+div#acf-image4 p.label
+ {
+     width:100%;
+     padding: 1rem;
+     text-align:left;
+     padding: 0;
+     border-bottom:transparent;
+     transform: translateY(0px);
+ }
+
+ div#acf-image1>div,
+div#acf-image2>div,
+div#acf-image3>div,
+div#acf-image4>div{
+     padding: 0rem 0.5rem 0.5rem 0.5rem;
+     border-top:transparent;
+     min-height: 130px;
+}
+
+#acf-kounaisetsubi{
+    width: 100%;
+}
+
+.inside>div[id^="acf-"] {
+    width: 100%;
+    border: 1px solid #999;
+    padding: 1rem 1rem 1rem!important;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    -js-display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+
+
+.wp-admin select{
+   margin-top: -7px;
+}
+
+.acf_postbox .field input[type="text"], 
+.acf_postbox .field input[type="number"], 
+.acf_postbox .field input[type="password"], 
+.acf_postbox .field input[type="email"], 
+.acf_postbox .field textarea{
+    box-sizing:content-box;
+    padding: .5rem;
+}
+
+.acf_postbox.no_box > .inside > .field p+*{
+    width: calc(100% - 330px);
+    display: block;
+    height: 100%;
+    margin: 0 0.5rem!important;
+    min-width: 530px;
+}
+.acf_postbox.no_box > .inside > .field p+input+*{
+    width: calc(100% - 330px);
+    display: block;
+    height: 100%;
+    padding: .8rem 0 0!important;
+    margin: 0 0.5rem!important;
+    min-width: 530px;
+}
+.acf_postbox.no_box > .inside > .field p+textarea{
+    width: calc(100% - 350px);
+    min-width: 510px;
+}
+.acf_postbox.no_box > .inside > .field:first-child{
+    border-top: 1px solid #999;
+
+}
+.field_type-image {
+    border-bottom: transparent!important;
+}
+ */
+

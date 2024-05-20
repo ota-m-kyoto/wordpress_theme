@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230.963 230.963">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 118px;
+        font-family: HiraginoSans-W3, Hiragino Sans;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ化_927" data-name="グループ化 927" transform="translate(-371.953 -1904.953)">
+    <g id="楕円形_47" data-name="楕円形 47" class="cls-1" transform="matrix(0.966, -0.259, 0.259, 0.966, 371.953, 1953.762)">
+      <ellipse class="cls-3" cx="94.29" cy="94.29" rx="94.29" ry="94.29"/>
+      <ellipse class="cls-4" cx="94.29" cy="94.29" rx="89.29" ry="89.29"/>
+    </g>
+    <text id="得" class="cls-2" transform="matrix(0.966, -0.259, 0.259, 0.966, 441.783, 2080.304)"><tspan x="0" y="0">得</tspan></text>
+  </g>
+</svg>

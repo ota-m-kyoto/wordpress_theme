@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+
+#main .borderBox{
+	border:1px solid #e1e1e1;
+	padding:1rem;
+	margin-bottom:1rem;
+}
+#wholeContents #main .blueText{
+	color:#009BEC;
+	font-weight:bold;
+	font-size:1.2rem;
+	margin-bottom:1rem;
+}
+
+.bluedot:before{
+	content:"";
+	display:inline-block;
+	width:0.6rem;
+	height:0.6rem;
+	background-color:#009BEC;
+	border-radius:100%;
+	margin-right:0.3rem;
+}
+#main .paddingBox{
+	padding:1rem;
+}
+.policy_block ~ div{
+	padding:0 1rem;
+}

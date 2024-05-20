@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+.mb20 { margin-bottom: 1.25rem !important; }
+.mb30 { margin-bottom: 1.875rem!important; }
+
+.mt10 { margin-top: 0.625rem !important; }
+.mt15 { margin-top: 0.9375rem !important; }
+.mt20 { margin-top: 1.25rem !important; }
+.mt25 { margin-top: 1.5625rem !important; }
+.mt30 { margin-top: 1.875rem !important; }
+.mt40 { margin-top: 2.5rem !important; }
+.mt50 { margin-top: 3.125rem !important; }
+
+.policy_block ~ .{
+    padding: 0 1rem;
+}
+
+#main .pad { padding: 0 1rem; }
+
+
+.ttl01 {
+/*     background-color: #ffe1cb;
+    border-top: 1px solid #cd5d00; */
+/* background-color:#cd5d00; */}
+.ttl02 {
+    background-color: #c8c8c8;
+    color: #fff;
+    padding: 0.7rem 1rem 0.5rem;
+    font-size: 0.875rem;
+}
+.ttl03 {
+    background-color: #dc9153;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+}
+.ttl04 {
+    font-size: 1.25rem;
+    margin-bottom: .8em !important;
+    color: #cd5d00;
+    font-weight: bold;
+}
+.ttl04 span {
+    background: #dc9153;
+    border-radius: 3px;
+    color: #fff;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    vertical-align: middle;
+}
+
+#wholeContents.twoColumnpage th{
+    min-width:auto;
+}
+/*table*/
+.jyunchugata-table01 th {
+    background: #ffefe2 !important;
+}
+
+/*運送関係のお仕事に就かれる方！！*/
+.jyunchugata-box-border {
+    border: 1px solid #e1e1e1;
+    padding: 1.3rem 1.1rem;
+}
+.jyunchugata-dl01 {
+    margin-top: .5rem !important;
+}
+.jyunchugata-dl01 li {
+    margin-bottom: .3rem;
+    font-weight: bold;
+}
+.jyunchugata-dl01 li:before {
+    content: "●";
+    color: #cd5d00;
+    margin-right: .2rem;
+}
+
+/*ご注意ください*/
+.textBox {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    padding: 25px;
+    font-size: 0.875rem;
+}
+.textBox li:nth-child(n+2) { margin-top: 0.5rem; }
+.textBox span { display: block; margin-left: 1em; }
+
+/*取扱校一覧以降*/
+
+.ttl03.plan {
+    background-color: #dc9153;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+    margin-bottom: 0 !important;
+    padding:0.7rem;
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+.ttl03.plan span {
+    background: #fff;
+    border-radius: 3px;
+    color: #cd5d00;
+    margin-right: 1rem;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+    vertical-align: middle;
+}
+
+.jyunchugata-table02 { margin: 0px !important; }
+.jyunchugata-table02 th { background: #ffefe2 !important; }
+.price-tx-exc {
+    color: #e6002b;
+    display: block;
+    font-weight: bold;
+    width: 100%;
+}
+.price-tx-exc strong {font-size: 1.25rem;}
+
+.box-border {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    padding: 25px;
+    font-size: 0.875rem;
+}
+
+.text-c { text-align: center !important; }
+
+.btn01 {
+    background-color: #FF9D00;
+    border:1px solid #FF9D00;
+    color: #fff !important;
+    display: inline-block;
+    line-height: 1;
+    padding:1.5rem;
+    min-width: 250px;
+    font-size:1rem;
+    
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    margin-top: 1.3rem;
+}
+.btn01:hover {
+    background-color: #fff;
+    color: #FF9D00 !important;
+}
+.btn01:after {
+    content: '>>';
+    display: block;
+    height: 0.5rem;
+    width: 0.5rem;
+    position: absolute;
+    right: 1.3rem;
+    top: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#wholeContents.twoColumnpage .school_box .wpb_single_image{
+    width:50%;
+    padding:0 0.5rem;
+    float:left;
+}
+#wholeContents.twoColumnpage .nvc_medium_block .wpb_single_image{
+    margin:0;
+}
+.nvc_tpoint_box{
+    width:auto;
+}
+.nvc_btn{
+    width:100%;
+    text-align:center;
+}
+.nvc_tpoint_box_right{
+    display:flex;
+    align-items:center;
+}
+.nvc_medium_block{
+    margin-bottom:3rem;
+}
+.nvc_medium_block:last-child{
+    margin-bottom:0;
+}
+.nvc_medium_block .vc_btn3-container{
+    margin-bottom:0;
+}
+
+@media screen and (max-width:768px){
+    .wpb_text_column .ttl04 span{
+        display:block;
+        text-align:center;
+        margin-bottom:0.5rem;
+    }
+    .price-tx-exc strong {
+        font-size: 0.7rem;
+    }
+    #wholeContents.twoColumnpage .school_box .wpb_single_image{
+        width:100%;
+        padding:0 0.5rem;
+        float:none;
+    }
+    .nvc_tpoint_block{
+        max-width:393px;
+        margin-right:auto;
+        margin-left:auto;
+    }
+}
+
+@media screen and (max-width:480px){
+    .btn01{
+        width:100%;
+    }
+    
+    #wholeContents.twoColumnpage td{
+        font-size: 0.7rem;
+    }
+    .ttl03.plan{
+        line-height:1.8;
+    }
+    .jyunchugata-box-border{
+        padding:0.5rem
+    }
+    .jyunchugata-dl01 li{
+        font-size:0.8rem;
+        letter-spacing: 0;
+    }
+}

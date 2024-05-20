@@ -1,0 +1,80 @@
+#mainContents [class*="row"]{
+	/*margin-bottom:1rem;*/
+}
+#mainContents .row2{
+	margin-bottom:2rem;
+}
+
+#mainContents .row3{
+	margin-bottom:.5rem;
+	border-bottom:1px solid #555;
+}
+
+div#wholeContents.twoColumnpage .btn {
+    margin-bottom:0;
+}
+
+div#wholeContents.twoColumnpage .btn a {
+    display: block;
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 2rem auto 0;
+    padding: 0.9rem 0 0.8rem;
+}
+
+#meal p{
+	text-align:center;
+}
+/***************TB****************/
+
+@media screen and (max-width:768px) {
+
+}
+
+
+/***************TB****************/
+
+
+/***************SP****************/
+
+
+@media screen and (max-width:480px) {
+div#wholeContents.twoColumnpage .btn a {
+    display: block;
+    font-size: 1.3rem;
+    width: 90%;
+    margin: 2rem auto 0;
+    padding: 1rem 1rem .9rem;
+}
+
+
+#mainContents .row3 {
+    border-bottom: transparent;
+}
+div#wholeContents.twoColumnpage div#meal .wpb_single_image
+{
+ margin:0;   
+}
+
+
+#wholeContents.twoColumnpage .left .vc_column-inner {
+
+    padding-right: 0;
+
+
+ }
+
+ #meal .vc_col-sm-4{
+    margin-bottom: 1rem;
+ }
+
+#point4 .vc_col-sm-3{
+    width: 50%;
+}
+
+
+}
+
+
+
+/***************SP****************/

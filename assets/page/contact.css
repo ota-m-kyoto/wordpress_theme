@@ -1,0 +1,281 @@
+@charset "utf-8";
+article{
+  /* margin-top:-3rem; */
+}
+.eyecatch{
+    background-color: #E4F6FF;
+}
+#wholeContents.twoColumnpage   div#lead p{
+    border-color:#A5DBF8;
+}
+.marginBottom2{
+  margin-bottom:2rem;
+}
+.mainform,
+[class^="subform"]{
+    border:1px solid #e1e1e1;
+}
+.strRed{
+  color:#f00;
+  width:100%;
+}
+.wpcf7c-elm-step1{
+  /* margin-top:1rem; */
+}
+.wpcf7c-conf{
+  background-color:#dfdfdf;
+  border-color: #ccc;
+}
+
+.hitoriFlag.hide ~ div{
+  display:none;
+}
+.confBtn{
+  margin-top:1rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.wpcf7-not-valid-tip{
+  margin-top:0.1rem;
+}
+
+[type="radio"]{
+  margin-top:0;
+}
+.wpcf7-form-control-wrap{
+  margin:0 0.5rem;
+}
+
+.wpcf7-form-control-wrap + span{
+  margin:0 0.5rem;
+}
+span.wpcf7-list-item{
+  margin:0;
+  margin-right:0.5rem;
+}
+
+.wpcf7c-elm-step1,
+.wpcf7c-elm-step1 select{
+  font-size:0.9rem;
+}
+.blockTitle{
+    border-top:1px solid #009BEC;
+  background-color:#E7F7FF;
+  padding:0.5rem 1rem;
+  margin:2rem 0 1rem 0;
+}
+.blockTitle > span{
+    font-size:1.1rem;
+    font-weight:bold;
+}
+.row{
+    display:flex;
+    border-bottom:1px solid #e1e1e1;
+    background-color:#E7F7FF;
+}
+
+.row > .leftName{
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  width:calc((100% / 7) * 2 - 0.01px);
+  min-height: 70px;
+  height:100%;
+  padding:1rem;
+}
+.row > .rightVal{
+    width:calc((100% / 7) * 5 - 0.01px);
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    padding: 0.5rem 0.5rem;
+    background-color:#fff;
+}
+
+.rightVal span{
+    display:inline-block;
+}
+
+.rightVal select{
+    display:inline-block;
+    margin-right:0.5rem;
+}
+
+.rightVal select,
+.rightVal input{
+  border-radius:0.2rem;
+}
+
+.blockBottom{
+    padding:1.5rem 0.5rem;
+}
+.lsBlueCircle br{
+  display:none;
+}
+.lsBlueCircle{
+    display:inline-block;
+    font-size:0.9rem;
+    letter-spacing:1px;
+    margin:0.5rem;
+}
+.lsBlueCircle:before{
+    content:"";
+    display:inline-block;
+    width:0.5rem;
+    height:0.5rem;
+    border-radius:100%;
+    margin-right:0.2rem;
+    background-color:#009BEC;
+}
+
+.age .wpcf7-form-control-wrap{
+  width:5rem;;
+}
+.birthday > .rightVal > span{
+  width:4rem;
+}
+.birthday .rightVal [role="alert"]{
+  position:absolute;
+  width:auto;
+  white-space:nowrap;
+  left: -14rem;
+  bottom: -1.1rem;
+}
+
+.addressNo .addres > span{
+  width:4rem;
+}
+
+.addressNo > .rightVal{
+  display:block;
+}
+.addressNo > .rightVal > div{
+  margin:0.5rem 0;
+}
+.addressNo > .rightVal > div > span:first-child{
+  width:5rem;
+}
+
+.addressNo > .rightVal .ken .contact-todouhuken{
+  width:10rem;
+}
+.question > .rightVal > span:first-child{
+  margin-bottom:0.2rem;
+}
+
+.question .wpcf7-form-control-wrap{
+  width:100%;
+}
+.know > .rightVal .wpcf7-list-item{
+  width:50%;
+  padding:0.5rem 0;
+  margin:auto;
+}
+
+.birthday > .rightVal,
+.addressNo > .rightVal{
+  padding:0.5rem 1rem;
+}
+.birthday .rightVal{
+  padding-bottom: 1.5rem;
+}
+.wpcf7-form-control-wrap{
+  margin-bottom:0.1rem;
+}
+
+.point > .rightVal > div:first-child{
+  margin:0 0.5rem;
+  width:60%;
+}
+.point > .rightVal > div:first-child > div{
+  display:flex;
+  align-items:center;
+  margin-bottom:0.5rem;
+}
+.point > .rightVal > div:first-child > div > span{
+  display:block;
+  flex-grow:1;
+}
+
+
+.point > .rightVal > div:last-child{
+  margin:0 0.5rem;
+  width: 100%;
+}
+.point > .rightVal > div:last-child > span{
+  margin:0;
+  width:100%;
+}
+
+.point > .rightVal > div:last-child > span:first-child{
+  margin-bottom:0.2rem;
+}
+
+.confBtn input{
+  cursor:pointer;
+  color:#fff;
+  background-color:#FF9D00;
+  border:1px solid #FF9D00 !important;
+  padding: 1rem;
+  width: 44%;
+  font-size: 1.1rem;
+  margin: 0px 3%;
+  transition:background-color 0.2s ease,color 0.2s ease;
+}
+.Pc .confBtn input:hover{
+  background-color:#fff;
+  color:#FF9D00;
+}
+.confBtn .wpcf7c-btn-back{
+  background-color:#555;
+  border-color:#555 !important;
+}
+.Pc .confBtn .wpcf7c-btn-back:hover{
+  background-color:#fff;
+  color:#555;
+}
+.wpcf7-form{
+  margin-bottom:5rem;
+}
+@media screen and (max-width:768px){
+  .row{
+    flex-wrap:wrap;
+  }
+  .row > .leftName,
+  .row > .rightVal{
+    width:100%;
+  }
+  .row > .leftName{
+    width:100%;
+    flex-wrap:nowrap;
+  }
+  .row > .leftName > span{
+    width:auto;
+  }
+  .row > .leftName .strRed{
+    margin-left:0.5rem;
+  }
+
+
+  .know > .rightVal .wpcf7-list-item{
+    width:100%;
+  }
+  .rightVal > span + span{
+    padding:0.3rem 0rem;
+  }
+}
+
+
+@media screen and (max-width:480px){
+.confBtn input{
+    width: 100%;
+    margin:auto;
+  }
+}
+
+div.wpcf7 .ajax-loader{
+  display:none
+}

@@ -1,0 +1,989 @@
+<?php
+  $category = get_the_category();
+  $cat_id   = $category[0]->cat_ID;
+  $cat_name = $category[0]->cat_name;
+  $cat_slug = $category[0]->category_nicename;
+?>
+
+<?php 
+
+$slug_name = basename(get_permalink());
+
+$spot_csv = csv_return_Func($slug_name,'spot');
+$hotel_csv = csv_return_Func($slug_name,'hotel');
+$price_csv = csv_return_Func($slug_name,'price');
+$school_data_csv = csv_return_Func($slug_name,'school_data');
+
+$filepath = dirname(__FILE__).'/school/'.$slug_name;
+
+$title = get_the_title();
+
+$terms = get_the_terms($post->ID,'school_cat');
+foreach($terms as $term){
+  $t = $term->name;
+  if(strpos($t,'道') !== false || strpos($t,'府') !== false || strpos($t,'都') !== false || strpos($t,'県') !== false){
+    $area = $term->name;
+  }
+}
+
+ ?>
+
+<?php get_header(); ?>
+
+<!--page-->
+
+
+<div id="wholeContents" class="wholeContents twoColumnpage single-school" role="main">
+  <div id="mainContents" class="mainContents">
+    <div id="contentsWrapper" class="contentsWrapper maxWidth flex fWrap_wrap">
+
+      <!--main-->
+      <div id="main" class="mainContent">
+        <p class="shiteiIinkai"><?php echo $area; ?>公安委員会指定</p>
+        <h2 class="schoolName text title"><?php echo $title; ?></h2>
+        <!-- TAB CONTROLLERS -->
+        <input id="panel-1-ctrl" class="panel-radios" type="radio" name="tab-radios" checked>
+        <input id="panel-2-ctrl" class="panel-radios" type="radio" name="tab-radios">
+        <input id="panel-3-ctrl" class="panel-radios" type="radio" name="tab-radios">
+        <input id="panel-4-ctrl" class="panel-radios" type="radio" name="tab-radios">
+
+        <!-- TABS LIST -->
+        <ul id="tabs-list">
+            <!-- MENU TOGGLE -->
+            <li id="li-for-panel-1">
+              <label class="panel-label" for="panel-1-ctrl">教習所について</label>
+            </li><!--INLINE-BLOCK FIX-->
+            <li id="li-for-panel-2">
+              <label class="panel-label" for="panel-2-ctrl">オトクな合宿プラン</label>
+            </li><!--INLINE-BLOCK FIX-->
+            <li id="li-for-panel-3">
+              <label class="panel-label" for="panel-3-ctrl">宿泊施設</label>
+            </li><!--INLINE-BLOCK FIX-->
+            <li id="li-for-panel-4">
+              <label class="panel-label" for="panel-4-ctrl">周辺スポット</label>
+            </li><!--INLINE-BLOCK FIX-->
+        </ul>
+
+        <!-- THE PANELS -->
+        <div id="panels">
+          <div class="tabContainer">
+            <div id="panel-1">
+              <main>
+                <div id="topImages">
+                  <p class="image">
+                    <img class="imgRes" src="/wp-content/themes/nanairo/school/<?php echo $slug_name ;?>/img/school1.jpg" alt="<?php echo $title ;?>の安心、格安、丁寧な予約は運転免許受付センター"></img>
+                  </p>
+            </div>
+
+          <?php
+          for($l = 0; $l < count($school_data_csv); $l++){//1行目と2行目回まわす
+            for($ll = 1; $ll < count($school_data_csv[$l]); $ll++){//列数回まわすヘッダ飛ばす
+              if(!empty($price_csv[$l][$ll]));
+            }
+          }
+          ?>
+            <div id="leadText">
+              <p class="text">
+                <?php echo $school_data_csv[0][1]; ?>
+              </p>
+            </div>
+            <div id="schoolComment">
+              <p class="text">
+                <?php echo $school_data_csv[1][1]; ?>
+
+              </p>
+            </div>
+            <div id="typeOf" class="flex fWrap_wrap">
+              <div id="typeOfLicense" class="col1of2 col2of2Sp co1 left">
+                <h3><i class="fa fa-car"></i>対応免許</h3>
+ 
+                <div class="typeofLicenseWrapper flex fWrap_wrap">
+                  <?php echo do_shortcode('[single_menkyo]'); ?>
+                </div>
+                <p class="highway">高速教習：<?php echo $school_data_csv[2][1]; ?><br />
+※諸事情により変更となる場合がございます。</p>
+              </div>
+              <div id="daysForGrad" class="col1of2 col2of2Sp co2 right">
+                <h3><i class="fa fa-calendar"></i>卒業日数</h3>
+                <div class="atmt flex">
+                  <p class="at">
+                    AT：最短<span><?php echo $school_data_csv[3][1]; ?></span>日～
+                  </p>
+                  <p class="mt">
+                    MT：最短<span><?php echo $school_data_csv[4][1]; ?></span>日～
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <!--施設紹介-->
+            <div id="facility">
+              <h3><i class="fa fa-home"></i>施設紹介</h3>
+              <p class="address">住所：〒<?php echo $school_data_csv[5][1]; ?> <?php echo $school_data_csv[5][2]; ?> </p>
+
+              <div class="images flex fWrap_wrap">
+                  <?php $picDirNAme = dirname(__FILE__).'/school/' . $slug_name . '/img/school';
+                    
+                    $iPic = 2;
+                      while($iPic < 20)
+                        { 
+                          // echo $picDirNAme . $iPic . ".jpg";
+                          if (file_exists($picDirNAme . $iPic . ".jpg")) {
+                            echo '
+
+                              <div class="col1of2 col2of2Sp co1">
+                                <p class="image">
+                                  <img src="/wp-content/themes/nanairo/school/' . $slug_name .'/img/school' . $iPic . '.jpg" alt="' .  $title . 'の安心、格安、丁寧な予約は運転免許受付センター" class="imgRes">
+                                </p>
+                                <p class="text">
+                                  ' . $school_data_csv[6][$iPic - 2] . '
+                                </p>
+
+                              </div>
+
+
+
+                            ';
+                        } else {
+                            end;
+                        }
+                         $iPic++; 
+                       } 
+
+                   ?>
+
+              </div>
+
+              <?php readfile($filepath.'/facility.html'); ?>
+
+            </div>
+
+            <!--合宿の様子-->
+            <div id="camp">
+              <?php 
+              $picDirNAme = dirname(__FILE__).'/school/' . $slug_name . '/img/camp';
+              if (file_exists($picDirNAme . "2.jpg")) echo '<h3><i class="fa fa-image"></i>合宿の様子</h3>';
+               ?>
+
+              <div class="images flex fWrap_wrap">
+                  <?php //$picDirNAme = dirname(__FILE__).'/school/' . $slug_name . '/img/camp';
+                    
+                    $iPic = 2;
+                      while($iPic < 20)
+                        { 
+                          // echo $picDirNAme . $iPic . ".jpg";
+                          if (file_exists($picDirNAme . $iPic . ".jpg")) {
+                            echo '
+
+                              <div class="col1of2 col2of2Sp co1">
+                                <p class="image">
+                                  <img src="/wp-content/themes/nanairo/school/' . $slug_name .'/img/camp' . $iPic . '.jpg" alt="' .  $title . 'の安心、格安、丁寧な予約は運転免許受付センター" class="imgRes">
+                                </p>
+                                <p class="text">
+                                  ' . $school_data_csv[13][$iPic - 2] . '
+                                </p>
+
+                              </div>
+
+
+
+                            ';
+                        } else {
+                            end;
+                        }
+                         $iPic++; 
+                       } 
+
+                   ?>
+
+              </div>
+            </div>
+
+
+            <!-- アクセス -->
+            <div id="access">
+            <?php
+            //アクセス部分の読み込み
+            readfile($filepath.'/access.html');
+            ?>
+            </div>
+
+
+
+            <ul id="footer-tabs-list">
+          <!-- MENU TOGGLE -->
+          <li id="li-for-panel-1">
+            <label for="panel-1-ctrl">教習所について</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-2">
+            <label for="panel-2-ctrl">オトクな合宿プラン</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-3">
+            <label for="panel-3-ctrl">宿泊施設</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-4">
+            <label for="panel-4-ctrl">周辺スポット</label>
+          </li><!--INLINE-BLOCK FIX-->
+      </ul>
+
+
+              </main>
+            </div>
+            <div id="panel-2">
+              <main id="plan">
+                <!-- ////////////////////////////// 料金表 start -->
+            <section class="main-sct">
+              <h3 class="ttl01 icon-car"><i class="fa fa-car"></i>料金表（AT車）</h3>
+              <div class="main-sct-inner">
+              <?php
+                // echo "<pre>";
+                // var_dump($price_csv);
+                // echo "</pre>";
+                for($k = 0; $k < count($price_csv); $k++){
+                  for($kk = 1; $kk < count($price_csv[$k]); $kk++){
+                    //ヘッダー
+                      if($k ==0){
+                        if(!empty($price_csv[0][$kk])){
+                        $ryokinhyoHeader .= $price_csv[0][$kk] ."<br>";
+                        }
+                      } 
+                    //フッター
+                      if($k ==1){
+                        if(!empty($price_csv[1][$kk])){
+                        $ryokinhyoFooter .= $price_csv[1][$kk] ."<br>";
+                        }
+                      }
+                    //嬉しい特典
+                      if($k ==2){
+                        if(!empty($price_csv[2][$kk])){
+                        $ureshiitokuten .= '<i class="fa fa-star"></i>' . $price_csv[2][$kk] ."<br>";
+                        }
+                      }
+
+
+                // echo $k . '_' . $kk . '_' . $price_csv[$k][$kk]."<br>\n";
+                  }
+                }
+                // echo $price_csv[0][1]."\n";
+                // echo $price_csv[1][1]."\n";
+                // echo $k . '_' . $kk . '_' . $price_csv[$k][$kk]."\n";
+              ?>
+
+                <div class="ryokinhyoHeader">
+                  <p>
+                    <?php echo $ryokinhyoHeader; ?>
+
+                  </p>
+                </div>
+
+                <div class="price-tbl-wrap">
+                  <div class="price-tbl">
+                    <div class="price-tbl-col">
+                      <div><p>宿泊プラン</p></div>
+                      <div><p>レギュラー</p></div>
+                      <div><p>ホテルツイン(女性の方)<br>ホテルシングルA</p></div>
+                      <div><p>ホテルシングルB</p></div>
+                    </div>
+                    <div class="price-tbl-col">
+                      <div><p>10/1〜1/18<br>3/25〜5/31</p></div>
+                      <div><p><span class="price-tx-exc"><strong>200,000</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>205,000</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>210,000</strong>円</span></p></div>
+                    </div>
+                    <div class="price-tbl-col">
+                      <div><p>1/19〜1/25</p></div>
+                      <div><p><span class="price-tx-exc"><strong>224,000</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>236,500</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>239,000</strong>円</span></p></div>
+                    </div>
+                    <div class="price-tbl-col">
+                      <div><p>1/26〜1/31<br>3/16〜3/24</p></div>
+                      <div><p><span class="price-tx-exc"><strong>253,000</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>268,000</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>271,000</strong>円</span></p></div>
+                    </div>
+                  </div>
+
+                  <div class="price-tbl col3">
+                    <div class="price-tbl-col">
+                      <div><p>宿泊プラン</p></div>
+                      <div><p>レギュラー</p></div>
+                      <div><p>ホテルツイン(女性の方)<br>ホテルシングルA</p></div>
+                      <div><p>ホテルシングルB</p></div>
+                    </div>
+                    <div class="price-tbl-col">
+                      <div><p>2/1〜2/25<br>3/5〜3/15</p></div>
+                      <div><p><span class="price-tx-exc"><strong>286,000</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>303,500</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>305,000</strong>円</span></p></div>
+                    </div>
+                    <div class="price-tbl-col">
+                      <div><p>2/26〜3/4</p></div>
+                      <div><p><span class="price-tx-exc"><strong>295,000</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>313,000</strong>円</span></p></div>
+                      <div><p><span class="price-tx-exc"><strong>315,000</strong>円</span></p></div>
+                    </div>
+
+                  </div>
+                </div><!-- // .price-tbl-wrap -->
+
+
+
+                <div class="ryokinhyoFooter">
+                  <p>
+                    <?php echo $ryokinhyoFooter; ?>
+
+                  </p>
+                </div>
+
+
+<!--
+                <ul class="price-notes">
+                  <li>※昼食のみのプランは上記より税込16,200円割引。</li>
+                  <li>※過去に免許停止・無免許運転・免許取り消し等の行政処分を受けたことがある方および複数回違反のある方は入校できません。</li>
+                  <li>※2/1〜3/20は学生の方のみの入校とさせていただきます。</li>
+                  <li>（※1）10/1〜1/10・4/10〜5/31の期間はグループオススメ（2人部屋を3名以上）でご利用の方は税込5,400円割引（男性のみ）</li>
+                  <li>※66歳以上の方はご入校いただけません。</li>
+                </ul>
+//-->
+
+              </div><!-- // .main-sct-inner -->
+            </section><!-- // .main-sct -->
+            <!-- ////////////////////////////// 料金表 end -->
+
+
+
+
+
+            <!-- ////////////////////////////// おトク情報 start -->
+            <section class="main-sct color-pink none">
+              <h3 class="ttl01 icon-note"><i class="fa fa-music"></i>おトク情報</h3>
+
+              <!-- コース　-->
+              <div id="courses" class="fWrap_wrap flex row">
+
+
+                  <div class="co1 left jisui col1of2">
+                      <div class="jisuiWrapper">
+                          <div class="jisuiInner">
+                              <div class="wpb_text_column wpb_content_element ">
+                                  <div class="wpb_wrapper">
+                                      <h3 class="h3Style1 ">自炊でおトク</h3>
+                                  </div>
+                              </div>
+                              <div class="wpb_single_image wpb_content_element vc_align_center">
+                                  <figure class="wpb_wrapper vc_figure">
+                                      <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1000" height="665" src="http://www.menkyouketsuke.com/wp-content/uploads/2018/01/b17a6abffc7177d6dbdbcb1acd23bb52_m-1.jpg" class="vc_single_image-img attachment-full" alt=""></div>
+                                  </figure>
+                              </div>
+                              <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                  <div class="textCenter atLabel co1 left wpb_column vc_column_container vc_col-sm-4">
+                                      <div class="atLabelWrapper">
+                                          <div class="atLabelInner">
+                                              <div class="priceTypeWrapper">
+                                                  <div class="priceTypeInner">
+                                                      <p class="price-type">AT車</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="co2 right atPrice wpb_column vc_column_container vc_col-sm-8">
+                                      <div class="vc_column-inner ">
+                                          <div class="wpb_wrapper">
+                                              <div class="wpb_text_column wpb_content_element  taxExc">
+                                                  <div class="wpb_wrapper">
+                                                      <p>168,000円～</p>
+                                                  </div>
+                                              </div>
+                                              <div class="wpb_text_column wpb_content_element  taxInc">
+                                                  <div class="wpb_wrapper">
+                                                      <p>税込181,440円～</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="wpb_text_column wpb_content_element  comment">
+                                  <div class="wpb_wrapper">
+                                      <p>とにかく予算をおさえたい方に、
+                                          <br> 料理好きや食事制限がある方に！
+                                      </p>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="co2 right ichijikitaku col1of2">
+                      <div class="ichijikitakuWrapper ">
+                          <div class="ichijikitakuInner">
+                              <div class="wpb_text_column wpb_content_element ">
+                                  <div class="wpb_wrapper">
+                                      <h3 class="h3Style1 ">一時帰宅でおトク</h3>
+                                  </div>
+                              </div>
+                              <div class="wpb_single_image wpb_content_element vc_align_center">
+                                  <figure class="wpb_wrapper vc_figure">
+                                      <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1000" height="664" src="http://www.menkyouketsuke.com/wp-content/uploads/2018/01/341ab52e47b4217e95f0ae60899868aa_m.jpg" class="vc_single_image-img attachment-full" alt="" ></div>
+                                  </figure>
+                              </div>
+                              <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                  <div class="textCenter atLabel co1 left wpb_column vc_column_container vc_col-sm-4">
+                                      <div class="atLabelWrapper">
+                                          <div class="atLabelInner">
+                                              <div class="priceTypeWrapper">
+                                                  <div class="priceTypeInner">
+                                                      <p class="price-type">AT車</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="co2 right atPrice wpb_column vc_column_container vc_col-sm-8">
+                                      <div class="vc_column-inner ">
+                                          <div class="wpb_wrapper">
+                                              <div class="wpb_text_column wpb_content_element  taxExc">
+                                                  <div class="wpb_wrapper">
+                                                      <p>169,000円～</p>
+                                                  </div>
+                                              </div>
+                                              <div class="wpb_text_column wpb_content_element  taxInc">
+                                                  <div class="wpb_wrapper">
+                                                      <p>税込182,520円～</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="wpb_text_column wpb_content_element  comment">
+                                  <div class="wpb_wrapper">
+                                      <p>合宿で早く免許を取りたいけど
+                                          <br> 2週間連続でお休みが取れない方に！
+                                      </p>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="co1 left bgStripe3 col1of2">
+                      <div class="vc_column-inner ">
+                          <div class="wpb_wrapper">
+                              <div class="wpb_text_column wpb_content_element ">
+                                  <div class="wpb_wrapper">
+                                      <h3 class="h3Style1 ">ひとりでもおトク</h3>
+                                  </div>
+                              </div>
+                              <div class="wpb_single_image wpb_content_element vc_align_center">
+                                  <figure class="wpb_wrapper vc_figure">
+                                      <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="1000" height="665" src="/wp-content/uploads/2018/01/AdobeStock_130594445_Preview-1024x681.jpeg" class="vc_single_image-img attachment-full" alt="" ></div>
+                                  </figure>
+                              </div>
+                              <div class="vc_row wpb_row vc_inner vc_row-fluid">
+                                  <div class="textCenter atLabel co1 left wpb_column vc_column_container vc_col-sm-4">
+                                      <div class="atLabelWrapper">
+                                          <div class="atLabelInner">
+                                              <div class="priceTypeWrapper">
+                                                  <div class="priceTypeInner">
+                                                      <p class="price-type">AT車</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="co2 right atPrice wpb_column vc_column_container vc_col-sm-8">
+                                      <div class="vc_column-inner ">
+                                          <div class="wpb_wrapper">
+                                              <div class="wpb_text_column wpb_content_element  taxExc">
+                                                  <div class="wpb_wrapper">
+                                                      <p>195,000円～</p>
+                                                  </div>
+                                              </div>
+                                              <div class="wpb_text_column wpb_content_element  taxInc">
+                                                  <div class="wpb_wrapper">
+                                                      <p>税込210,600円～</p>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="wpb_text_column wpb_content_element  comment">
+                                  <div class="wpb_wrapper">
+                                      <p>広いお部屋を独り占め！
+                                          <br> （入校日10/1-1/18、3/25-5/31）
+                                      </p>
+                                  </div>
+                              </div>
+                              <div class="wpb_text_column wpb_content_element ">
+                                  <div class="wpb_wrapper">
+                                      <div class="dropmenu">
+                                          <label for="menu_hitoriwari">教習所を見る</label>
+                                          <input type="checkbox" id="menu_hitoriwari" class="accordion">
+                                          <ul id="links_hitoriwari">
+                                              <li><a href="http://www.menkyouketsuke.com/school/kanonji/">観音寺自動車学校</a></li>
+                                              <li><a href="http://www.menkyouketsuke.com/school/%e5%a4%a7%e5%ae%ae%e8%87%aa%e5%8b%95%e8%bb%8a%e6%95%99%e7%bf%92%e6%89%80/">大宮自動車教習所</a></li>
+                                              <li><a href="http://www.menkyouketsuke.com/school/nishishibata%e8%a5%bf/">マツキドライビングスクール新潟西しばた校テスト西</a></li>
+                                              <li><a href="http://www.menkyouketsuke.com/school/rikuzentakadaeast1/">陸前高田ドライビングスクール東1</a></li>
+                                              <li><a href="http://www.menkyouketsuke.com/school/rikuzentakada3/">陸前高田ドライビングスクール3</a></li>
+                                              <li><a href="http://www.menkyouketsuke.com/school/rikuzentakada2/">陸前高田ドライビングスクール2</a></li>
+                                              <li><a href="http://www.menkyouketsuke.com/school/nishishibata/">マツキドライビングスクール新潟西しばた校</a></li>
+                                              <li><a href="http://www.menkyouketsuke.com/school/rikuzentakada/">陸前高田ドライビングスクール</a></li>
+                                          </ul>
+                                      </div>
+                                      <style>
+                                      #menu_hitoriwari:checked~#links_hitoriwari li {
+                                          max-height: 300px;
+                                          opacity: 1;
+                                      }
+                                      </style>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div class="main-sct-inner">
+
+                <!-- キャンペーン start -->
+                <div class="cp-box-wrap">
+
+                  <section class="cp-box cp-genteiwari">
+                    <h3 class="cp-box-ttl">限定割コース <span>レギュラー・ひとりでオススメ</span></h3>
+                    <div class="cp-box-inner">
+                      <div class="cp-box-price">
+                        <p class="price-type">AT車</p>
+                        <p class="price-tx-exc"><strong>195,000</strong>円</p>
+                        <p class="price-tx-inc">税込<strong>210,600</strong>円</p>
+                      </div>
+                      <p class="cp-box-priceUp">[MT車] 税込16,200円UP<br>
+                        [ホテルツイン] 税込5,400円UP<br>
+                        [ホテルシングルＡ] 税込8,100円UP</p>
+                      <p class="cp-box-period">対象入校日：カレンダーの<span class="cp-color">●</span>の日</p>
+                      <p class="cp-box-notes">※30歳までの方対象</p>
+                    </div>
+                  </section>
+
+                  <section class="cp-box cp-twin">
+                    <h3 class="cp-box-ttl">2人でお得 <span></span></h3>
+                    <div class="cp-box-inner">
+                      <div class="cp-box-price">
+                        <p class="price-type">AT車</p>
+                        <p class="price-tx-exc"><strong>200,000</strong>円</p>
+                        <p class="price-tx-inc">税込<strong>216,000</strong>円</p>
+                      </div>
+                      <p class="cp-box-priceUp">[MT車] 税込16,200円UP</p>
+                      <p class="cp-box-period">対象入校日：10/1〜1/18・3/25〜5/31の全入校日</p>
+                      <p class="cp-box-notes">※30歳までの方（女性）対象</p>
+                    </div>
+                  </section>
+
+                  <section class="cp-box cp-harutoku">
+                    <h3 class="cp-box-ttl">スプリング <span>レギュラー</span></h3>
+                    <div class="cp-box-inner">
+                      <div class="cp-box-price">
+                        <p class="price-type">AT車</p>
+                        <p class="price-tx-exc"><strong>205,000</strong>円</p>
+                        <p class="price-tx-inc">税込<strong>221,400</strong>円</p>
+                      </div>
+                      <p class="cp-box-priceUp">[MT車] 税込16,200円UP<br>
+                        [ホテルツイン] 税込10,800円UP<br>
+                        [ホテルシングルＡ] 税込10,800円UP</p>
+                        <p class="cp-box-period">対象入校日：カレンダーの<span class="cp-color">●</span>の日</p>
+                      <p class="cp-box-notes">※30歳までの方対象</p>
+                    </div>
+                  </section>
+
+                  <section class="cp-box cp-gold">
+                    <h3 class="cp-box-ttl">リミテッド <span>レギュラー</span></h3>
+                    <div class="cp-box-inner">
+                      <div class="cp-box-price">
+                        <p class="price-type">AT車</p>
+                        <p class="price-tx-exc"><strong>228,500</strong>円</p>
+                        <p class="price-tx-inc">税込<strong>246,780</strong>円</p>
+                      </div>
+                      <p class="cp-box-priceUp">[MT車] 税込16,200円UP<br>
+                        [ホテルツイン] 税込10,800円UP<br>
+                        [ホテルシングルＡ] 税込10,800円UP</p>
+                        <p class="cp-box-period">対象入校日：カレンダーの<span class="cp-color">●</span>の日</p>
+                      <p class="cp-box-notes">※30歳までの方対象</p>
+                    </div>
+                  </section>
+
+                  <section class="cp-box cp-nirindouji">
+                    <h3 class="cp-box-ttl">二輪同時特別コース <span>普通AT＋普通二輪（MT科）</span></h3>
+                    <div class="cp-box-inner">
+                      <div class="cp-box-price">
+                        <p class="price-tx-exc"><strong>252,000</strong>円</p>
+                        <p class="price-tx-inc">税込<strong>272,160</strong>円</p>
+                      </div>
+                      <p class="cp-box-priceUp">[普通MT＋普通二輪（MT科）]<br>税込285,660円</p>
+                      <p class="cp-box-period">対象入校日：10/1〜1/18・3/25〜5/31の全入校日</p>
+                      <p class="cp-box-notes">※30歳までの方対象</p>
+                    </div>
+                  </section>
+
+                </div>
+                <!-- キャンペーン end -->
+
+
+                <!-- 割引 start -->
+                <section>
+                  <h3 class="ttl02">割引</h3>
+                  
+                  <div class="waribiki">
+                     <?php echo do_shortcode('[single_waribiki]'); ?>
+                  </div>
+                </section>
+                <!-- 割り引き end -->
+
+                <!-- うれしい特典 start -->
+                <section>
+                  <h3 class="ttl02">うれしい特典</h3>
+                  
+                  <div class="ureshiitokuten">
+                    <p>
+                      <?php echo $ureshiitokuten; ?>
+
+                    </p>
+                  </div>
+                </section>
+                <!-- うれしい特典 end -->
+
+
+                <!-- その他割引 start -->
+<!--
+                <section>
+                  <h3 class="ttl02">その他割引</h3>
+                  <ul class="option-list">
+                    <li>
+                      <a href="/campaign/">
+                        <span class="option-name">早割</span>
+                        <span class="option-discount">税込<strong>5,000</strong>円割引</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/campaign/">
+                        <span class="option-name">学割</span>
+                        <span class="option-discount">税込<strong>3,000</strong>円割引</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/campaign/">
+                        <span class="option-name">G割</span>
+                        <span class="option-discount">税込<strong>5,000</strong>円割引</span>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+//-->
+                <!-- その他割引 end -->
+
+
+              </div><!-- // .main-sct-inner -->
+            </section><!-- // .main-sct -->
+            <!-- ////////////////////////////// おトク情報 end -->
+
+
+
+
+
+            <!-- ////////////////////////////// 入校日カレンダー start -->
+            <section class="main-sct color-green">
+              <h3 class="ttl01 icon-calendar">入校日カレンダー</h3>
+              <div class="main-sct-inner">
+
+                <?php echo do_shortcode('[csv2table table_id="sample-table"]'); ?>
+
+
+                <!-- カレンダー注釈 start -->
+                <section>
+                  <ul class="endyear-list">
+                    <li>※<span class="brown">◯</span>年末一時帰宅</li>
+                    <li>※年末一時帰宅該当日以外のご入校で教習延長により年末休校日にかかる場合は、一時帰宅していただきます。その際の交通費はお客様のご負担となります。</li>
+                  </ul>
+                </section>
+                <!-- カレンダー注釈 end -->
+
+                <?php readfile($filepath.'/notice.html'); ?>
+
+                <!-- ローカルナビ start -->
+              <ul id="footer-tabs-list">
+          <!-- MENU TOGGLE -->
+          <li id="li-for-panel-1">
+            <label for="panel-1-ctrl">教習所について</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-2">
+            <label for="panel-2-ctrl">オトクな合宿プラン</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-3">
+            <label for="panel-3-ctrl">宿泊施設</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-4">
+            <label for="panel-4-ctrl">周辺スポット</label>
+          </li><!--INLINE-BLOCK FIX-->
+      </ul>
+              <!-- ローカルナビ end -->
+
+              </div><!-- // .main-sct-inner -->
+            </section><!-- // .main-sct -->
+            <!-- ////////////////////////////// 入校日カレンダー end -->
+              </main>
+            </div>
+            <div id="panel-3">
+              <main id="hotel">
+                <!-- ////////////////////////////// 宿泊施設 start -->
+
+            <section class="main-sct">
+              <h3 class="ttl05"><i class="fa fa-bed"></i>宿泊施設詳細</h3>
+              <div class="main-sct-inner">
+                <div class="hotel-box-wrap">
+
+                  <?php 
+                  for($j = 1; $j < count($hotel_csv); $j++){//1セット
+                    $hotel_imgs = "";
+                    $img_path = dirname(__FILE__).'/school/'.$slug_name.'/img';
+                    $img_path = file_search($img_path);
+                    for($jj = 0; $jj < count($img_path); $jj++){
+                      if(strpos($img_path[$jj],'img/'.$hotel_csv[$j][1]) !== false){
+                        $wppoint = strpos($img_path[$jj], '/wp-content');
+                        $wppoint = substr($img_path[$jj], $wppoint);
+                        $hotel_imgs .= '<li>
+                                          <img src="'.$wppoint.'" alt="" width="714" height="437">
+                                        </li>';
+                      }
+                    }
+                    print '
+                    <section class="main-sct hotel-box" id="05">
+                      <h4 class="ttl03">'.$hotel_csv[$j][0].'</h4>
+                      <ul class="photo-slider">
+                        '.$hotel_imgs.'
+                      </ul>
+                      <h4 class="ttl02 mb0">宿舎情報</h4>
+                      <ul class="list-col2">
+                        <li>
+                          <p class="item-head">宿泊プラン</p><p class="item-data">'.$hotel_csv[$j][2].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">学校から</p><p class="item-data">'.$hotel_csv[$j][3].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">部屋人数</p><p class="item-data">'.$hotel_csv[$j][4].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">バス/トイレ</p><p class="item-data">'.$hotel_csv[$j][5].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">テレビ</p><p class="item-data">'.$hotel_csv[$j][6].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">冷蔵庫</p><p class="item-data">'.$hotel_csv[$j][7].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">洗濯機</p><p class="item-data">'.$hotel_csv[$j][8].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">乾燥機</p><p class="item-data">'.$hotel_csv[$j][9].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">ネット環境</p><p class="item-data">'.$hotel_csv[$j][10].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">コンビニまで</p><p class="item-data">'.$hotel_csv[$j][11].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head">食事場所</p><p class="item-data">'.$hotel_csv[$j][12].'</p>
+                        </li>
+                        <li>
+                          <p class="item-head"></p><p class="item-data"></p>
+                        </li>
+                      </ul>
+                    </section>';
+                  }
+                   ?>
+
+                </div><!-- // .hotel-box-wrap -->
+
+              </div><!-- // .main-sct-inner -->
+            </section><!-- // .main-sct -->
+            <!-- ////////////////////////////// 宿泊施設 end -->
+
+
+            <!-- ローカルナビ start -->
+            <ul id="footer-tabs-list">
+          <!-- MENU TOGGLE -->
+          <li id="li-for-panel-1">
+            <label for="panel-1-ctrl">教習所について</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-2">
+            <label for="panel-2-ctrl">オトクな合宿プラン</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-3">
+            <label for="panel-3-ctrl">宿泊施設</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-4">
+            <label for="panel-4-ctrl">周辺スポット</label>
+          </li><!--INLINE-BLOCK FIX-->
+      </ul>
+            <!-- ローカルナビ end -->
+
+              </main>
+            </div>
+            <div id="panel-4">
+              <main id="spot">
+                
+            <!-- ////////////////////////////// 周辺スポット start -->
+            <section class="main-sct">
+
+
+              <h3 class="ttl05"><i class="fa fa-map-marker" aria-hidden="true"></i>周辺スポット詳細</h3>
+              <div class="main-sct-inner">
+
+                <div class="spot-box-wrap">
+                  <?php 
+                  for($i = 1; $i < count($spot_csv); $i++){
+                    $spot_imgs = "";
+                    $img_path = dirname(__FILE__).'/school/'.$slug_name.'/img';
+                    $img_path = file_search($img_path);
+                    for($ii = 0; $ii < count($img_path); $ii++){
+                      if(strpos($img_path[$ii],'img/'.$spot_csv[$i][1]) !== false){
+                        $wppoint = strpos($img_path[$ii], '/wp-content');
+                        $wppoint = substr($img_path[$ii], $wppoint);
+                        $spot_imgs .= '<li>
+                                          <img src="'.$wppoint.'" alt="" width="714" height="437">
+                                        </li>';
+                      }
+                    }
+                    echo '
+                      <section class="main-sct spot-box">
+                        <h4 class="ttl03">'.$spot_csv[$i][0].'</h4>
+                        <ul class="photo-slider">
+                          '.$spot_imgs.'
+                        </ul>
+                        <section>
+                          <p>'.$spot_csv[$i][2].'</p>
+                        </section>
+                      </section>
+                    ';
+                  }
+                  ?>
+
+
+                </div><!-- // .spot-box-wrap -->
+
+
+              </div><!-- // .main-sct-inner -->
+            </section><!-- // .main-sct -->
+            <!-- ////////////////////////////// 周辺スポット end -->
+
+
+           <ul id="footer-tabs-list">
+          <!-- MENU TOGGLE -->
+          <li id="li-for-panel-1">
+            <label for="panel-1-ctrl">教習所について</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-2">
+            <label for="panel-2-ctrl">オトクな合宿プラン</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-3">
+            <label for="panel-3-ctrl">宿泊施設</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-4">
+            <label for="panel-4-ctrl">周辺スポット</label>
+          </li><!--INLINE-BLOCK FIX-->
+      </ul>
+              </main>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <?php
+        // ループ開始
+        while ( have_posts() ) : the_post();
+
+          // content-page.phpをロード
+          get_template_part( 'template-parts/content', 'page' );//
+
+          // コメント表示がオンになっていて、1つ以上のコメントがついている場合表示する
+          if ( comments_open() || get_comments_number() ) :
+            comments_template();
+          endif;
+        // ループ終わり
+        endwhile;
+        ?>
+      </div>
+
+
+      <!--sidebar-->
+      <div id="sidebar" class="sidebarContent">
+        <div class="sidebarWrapper">
+        <?php
+          if (is_page()) {
+            $parent_id = $post->post_parent; // 親ページのIDを取得
+            $parent_slug = get_post($parent_id)->post_name; // 親ページのスラッグを取得
+            }
+            dynamic_sidebar( 'untenmenkyouketsukecentersidebar' );
+          ?>
+        </div>
+      </div>
+    </div><!--contentsWrapper-->
+
+
+
+
+
+    
+        <?php
+        //コンテンツ
+        // ループ開始
+        // while ( have_posts() ) : the_post();
+
+          // content-page.phpをロード
+          // get_template_part( 'template-parts/content', 'page' );//
+
+          // コメント表示がオンになっていて、1つ以上のコメントがついている場合表示する
+          // if ( comments_open() || get_comments_number() ) :
+            // comments_template();
+          // endif;
+        // ループ終わり
+        // endwhile;
+        ?>
+
+
+
+  </div><!--#mainContents-->
+</div><!--#wholeContents-->
+
+
+<?php get_footer(); ?>

@@ -1,0 +1,319 @@
+<?php
+  $category = get_the_category();
+  $cat_id   = $category[0]->cat_ID;
+  $cat_name = $category[0]->cat_name;
+  $cat_slug = $category[0]->category_nicename;
+?>
+
+<?php get_header(); ?>
+
+<!--school-->
+<div id="wholeContents" class="wholeContents page-php" role="main">
+    <div id="mainContents" class="mainContents">
+
+<?php 
+
+$slug_name = basename(get_permalink());
+echo $slug_name;
+
+$filepath = dirname(__FILE__).'/csv/school_info/'.$slug_name;
+
+$file = new SplFileObject($filepath."/".$slug_name.".csv");
+$file->setFlags(SplFileObject::READ_CSV);
+foreach($file as $line){
+  //終端の空行を除く処理　空行の場合に取れる値は後述
+  if(!is_null($line[0])){
+    $records[] = $line;
+  }
+}
+echo('<pre>');
+var_dump($records);
+echo('</pre>');
+echo $records[0][0];
+readfile($filepath.'/test.html');
+ ?>
+
+      <?php 
+        //カテゴリ処理
+        //echo do_shortcode('[shop_image_html  '.$cat_name.']'); 
+      ?>
+        <div id="newsDetails" class="maxWidth">
+          <div class="products_main">
+              <div class="secInner">
+                <div class="DetailsWrap">
+                    <div class="title titleText">
+                        <h2 class="text title"><?php echo get_the_title() ?></h2>
+                    </div>
+                    <div class="date">
+                        <?php //echo get_the_date('Y.m.d'); ?>
+                    </div>
+                    <div class="main_news">
+                        <?php
+                        // $this_content= wpautop($post->post_content);
+                        // echo $this_content;
+                        ?>
+                      <?php
+                      // ループ開始
+                      while ( have_posts() ) : the_post();
+
+                        // content-single.phpをロード
+                        get_template_part( 'template-parts/content', 'page' );//
+
+                        // コメント表示がオンになっていて、1つ以上のコメントがついている場合表示する
+                        if ( comments_open() || get_comments_number() ) :
+                          comments_template();
+                        endif;
+                      // ループ終わり
+                      endwhile;
+                      ?>
+<!-- オオタ追加ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー -->
+<?php 
+$terms = get_the_terms($post->ID,'school_cat');
+$touzai_f = "";
+foreach( $terms as $term ) {
+  if($term->slug == "east_starting"){
+    $touzai_f = 1;
+  }elseif($term->slug == "west_starting"){
+    $touzai_f = 0;
+  }
+}
+ ?>
+<?php 
+//オプション出力
+$field = get_field_object('option');
+$options = $field['value'];
+if( $options ){
+  echo '<ul>';
+  foreach( $options as $option ){
+    echo '<li>'.$field['choices'][ $option ].'</li>';
+  }
+  echo '</ul>';
+}
+?>
+
+<?php 
+//取得可能免許
+$field = get_field_object('type_of_school');
+$type_of_schools = $field['value'];
+if( $type_of_schools ){
+  echo '<ul>';
+  foreach( $type_of_schools as $type_of_school ){
+    echo '<li>'.$field['choices'][ $type_of_school ].'</li>';
+  }
+  echo '</ul>';
+}
+ ?>
+
+<?php 
+//学校コメント１
+echo '<div class="coment1">'. nl2br(post_custom('school_comment1')).'</div>';
+ ?>
+
+<?php 
+//画像出力
+$image = get_field('image1');
+if( !empty($image) ){
+  echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+}
+$image = get_field('image2');
+if( !empty($image) ){
+  echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+}
+$image = get_field('image3');
+if( !empty($image) ){
+  echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+}
+$image = get_field('image4');
+if( !empty($image) ){
+  echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+}
+$image = get_field('image5');
+if( !empty($image) ){
+  echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+}
+$image = get_field('image6');
+if( !empty($image) ){
+  echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+}
+$image = get_field('image7');
+if( !empty($image) ){
+  echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+}
+$image = get_field('image8');
+if( !empty($image) ){
+  echo '<img src="'.$image['url'].'" alt="'.$image['alt'].'" />';
+}
+ ?>
+
+<?php 
+//学校コメント2
+echo '<div class="coment2">'. nl2br(post_custom('school_comment2')).'</div>';
+ ?>
+
+<?php 
+//校内施設情報
+echo '<div class="facility">'. nl2br(post_custom('school_facility')).'</div>';
+ ?>
+
+<?php 
+//オリジナル特典
+if($touzai_f == 1){
+  echo '<div class="original_present">'. nl2br(post_custom('original_present_east')).'</div>';
+}elseif($touzai_f == 0){
+  echo '<div class="original_present">'. nl2br(post_custom('original_present_west')).'</div>';
+}
+ ?>
+
+<?php 
+//スペシャルコース
+if($touzai_f == 1){
+  $field = get_field_object('special_course_east');
+  $special_course_easts = $field['value'];
+  if( $special_course_easts ){
+    echo '<ul>';
+    foreach( $special_course_easts as $special_course_east ){
+      echo '<li>'.$field['choices'][$special_course_east].'</li>';
+    }
+    echo '</ul>';
+  }
+  echo '<div class="special_course_east_note  ">'. nl2br(post_custom('special_course_east_note  ')).'</div>';
+}elseif($touzai_f == 0){
+  $field = get_field_object('special_course_west');
+  $special_course_wests = $field['value'];
+  if( $special_course_wests ){
+    echo '<ul>';
+    foreach( $special_course_wests as $special_course_west ){
+      echo '<li>'.$field['choices'][ $special_course_west ].'</li>';
+    }
+    echo '</ul>';
+  }
+  echo '<div class="special_course_west_note">'. nl2br(post_custom('special_course_west_note')).'</div>';
+}
+ ?>
+
+<?php 
+//料金
+if($touzai_f == 1){
+  $table = get_field( 'price_east' );
+}elseif($touzai_f == 0){
+  $table = get_field( 'price' );
+}
+
+if ( $table ) {
+  echo '<table border="0">';
+  if ( $table['header'] ) {
+    echo '<thead>';
+    echo '<tr>';
+    foreach ( $table['header'] as $th ) {
+      echo '<th>';
+      echo $th['c'];
+      echo '</th>';
+    }
+    echo '</tr>';
+    echo '</thead>';
+  }
+  echo '<tbody>';
+  foreach ( $table['body'] as $tr ) {
+    echo '<tr>';
+    foreach ( $tr as $td ) {
+      echo '<td>';
+      echo $td['c'];
+      echo '</td>';
+    }
+    echo '</tr>';
+  }
+  echo '</tbody>';
+  echo '</table>';
+}
+ ?>
+
+<?php 
+$table = get_field( 'hotel' );
+if ( $table ) {
+  echo '<table border="0">';
+  if ( $table['header'] ) {
+    echo '<thead>';
+    echo '<tr>';
+    foreach ( $table['header'] as $th ) {
+      echo '<th>';
+      echo $th['c'];
+      echo '</th>';
+    }
+    echo '</tr>';
+    echo '</thead>';
+  }
+  echo '<tbody>';
+  foreach ( $table['body'] as $tr ) {
+    echo '<tr>';
+    foreach ( $tr as $td ) {
+      echo '<td>';
+      echo $td['c'];
+      echo '</td>';
+    }
+    echo '</tr>';
+  }
+  echo '</tbody>';
+  echo '</table>';
+}
+echo '<div class="facility">'. nl2br(post_custom('hotel_note')).'</div>';
+ ?>
+
+<?php 
+echo '<div class="facility">'. nl2br(post_custom('warranty')).'</div>';
+ ?>
+<!-- オオタ追加ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー -->
+
+                      <div class="address">住所<?php echo nl2br(post_custom('address')); ?></div>
+                      <p>最短卒業日数</p>
+                      <div class="mt">ＭＴ車：<?php echo nl2br(post_custom('mt')); ?>日〜</div>
+                      <div class="at">ＡＴ車：<?php echo nl2br(post_custom('at')); ?>日〜</div>
+                      <div class="tenimotsu">手荷物預かりサービス： 
+                        <?php if( get_field('tenimotsu') ) //真の場合
+                            {
+                                echo '<i class="fa fa-suitcase" aria-hidden="true"></i> あり';
+                            }
+                            else // 偽の場合
+                            {
+                                echo '<i class="fa fa-suitcase" aria-hidden="true"></i>　なし';
+                            }
+                          ?>
+                      </div>
+                      <div class="kounaisetsubi">
+                        構内設備：<?php echo nl2br(post_custom('kounaisetsubi')); ?>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="page_link">
+                      <div class="paging">
+                          <?php if (get_previous_post()):?>
+                          <div class="prev"><?php previous_post_link('%link','<<前へ',TRUE); ?></div>
+                          <?php endif; ?>
+                          <?php if (get_next_post()): ?>
+                          <div class="next"><?php next_post_link('%link','次へ>>',TRUE); ?></div>
+                          <?php endif; ?>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <?php 
+          // サイドバースタイルのときはコメントアウトを解除
+          // echo'<div id="sidebar" class="side">';
+          // echo' <div class="secInner">';
+          // echo'   <div id="mypageSidebar" class="">';
+          // echo'     <div class="sidebarTitle">';
+          // echo'      <p></p>';
+          // echo'     </div><!-- sidebarTitle -->';
+
+          // dynamic_sidebar('mypage_news-sidebar');
+          // echo'   </div><!--/#mypageSidebar -->';
+          // echo'  </div><!-- /.secInner -->';
+          // echo'</div><!-- /#sidebar -->';
+            ?>
+
+        </div>
+    </div><!--#mainContents-->
+}
+</div><!--#wholeContents-->
+
+
+<?php get_footer(); ?>

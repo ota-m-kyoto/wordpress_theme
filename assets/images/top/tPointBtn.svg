@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 54">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-2 {
+        fill: #003e8d;
+      }
+
+      .cls-3 {
+        fill: #f5ea2b;
+      }
+
+      .cls-4 {
+        fill: #666;
+        font-size: 8px;
+        font-family: rounded-mplus-1c-regular, "Rounded M+ 1c";
+        letter-spacing: -0.08em;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="パス_974" data-name="パス 974" d="M28.25,0H3.75A3.761,3.761,0,0,0,0,3.75v24.5A3.761,3.761,0,0,0,3.75,32h24.5A3.761,3.761,0,0,0,32,28.25V3.75A3.761,3.761,0,0,0,28.25,0Z"/>
+    </clipPath>
+  </defs>
+  <g id="グループ化_1532" data-name="グループ化 1532" transform="translate(-834 -5496)">
+    <g id="グループ化_636" data-name="グループ化 636" transform="translate(-8)">
+      <g id="グループ化_627" data-name="グループ化 627" transform="translate(850 5496)">
+        <g id="グループ化_627-2" data-name="グループ化 627" class="cls-1">
+          <rect id="長方形_465" data-name="長方形 465" class="cls-2" width="10.663" height="21.337" transform="translate(0 10.663)"/>
+          <path id="パス_973" data-name="パス 973" class="cls-3" d="M0,0V10.663H10.663V32H21.337V10.663H32V0H0"/>
+          <rect id="長方形_466" data-name="長方形 466" class="cls-2" width="10.663" height="21.337" transform="translate(21.337 10.663)"/>
+        </g>
+      </g>
+      <text id="Tポイント_対象校" data-name="Tポイント
+対象校" class="cls-4" transform="translate(866 5538)"><tspan x="-17.256" y="0">T</tspan><tspan y="0">ポイント</tspan><tspan x="-11.36" y="9">対象校</tspan></text>
+    </g>
+    <rect id="長方形_823" data-name="長方形 823" class="cls-5" width="48" height="54" transform="translate(834 5496)"/>
+  </g>
+</svg>

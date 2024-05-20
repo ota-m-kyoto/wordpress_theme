@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+strong{
+	margin-top: 1rem;
+	display: block;
+}
+
+
+.privacy-sec-txt{
+	padding:1rem;
+}
+.privacy-sec-list{
+	padding:0 1rem;
+	counter-reset: number 0;  
+}
+.privacy-sec-list li > strong:before{
+	counter-increment: number 1;
+	content: counter(number) ". ";
+}
+.privacy-sec-list li > strong ~ p{
+	padding-left:1.3rem;
+}
+
+.privacy-sec-dl{
+	padding:0 1rem;
+}
+.listStyle{
+    padding-left: 1.5rem;
+}
+.listStyle > li{
+    list-style-type: decimal
+}
+.listStyle > li > strong:first-child{
+    margin-bottom:0.2rem;
+}
+#wholeContents.twoColumnpage p{
+    padding:0;
+}

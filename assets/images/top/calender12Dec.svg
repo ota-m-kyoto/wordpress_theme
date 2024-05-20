@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70 90">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-6 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-7 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-10, .cls-20, .cls-8, .cls-9 {
+        fill: none;
+      }
+
+      .cls-10, .cls-8, .cls-9 {
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-9 {
+        stroke-dasharray: 0 5.043;
+      }
+
+      .cls-10 {
+        stroke-dasharray: 0 5.043;
+      }
+
+      .cls-11 {
+        fill: url(#radial-gradient-3);
+      }
+
+      .cls-12 {
+        fill: url(#radial-gradient-4);
+      }
+
+      .cls-13 {
+        fill: url(#radial-gradient-5);
+      }
+
+      .cls-14 {
+        fill: url(#radial-gradient-6);
+      }
+
+      .cls-15 {
+        fill: url(#radial-gradient-7);
+      }
+
+      .cls-16 {
+        fill: url(#radial-gradient-8);
+      }
+
+      .cls-17 {
+        fill: #fdd000;
+      }
+
+      .cls-18 {
+        fill: #e60012;
+      }
+
+      .cls-19 {
+        fill: #edc300;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-0.001" y1="0.5" x2="1.001" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.006" stop-color="#7f4f21"/>
+      <stop offset="0.273" stop-color="#7b4c20"/>
+      <stop offset="0.514" stop-color="#71451d"/>
+      <stop offset="0.744" stop-color="#5e3818"/>
+      <stop offset="0.966" stop-color="#452510"/>
+      <stop offset="1" stop-color="#40220f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.001" y1="0.499" x2="1.001" y2="0.499" gradientUnits="objectBoundingBox">
+      <stop offset="0.006" stop-color="#6a3906"/>
+      <stop offset="0.217" stop-color="#663706"/>
+      <stop offset="0.406" stop-color="#5b3105"/>
+      <stop offset="0.588" stop-color="#492704"/>
+      <stop offset="0.764" stop-color="#2f1903"/>
+      <stop offset="0.936" stop-color="#0e0801"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.001" y1="0.499" x2="1" y2="0.499" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00913a"/>
+      <stop offset="1" stop-color="#077837"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.001" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient-3"/>
+    <linearGradient id="linear-gradient-5" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#linear-gradient-3"/>
+    <radialGradient id="radial-gradient" cx="79.856" cy="5.174" r="5.156" gradientTransform="translate(-0.018 -0.018)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff100"/>
+      <stop offset="1" stop-color="#fdd000"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="54.367" cy="128.013" r="4.639" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.429" stop-color="#e60012"/>
+      <stop offset="1" stop-color="#c7000b"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="54.665" cy="71.724" r="4.639" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="radial-gradient-4" cx="85.5" cy="49.72" r="2.32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.429" stop-color="#036eb8"/>
+      <stop offset="1" stop-color="#172a88"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-5" cx="79.182" cy="101.699" r="2.32" xlink:href="#radial-gradient-4"/>
+    <radialGradient id="radial-gradient-6" cx="120.701" cy="130.521" r="2.32" xlink:href="#radial-gradient-4"/>
+    <radialGradient id="radial-gradient-7" cx="106.58" cy="39.416" r="4.639" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="radial-gradient-8" cx="122.766" cy="100.313" r="4.64" xlink:href="#radial-gradient-2"/>
+  </defs>
+  <g id="グループ化_1559" data-name="グループ化 1559" transform="translate(737 -2834)">
+    <g id="グループ化_1554" data-name="グループ化 1554">
+      <g id="グループ化_1553" data-name="グループ化 1553" transform="translate(0 223)">
+        <g id="グループ化_1552" data-name="グループ化 1552" transform="translate(-731 2621)">
+          <g id="グループ化_381" data-name="グループ化 381" transform="translate(7.037)">
+            <rect id="長方形_299" data-name="長方形 299" class="cls-1" width="10.72" height="14.731" transform="translate(19.945 47.583)"/>
+            <path id="パス_722" data-name="パス 722" class="cls-2" d="M80.159,173.5H67.251L65.1,161.8H82.274Z" transform="translate(-48.4 -102.804)"/>
+            <g id="グループ化_372" data-name="グループ化 372" transform="translate(9.079 4.448)">
+              <path id="パス_723" data-name="パス 723" class="cls-3" d="M60.462,12.2a40.664,40.664,0,0,0,6.782,8.642,47.024,47.024,0,0,0,9.48,7.11,52.667,52.667,0,0,1-16.262,2.589A52.839,52.839,0,0,1,44.2,27.952a47.024,47.024,0,0,0,9.48-7.11A40.664,40.664,0,0,0,60.462,12.2Z" transform="translate(-44.2 -12.2)"/>
+            </g>
+            <g id="グループ化_373" data-name="グループ化 373" transform="translate(5.834 14.147)">
+              <path id="パス_724" data-name="パス 724" class="cls-4" d="M54.807,38.8a49.1,49.1,0,0,0,8.131,10.355,56.7,56.7,0,0,0,11.376,8.569,63.618,63.618,0,0,1-19.507,3.1,62.705,62.705,0,0,1-19.507-3.1,54.646,54.646,0,0,0,11.413-8.569A48,48,0,0,0,54.807,38.8Z" transform="translate(-35.3 -38.8)"/>
+            </g>
+            <g id="グループ化_374" data-name="グループ化 374" transform="translate(0 22.68)">
+              <path id="パス_725" data-name="パス 725" class="cls-5" d="M44.641,62.2A62.906,62.906,0,0,0,55.215,75.655,72.874,72.874,0,0,0,69.983,86.776a82.061,82.061,0,0,1-50.683,0A72.873,72.873,0,0,0,34.067,75.655,62.02,62.02,0,0,0,44.641,62.2Z" transform="translate(-19.3 -62.2)"/>
+            </g>
+            <path id="パス_726" data-name="パス 726" class="cls-6" d="M83.633,8.97l-3.1-1.2-2.078,2.589-.51-3.282L74.7,6.563l2.552-2.078-1.167-3.1,3.063,1.2L81.227,0l.51,3.282,3.282.51L82.43,5.87Z" transform="translate(-54.5)"/>
+            <path id="パス_727" data-name="パス 727" class="cls-7" d="M57.109,128.955a3.355,3.355,0,1,1-3.355-3.355A3.346,3.346,0,0,1,57.109,128.955Z" transform="translate(-39.06 -79.803)"/>
+            <g id="グループ化_377" data-name="グループ化 377" transform="translate(14.038 17.247)">
+              <g id="グループ化_376" data-name="グループ化 376">
+                <g id="グループ化_375" data-name="グループ化 375">
+                  <line id="線_16" data-name="線 16" class="cls-8" transform="translate(21.33)"/>
+                  <path id="パス_728" data-name="パス 728" class="cls-9" d="M80.14,52.2c.583,4.558-2.589,9.3-7.8,11.194-5.542,2.005-11.449.073-13.637-4.375" transform="translate(-58.372 -50.413)"/>
+                  <line id="線_17" data-name="線 17" class="cls-8" transform="translate(0 7.766)"/>
+                </g>
+              </g>
+            </g>
+            <g id="グループ化_380" data-name="グループ化 380" transform="translate(14.042 33.946)">
+              <g id="グループ化_379" data-name="グループ化 379">
+                <g id="グループ化_378" data-name="グループ化 378">
+                  <line id="線_18" data-name="線 18" class="cls-8" transform="translate(0.47)"/>
+                  <path id="パス_729" data-name="パス 729" class="cls-10" d="M57.88,98c-.583,4.558,2.589,9.3,7.8,11.194,5.542,2.005,11.449.073,13.637-4.375" transform="translate(-57.811 -96.213)"/>
+                  <line id="線_19" data-name="線 19" class="cls-8" transform="translate(21.837 7.803)"/>
+                </g>
+              </g>
+            </g>
+            <path id="パス_730" data-name="パス 730" class="cls-11" d="M57.409,72.655A3.355,3.355,0,1,1,54.055,69.3,3.346,3.346,0,0,1,57.409,72.655Z" transform="translate(-39.251 -44.032)"/>
+            <path id="パス_731" data-name="パス 731" class="cls-12" d="M86.855,50.177A1.677,1.677,0,1,1,85.177,48.5,1.673,1.673,0,0,1,86.855,50.177Z" transform="translate(-60.091 -30.816)"/>
+            <path id="パス_732" data-name="パス 732" class="cls-13" d="M80.555,102.177a1.677,1.677,0,1,1-1.677-1.677A1.673,1.673,0,0,1,80.555,102.177Z" transform="translate(-56.088 -63.855)"/>
+            <path id="パス_733" data-name="パス 733" class="cls-14" d="M122.055,130.977a1.677,1.677,0,0,1-3.355,0,1.677,1.677,0,0,1,3.355,0Z" transform="translate(-82.456 -82.154)"/>
+            <path id="パス_734" data-name="パス 734" class="cls-15" d="M109.309,40.355A3.355,3.355,0,1,1,105.955,37,3.346,3.346,0,0,1,109.309,40.355Z" transform="translate(-72.227 -23.509)"/>
+            <path id="パス_735" data-name="パス 735" class="cls-16" d="M125.509,101.255a3.355,3.355,0,1,1-3.355-3.355A3.346,3.346,0,0,1,125.509,101.255Z" transform="translate(-82.52 -62.203)"/>
+          </g>
+          <g id="グループ化_382" data-name="グループ化 382" transform="translate(0 51.521)">
+            <path id="パス_736" data-name="パス 736" class="cls-17" d="M17.9,154.56H0l2.005-1.86H15.9Z" transform="translate(0 -148.543)"/>
+            <path id="パス_737" data-name="パス 737" class="cls-18" d="M1.5,154.875,2.412,154H17.434l.912.875Z" transform="translate(-0.953 -149.369)"/>
+            <rect id="長方形_300" data-name="長方形 300" class="cls-18" width="2.953" height="1.86" transform="translate(7.584 4.157)"/>
+            <rect id="長方形_301" data-name="長方形 301" class="cls-17" width="16.846" height="10.392" transform="translate(0.547 8.605)"/>
+            <rect id="長方形_302" data-name="長方形 302" class="cls-19" width="17.903" height="3.464" transform="translate(0 6.016)"/>
+            <rect id="長方形_303" data-name="長方形 303" class="cls-18" width="2.953" height="12.981" transform="translate(7.584 6.016)"/>
+            <path id="パス_738" data-name="パス 738" class="cls-18" d="M24.621,146.478l-1.021-.839,2.334-4.339,2.516,2.115Z" transform="translate(-14.995 -141.3)"/>
+            <path id="パス_739" data-name="パス 739" class="cls-18" d="M16.765,146.478l1.021-.839L15.452,141.3,12.9,143.415Z" transform="translate(-8.196 -141.3)"/>
+          </g>
+        </g>
+        <rect id="長方形_833" data-name="長方形 833" class="cls-20" width="70" height="90" transform="translate(-737 2611)"/>
+      </g>
+    </g>
+  </g>
+</svg>

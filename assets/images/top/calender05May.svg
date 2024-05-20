@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70 90">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #6a3906;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+        stroke-width: 0.986px;
+      }
+
+      .cls-3 {
+        stroke: #f8b62d;
+      }
+
+      .cls-4 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-7 {
+        fill: #172a88;
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        fill: #fff100;
+      }
+
+      .cls-10 {
+        fill: #231815;
+      }
+
+      .cls-11 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-12 {
+        fill: #a50319;
+      }
+
+      .cls-13 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-14 {
+        fill: #005e2e;
+      }
+
+      .cls-15 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="31.279" cy="4.238" r="3.371" gradientTransform="matrix(0.985, 0.174, -0.174, 0.985, 0.356, -0.595)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbd181"/>
+      <stop offset="1" stop-color="#f8b62d"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="37.306" cy="-0.378" r="3.352" gradientTransform="matrix(0.577, 0.824, -0.824, 0.577, -0.346, -8.409)" xlink:href="#radial-gradient"/>
+    <linearGradient id="linear-gradient" x1="-0.557" y1="1.621" x2="0.411" y2="1.621" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1769b4"/>
+      <stop offset="1" stop-color="#004898"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="0.499" x2="1" y2="0.499" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e60012"/>
+      <stop offset="1" stop-color="#c30d23"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" y1="0.501" x2="1" y2="0.501" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#22ac38"/>
+      <stop offset="1" stop-color="#006934"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.393" y1="0.5" x2="0.632" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#956134"/>
+      <stop offset="1" stop-color="#40220f"/>
+    </linearGradient>
+  </defs>
+  <g id="グループ化_1563" data-name="グループ化 1563" transform="translate(603 -2189)">
+    <g id="グループ化_1537" data-name="グループ化 1537">
+      <rect id="長方形_825" data-name="長方形 825" class="cls-1" width="70" height="90" transform="translate(-603 2189)"/>
+      <g id="グループ化_1535" data-name="グループ化 1535" transform="translate(-592.981 2198.597)">
+        <g id="グループ化_230" data-name="グループ化 230" transform="translate(7.941 43.833)">
+          <path id="パス_138" data-name="パス 138" class="cls-2" d="M30.288,134.3l-5.611,3.081a.312.312,0,0,0-.13.389l2.53,5.936" transform="translate(-24.522 -134.3)"/>
+        </g>
+        <g id="グループ化_231" data-name="グループ化 231" transform="translate(11.022 28.394)">
+          <path id="パス_139" data-name="パス 139" class="cls-2" d="M39.495,86.7l-5.352,4.768a.409.409,0,0,0-.1.422l2.692,7.46" transform="translate(-34.019 -86.7)"/>
+        </g>
+        <g id="グループ化_232" data-name="グループ化 232" transform="translate(12.985 12.208)">
+          <path id="パス_140" data-name="パス 140" class="cls-2" d="M45.5,36.8l-5.287,5.028a.547.547,0,0,0-.13.454l2.173,7.136" transform="translate(-40.074 -36.8)"/>
+        </g>
+        <g id="グループ化_233" data-name="グループ化 233" transform="translate(3.393 9.095)">
+          <path id="パス_141" data-name="パス 141" class="cls-2" d="M18.609,27.2c1.946.357,1.719,10.9-.519,23.548s-5.611,22.64-7.59,22.283" transform="translate(-10.5 -27.2)"/>
+        </g>
+        <path id="パス_142" data-name="パス 142" class="cls-3" d="M33.519,5.04A3.938,3.938,0,1,1,30.34.467,3.937,3.937,0,0,1,33.519,5.04Z" transform="translate(-17.379 0)"/>
+        <path id="パス_143" data-name="パス 143" class="cls-3" d="M30.449,9.044a3.277,3.277,0,1,1,3.795-2.66A3.273,3.273,0,0,1,30.449,9.044Z" transform="translate(-18.753 -1.442)"/>
+        <path id="パス_144" data-name="パス 144" class="cls-4" d="M30.425,9.117A4.809,4.809,0,0,0,27.7,5.225,4.809,4.809,0,0,0,31.592,2.5a4.809,4.809,0,0,0,2.725,3.892A4.68,4.68,0,0,0,30.425,9.117Z" transform="translate(-18.728 -1.417)"/>
+        <path id="パス_145" data-name="パス 145" class="cls-5" d="M29.4,8.8a4.756,4.756,0,0,0,.811-4.7,4.831,4.831,0,0,0,4.7.843,4.757,4.757,0,0,0-.811,4.7A4.86,4.86,0,0,0,29.4,8.8Z" transform="translate(-19.877 -2.498)"/>
+        <g id="グループ化_236" data-name="グループ化 236" transform="translate(14.662 11.512)">
+          <path id="パス_146" data-name="パス 146" class="cls-6" d="M80.227,40.118,64.853,37.393,49.478,34.669c-1.427-.259-3.179,2.887-3.925,6.974-.714,4.119-.162,7.655,1.3,7.914h0l15.375,2.725L77.6,55.006l-1.33-7.914Z" transform="translate(-45.243 -34.654)"/>
+          <g id="グループ化_234" data-name="グループ化 234" transform="translate(15.166 2.804)">
+            <path id="パス_147" data-name="パス 147" class="cls-7" d="M97.911,43.3c2.3.422,3.179,1.654,2.952,2.952S99.4,48.425,97.1,48Z" transform="translate(-95.446 -43.3)"/>
+            <path id="パス_148" data-name="パス 148" class="cls-8" d="M95.411,57.8c2.3.389,3.179,1.654,2.952,2.952S96.9,62.925,94.6,62.5Z" transform="translate(-93.757 -53.097)"/>
+            <path id="パス_149" data-name="パス 149" class="cls-7" d="M92.811,72.3c2.3.422,3.179,1.654,2.952,2.952S94.3,77.425,92,77Z" transform="translate(-92 -62.894)"/>
+            <path id="パス_150" data-name="パス 150" class="cls-8" d="M110.411,45.5c2.3.389,3.179,1.654,2.952,2.952S111.9,50.625,109.6,50.2Z" transform="translate(-103.891 -44.786)"/>
+            <path id="パス_151" data-name="パス 151" class="cls-7" d="M107.911,60c2.3.422,3.179,1.654,2.952,2.952S109.4,65.125,107.1,64.7Z" transform="translate(-102.202 -54.583)"/>
+            <path id="パス_152" data-name="パス 152" class="cls-8" d="M105.311,74.6c2.3.422,3.179,1.654,2.952,2.952S106.8,79.725,104.5,79.3Z" transform="translate(-100.446 -64.448)"/>
+            <path id="パス_153" data-name="パス 153" class="cls-7" d="M123.011,47.7c2.3.422,3.179,1.654,2.952,2.952S124.5,52.825,122.2,52.4Z" transform="translate(-112.404 -46.273)"/>
+            <path id="パス_154" data-name="パス 154" class="cls-8" d="M120.411,62.2c2.3.422,3.179,1.654,2.952,2.952S121.9,67.325,119.6,66.9Z" transform="translate(-110.648 -56.07)"/>
+            <path id="パス_155" data-name="パス 155" class="cls-7" d="M117.911,76.8c2.3.389,3.179,1.654,2.952,2.952S119.4,81.925,117.1,81.5Z" transform="translate(-108.959 -65.934)"/>
+          </g>
+          <g id="グループ化_235" data-name="グループ化 235" transform="translate(4.692 2.698)">
+            <path id="パス_156" data-name="パス 156" class="cls-8" d="M65,46.062a2.634,2.634,0,1,1-2.141-3.049A2.64,2.64,0,0,1,65,46.062Z" transform="translate(-59.75 -42.971)"/>
+            <path id="パス_157" data-name="パス 157" class="cls-9" d="M61.457,48.49a2.106,2.106,0,1,1,2.433-1.719A2.065,2.065,0,0,1,61.457,48.49Z" transform="translate(-59.708 -43.874)"/>
+            <path id="パス_158" data-name="パス 158" class="cls-10" d="M61.109,48.825a1.565,1.565,0,1,1,1.816-1.265A1.556,1.556,0,0,1,61.109,48.825Z" transform="translate(-59.781 -44.826)"/>
+          </g>
+        </g>
+        <g id="グループ化_239" data-name="グループ化 239" transform="translate(12.65 28.251)">
+          <path id="パス_159" data-name="パス 159" class="cls-11" d="M70.554,91.139,56.7,88.706l-13.85-2.433c-1.3-.227-2.887,2.595-3.535,6.293s-.13,6.876,1.168,7.1h0l13.85,2.433,13.85,2.433-1.2-7.1Z" transform="translate(-39.039 -86.261)"/>
+          <g id="グループ化_237" data-name="グループ化 237" transform="translate(13.643 2.478)">
+            <path id="パス_160" data-name="パス 160" class="cls-12" d="M86.446,93.9c2.076.357,2.854,1.492,2.66,2.66s-1.33,1.946-3.406,1.589Z" transform="translate(-84.208 -93.9)"/>
+            <path id="パス_161" data-name="パス 161" class="cls-8" d="M84.146,106.9c2.076.357,2.854,1.492,2.66,2.66s-1.33,1.946-3.406,1.589Z" transform="translate(-82.654 -102.683)"/>
+            <path id="パス_162" data-name="パス 162" class="cls-12" d="M81.846,120c2.076.357,2.854,1.492,2.66,2.66s-1.33,1.946-3.406,1.589Z" transform="translate(-81.1 -111.534)"/>
+            <path id="パス_163" data-name="パス 163" class="cls-8" d="M97.746,95.8c2.076.357,2.854,1.492,2.66,2.66s-1.33,1.946-3.406,1.589Z" transform="translate(-91.843 -95.184)"/>
+            <path id="パス_164" data-name="パス 164" class="cls-12" d="M95.446,108.9c2.076.357,2.854,1.492,2.66,2.66s-1.33,1.946-3.406,1.589Z" transform="translate(-90.289 -104.035)"/>
+            <path id="パス_165" data-name="パス 165" class="cls-8" d="M93.146,122c2.076.357,2.854,1.492,2.66,2.66s-1.33,1.946-3.406,1.589Z" transform="translate(-88.735 -112.886)"/>
+            <path id="パス_166" data-name="パス 166" class="cls-12" d="M109.046,97.8c2.076.357,2.854,1.492,2.66,2.66s-1.33,1.946-3.406,1.589Z" transform="translate(-99.477 -96.535)"/>
+            <path id="パス_167" data-name="パス 167" class="cls-8" d="M106.746,110.9c2.076.357,2.854,1.492,2.66,2.66s-1.33,1.946-3.406,1.589Z" transform="translate(-97.923 -105.386)"/>
+            <path id="パス_168" data-name="パス 168" class="cls-12" d="M104.446,124c2.076.357,2.854,1.492,2.66,2.66s-1.33,1.946-3.406,1.589Z" transform="translate(-96.37 -114.237)"/>
+          </g>
+          <g id="グループ化_238" data-name="グループ化 238" transform="translate(4.233 2.377)">
+            <path id="パス_169" data-name="パス 169" class="cls-8" d="M56.829,96.382a2.386,2.386,0,1,1-1.946-2.757A2.387,2.387,0,0,1,56.829,96.382Z" transform="translate(-52.089 -93.59)"/>
+            <path id="パス_170" data-name="パス 170" class="cls-9" d="M53.755,98.561a1.9,1.9,0,0,1,.681-3.73,1.931,1.931,0,0,1,1.557,2.206A1.959,1.959,0,0,1,53.755,98.561Z" transform="translate(-52.163 -94.406)"/>
+            <path id="パス_171" data-name="パス 171" class="cls-10" d="M53.373,98.828a1.419,1.419,0,1,1,1.654-1.135A1.454,1.454,0,0,1,53.373,98.828Z" transform="translate(-52.17 -95.224)"/>
+          </g>
+        </g>
+        <g id="グループ化_242" data-name="グループ化 242" transform="translate(10.145 43.271)">
+          <path id="パス_172" data-name="パス 172" class="cls-13" d="M59.66,136.989,47.2,134.784,34.75,132.578c-1.168-.195-2.595,2.335-3.179,5.644-.584,3.341-.13,6.2,1.038,6.39h0l12.455,2.206,12.455,2.206-1.07-6.39Z" transform="translate(-31.317 -132.568)"/>
+          <g id="グループ化_240" data-name="グループ化 240" transform="translate(12.255 2.249)">
+            <path id="パス_173" data-name="パス 173" class="cls-14" d="M74.049,139.5c1.881.324,2.562,1.33,2.4,2.4-.195,1.07-1.2,1.752-3.049,1.427Z" transform="translate(-72.005 -139.5)"/>
+            <path id="パス_174" data-name="パス 174" class="cls-8" d="M71.949,151.3c1.881.324,2.562,1.33,2.4,2.4-.195,1.07-1.2,1.752-3.049,1.427Z" transform="translate(-70.586 -147.473)"/>
+            <path id="パス_175" data-name="パス 175" class="cls-14" d="M69.781,163.1c1.881.324,2.562,1.33,2.368,2.4s-1.2,1.752-3.049,1.427Z" transform="translate(-69.1 -155.445)"/>
+            <path id="パス_176" data-name="パス 176" class="cls-8" d="M84.081,141.3c1.849.324,2.562,1.33,2.368,2.4-.195,1.038-1.2,1.752-3.049,1.427Z" transform="translate(-78.762 -140.716)"/>
+            <path id="パス_177" data-name="パス 177" class="cls-14" d="M82.149,153.1c1.881.324,2.562,1.33,2.4,2.4-.195,1.07-1.2,1.752-3.049,1.427Z" transform="translate(-77.478 -148.689)"/>
+            <path id="パス_178" data-name="パス 178" class="cls-8" d="M79.981,164.9c1.849.324,2.562,1.33,2.368,2.4-.195,1.038-1.2,1.752-3.049,1.427Z" transform="translate(-75.992 -156.661)"/>
+            <path id="パス_179" data-name="パス 179" class="cls-14" d="M94.281,143.1c1.881.324,2.562,1.33,2.368,2.4-.195,1.038-1.2,1.752-3.049,1.427Z" transform="translate(-85.653 -141.932)"/>
+            <path id="パス_180" data-name="パス 180" class="cls-8" d="M92.181,154.9c1.881.324,2.562,1.33,2.368,2.4-.195,1.038-1.2,1.752-3.049,1.427Z" transform="translate(-84.234 -149.905)"/>
+            <path id="パス_181" data-name="パス 181" class="cls-14" d="M90.081,166.7c1.849.324,2.562,1.33,2.368,2.4-.195,1.038-1.2,1.752-3.049,1.427Z" transform="translate(-82.816 -157.877)"/>
+          </g>
+          <g id="グループ化_241" data-name="グループ化 241" transform="translate(3.825 2.154)">
+            <path id="パス_182" data-name="パス 182" class="cls-8" d="M47.355,141.735a2.141,2.141,0,1,1-1.719-2.5A2.187,2.187,0,0,1,47.355,141.735Z" transform="translate(-43.108 -139.208)"/>
+            <path id="パス_183" data-name="パス 183" class="cls-9" d="M44.541,143.719a1.712,1.712,0,1,1,1.979-1.395A1.7,1.7,0,0,1,44.541,143.719Z" transform="translate(-43.116 -139.959)"/>
+            <path id="パス_184" data-name="パス 184" class="cls-10" d="M44.194,143.986a1.285,1.285,0,1,1,1.492-1.038A1.333,1.333,0,0,1,44.194,143.986Z" transform="translate(-43.126 -140.713)"/>
+          </g>
+        </g>
+        <g id="グループ化_243" data-name="グループ化 243" transform="translate(-0.019 8.764)">
+          <path id="パス_185" data-name="パス 185" class="cls-15" d="M1.349,87.685a.267.267,0,0,1-.324.227L.214,87.75a.267.267,0,0,1-.227-.324L10.756,26.414a.267.267,0,0,1,.324-.227l.843.162a.267.267,0,0,1,.227.324Z" transform="translate(0.019 -26.181)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

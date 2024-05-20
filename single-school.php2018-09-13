@@ -1,0 +1,1231 @@
+<?php
+  $category = get_the_category();
+  $cat_id   = $category[0]->cat_ID;
+  $cat_name = $category[0]->cat_name;
+  $cat_slug = $category[0]->category_nicename;
+?>
+
+<?php 
+
+$slug_name = basename(get_permalink());
+
+$spot_csv = csv_return_Func($slug_name,'spot');
+$hotel_csv = csv_return_Func($slug_name,'hotel');
+$price_csv = csv_return_Func($slug_name,'price');
+$campaign_csv = csv_return_Func($slug_name,'campaign');
+$school_data_csv = csv_return_Func($slug_name,'school_data');
+
+$filepath = get_stylesheet_directory().'/school/'.$slug_name;
+
+$title = get_the_title();
+
+$terms = get_the_terms($post->ID,'school_cat');
+foreach($terms as $term){
+  $t = $term->name;
+  if(strpos($t,'道') !== false || strpos($t,'府') !== false || strpos($t,'都') !== false || strpos($t,'県') !== false){
+    $area = $term->name;
+  }
+}
+
+
+ ?>
+
+<?php get_header(''); ?>
+
+<!--page-->
+
+
+<div id="wholeContents" class="wholeContents twoColumnpage single-school" role="main">
+  <div id="mainContents" class="mainContents">
+    <div id="contentsWrapper" class="contentsWrapper maxWidth flex fWrap_wrap">
+
+      <!--main-->
+      <div id="main" class="mainContent">
+        <p class="shiteiIinkai"><?php echo $area; ?>公安委員会指定</p>
+        <h2 class="schoolName text title"><?php echo $title; ?></h2>
+        <div class="entry"><a href="/apply-2/?sec=<?php echo $title; ?>"><p>お申込み</p><i class="vc_btn3-icon fa fa-play-circle"></i></a></div>
+        <!-- TAB CONTROLLERS -->
+        <input id="panel-1-ctrl" class="panel-radios" type="radio" name="tab-radios" checked>
+        <input id="panel-2-ctrl" class="panel-radios" type="radio" name="tab-radios">
+        <input id="panel-3-ctrl" class="panel-radios" type="radio" name="tab-radios">
+        <input id="panel-4-ctrl" class="panel-radios" type="radio" name="tab-radios">
+
+        <!-- TABS LIST -->
+        <ul id="tabs-list">
+            <!-- MENU TOGGLE -->
+            <li id="li-for-panel-1">
+              <label class="panel-label" for="panel-1-ctrl">教習所について</label>
+            </li><!--INLINE-BLOCK FIX-->
+            <li id="li-for-panel-2">
+              <label class="panel-label" for="panel-2-ctrl">オトクな合宿プラン</label>
+            </li><!--INLINE-BLOCK FIX-->
+            <li id="li-for-panel-3">
+              <label class="panel-label" for="panel-3-ctrl">宿泊施設</label>
+            </li><!--INLINE-BLOCK FIX-->
+            <li id="li-for-panel-4" class="<?php if(!file_exists(get_stylesheet_directory().'/school/'.$slug_name.'/spot.csv'))
+          {echo 'none';} ?>">
+              <label class="panel-label" for="panel-4-ctrl">周辺スポット</label>
+            </li><!--INLINE-BLOCK FIX-->
+        </ul>
+
+        <!-- THE PANELS -->
+        <div id="panels">
+          <div class="tabContainer">
+            <div id="panel-1">
+
+
+
+
+              <main>
+                <div id="topImages">
+                  <p class="image">
+                    <img class="imgRes" src="<?php echo get_stylesheet_directory_uri() ."/school/" . $slug_name ;?>/img/school1.jpg" alt="<?php echo $title ;?>の安心、格安、丁寧な予約は運転免許受付センター"></img>
+                  </p>
+                </div>
+
+          <?php
+          for($l = 0; $l < count($school_data_csv); $l++){//1行目と2行目回まわす
+            for($ll = 1; $ll < count($school_data_csv[$l]); $ll++){//列数回まわすヘッダ飛ばす
+              if(!empty($price_csv[$l][$ll]));
+            }
+          }
+          ?>
+            <!--#leadText-->
+            <div id="leadText">
+              <p class="text">
+                <?php echo $school_data_csv[0][1]; ?>
+              </p>
+            </div><!--/#leadText-->
+
+            <!--#schoolComment-->
+            <div id="schoolComment">
+              <p class="text">
+                <?php echo $school_data_csv[1][1]; ?>
+              </p>
+            </div><!--/#schoolComment-->
+
+            <div id="typeOf" class="flex fWrap_wrap">
+
+              <!--対応免許-->
+              <div id="typeOfLicense" class="col1of2 col2of2Sp co1 left">
+                <h3><i class="fa fa-car"></i>対応免許</h3>
+ 
+                <div class="typeofLicenseWrapper flex fWrap_wrap">
+                  <?php echo do_shortcode('[single_menkyo]'); ?>
+                </div>
+                <p class="highway">高速教習：<?php echo $school_data_csv[2][1]; ?><br />
+                ※諸事情により変更となる場合がございます。</p>
+              </div>
+
+              <!--卒業日数-->
+              <div id="daysForGrad" class="col1of2 col2of2Sp co2 right">
+                <h3><i class="fa fa-calendar"></i>卒業日数</h3>
+                <div class="atmt ">
+                  <p class="at">
+                    ＡＴ：最短<span><?php echo $school_data_csv[3][1]; ?></span>日～
+                  </p>
+                  <p class="mt">
+                    ＭＴ：最短<span><?php echo $school_data_csv[4][1]; ?></span>日～
+                  </p>
+                </div>
+              </div>
+
+            </div><!--/#typeOf-->
+
+
+            <!--施設紹介-->
+            <div id="facility">
+              <h3><i class="fa fa-home"></i>施設紹介</h3>
+              <p class="address">住所：〒<?php echo $school_data_csv[5][1]; ?> <?php echo $school_data_csv[5][2]; ?> </p>
+
+              <div class="images flex fWrap_wrap">
+                  <?php $picDirNAme = get_stylesheet_directory(). '/school/' . $slug_name . '/img/school';
+                    
+                    $iPic = 2;
+                      while($iPic < 20)
+                        { 
+                          // echo $picDirNAme . $iPic . ".jpg";
+                          if (file_exists($picDirNAme . $iPic . ".jpg")) {
+                            echo '
+
+                              <div class="col1of2 col2of2Sp co1">
+                                <p class="image">
+                                  <img src="/wp-content/themes/nanairo/school/' . $slug_name .'/img/school' . $iPic . '.jpg" alt="' .  $title . 'の安心、格安、丁寧な予約はHappy運転免許" class="imgRes">
+                                </p>
+                                <p class="text">
+                                  ' . $school_data_csv[7][$iPic - 1] . '
+                                </p>
+
+                              </div>
+
+
+
+                            ';
+                        } else {
+                            end;
+                        }
+                         $iPic++; 
+                       } 
+
+                   ?>
+
+              </div>
+
+              <?php 
+
+                echo'
+                <div id="facilityDetail">
+                  <h3 class="ttl02 mb0">設備・周辺施設</h3>
+                    <div class="ist-col2">
+                        <p class="text facilityDetail">
+                          ' . nl2br($school_data_csv[6][1]) .'
+                        </p>
+                    </div>
+                 </div>     ';
+
+               ?>
+            <?php //if(file_exists($filepath.'/facility.html'))readfile($filepath.'/facility.html'); ?>
+            </div>
+
+            <!--合宿の様子-->
+            <div id="camp">
+              <?php 
+              $picDirNAme = get_stylesheet_directory() . '/school/' . $slug_name . '/img/camp';
+              if (file_exists($picDirNAme . "2.jpg")) echo '<h3><i class="fa fa-image"></i>合宿の様子</h3>';
+               ?>
+
+              <div class="images flex fWrap_wrap">
+                  <?php //$picDirNAme = dirname(__FILE__).'/school/' . $slug_name . '/img/camp';
+                    
+                    $iPic = 1;
+                      while($iPic < 20)
+                        { 
+                          // echo $picDirNAme . $iPic . ".jpg";
+                          if (file_exists($picDirNAme . $iPic . ".jpg")) {
+                            echo '
+
+                              <div class="col1of2 col2of2Sp co1">
+                                <p class="image">
+                                  <img src="/wp-content/themes/nanairo/school/' . $slug_name .'/img/camp' . $iPic . '.jpg" alt="' .  $title . 'の安心、格安、丁寧な予約は運転免許受付センター" class="imgRes">
+                                </p>
+                                <p class="text">
+                                  ' . $school_data_csv[8][$iPic - 0] . '
+                                </p>
+
+                              </div>
+
+
+
+                            ';
+                        } else {
+                            end;
+                        }
+                         $iPic++; 
+                       } 
+
+                   ?>
+
+              </div>
+            </div>
+
+
+            <!-- アクセス -->
+            <div id="access">
+            <?php
+            //アクセス部分の読み込み
+            if(file_exists($filepath.'/access.html'))readfile($filepath.'/access.html');
+            ?>
+            </div>
+
+
+
+            <ul id="footer-tabs-list">
+          <!-- MENU TOGGLE -->
+          <li id="li-for-panel-1">
+            <label for="panel-1-ctrl">教習所について</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-2">
+            <label for="panel-2-ctrl">オトクな合宿プラン</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-3">
+            <label for="panel-3-ctrl">宿泊施設</label>
+          </li><!--INLINE-BLOCK FIX-->
+          <li id="li-for-panel-4" class="<?php if(!file_exists(get_stylesheet_directory().'/school/'.$slug_name.'/spot.csv'))
+          {echo 'none';} ?>">
+            <label for="panel-4-ctrl">周辺スポット</label>
+          </li><!--INLINE-BLOCK FIX-->
+      </ul>
+
+
+              </main>
+            </div>
+            <div id="panel-2">
+              <main id="plan">
+                <!-- ////////////////////////////// 料金表 start -->
+                  <section class="main-sct">
+                    <h3 class="ttl01 icon-car"><i class="fa fa-car"></i>料金表（AT車）</h3>
+                    <div class="main-sct-inner">
+                    <?php
+                      // echo "<pre>";
+                      // var_dump($price_csv);
+                      // echo "</pre>";
+                      $plans = "";
+                      $praice_col = "";
+                      $plan_flag = 0;
+                      $col_count = 0;
+
+
+                      //ヘッダー
+                        // if($k ==0){
+                          if(!empty($price_csv[0][1])){
+                          $ryokinhyoHeader = $price_csv[0][1];
+                          }
+                        // } 
+                      //フッター
+                        // if($k ==1){
+                          if(!empty($price_csv[1][1])){
+                          $ryokinhyoFooter = $price_csv[1][1];
+                          }
+                        // }
+                      //嬉しい特典
+                        // if($k ==2){
+                          if(!empty($price_csv[2][1])){
+                          $ureshiitokuten = $price_csv[2][1];
+                          }
+                        // }
+
+
+                        //料金表
+                        for($iii = 3; $iii < 12 ;$iii++){
+                          if(!empty($price_csv[$iii][0])){
+                              for($kk = 0; $kk < count($price_csv[3]); $kk++){
+                                if($iii == 3 ){  
+
+                                  if(strlen($price_csv[$iii][$kk]) >= 71){
+                                    $fontSize = 'titleSmall';
+                                  }
+                                  else{
+                                    $fontSize ='titleNormal';
+                                  }
+                                $plan[$iii] .= '<div class="hotelPlanTitle' . $iii . '_' . $kk . ' '. $fontSize  . ' '.  strlen($price_csv[$iii][$kk])  .'"><p>' . nl2br($price_csv[$iii][$kk])   . '</p>' .'</div>';
+
+                              }
+                                elseif($kk == 0 ){
+
+                                $plan[$iii] .= '<div class="hotelPlan' . $iii . '_' . $kk . '"><p>' . nl2br($price_csv[$iii][$kk])   . '</p>' .'</div>';
+
+                              }
+                                else{ 
+
+                                  if($price_csv[$iii][$kk]=='-'){
+                                    $plan[$iii] .= '<div class="textCenter hotelPlanPrice' . $iii . '_' . $kk . '"><p> - </p></div>';
+                                  }
+                                  elseif(!empty($price_csv[$iii][$kk])){
+
+                                  $taxInc = '<p class="taxInc">税込' . number_format(floor(str_replace(',','',$price_csv[$iii][$kk]) * 1.08 / 10000 * 1000)*10) . '円</p>';
+                                  // $taxInc = '<p class="taxInc">税込' . number_format(floor($price_csv[$iii][$kk] * 1.08 / 1000 * 1000)) . '円</p>';
+                                  $plan[$iii] .= '<div class="hotelPlanPrice' . $iii . '_' . $kk . '"><p>' . number_format(nl2br(str_replace(',','',$price_csv[$iii][$kk])))   . '円</p>' . $taxInc . '</div>';
+
+                                  }
+                                  else{
+                                    $plan[$iii] .= '<div class="textCenter hotelPlanPrice' . $iii . '_' . $kk . '"><p> - </p></div>';
+                                  }
+                                }
+                              }
+
+                          }
+                          if(!empty($plan[$iii])){
+                            $plans .= '<div class="price-tbl-col">'. $plan[$iii] .'</div>';
+                          }
+                        }
+
+                    ?>
+
+                      <div class="ryokinhyoHeader">
+                        <p>
+                          <?php echo nl2br($ryokinhyoHeader); ?>
+
+                        </p>
+                      </div>
+
+                      <div class="price-tbl-wrap">
+                        <div class="price-tbl">
+                                                <?php echo $plans ?>
+
+                          <?php //echo $praice_col; ?>
+                        </div>
+                      </div><!-- // .price-tbl-wrap -->
+
+                      <div class="ryokinhyoFooter">
+                        <p>
+                          <?php echo $ryokinhyoFooter; ?>
+
+                        </p>
+                      </div>
+
+                    </div><!-- // .main-sct-inner -->
+                  </section><!-- // .main-sct -->
+            <!-- ////////////////////////////// 料金表 end -->
+
+
+
+
+
+            <!-- ////////////////////////////// おトク情報 start -->
+            <section class="main-sct color-pink">
+              <h3 class="ttl02 icon-note"><i class="fa fa-music"></i>おトク情報</h3>
+              
+                <p class="ureshiitokuten">
+                  <?php echo nl2br($ureshiitokuten); ?>
+                </p>
+
+
+
+              <!-- キャンペーン -->
+
+              <?php
+                if(!empty(campaign_csv[2][0])){
+                {
+                  $campaignOutput = array();
+
+                             //料金表
+                  for($ccc = 2; $ccc < 50 ;$ccc++){
+                    // echo $ccc.'<br>';
+                   if(!empty($campaign_csv[$ccc][0])){
+                        
+                        //限定割
+                        if($campaign_csv[$ccc][0] == '限定割'){
+                          $campaignOutput[1][0] = 'campaign04';
+                          $campaignOutput[1][1] = '限定割コース'; //ace 限定割
+                          $campaignOutput[1][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[1][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[1][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[1][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[1][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[1][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //夏特
+                        if($campaign_csv[$ccc][0] == '夏特'){
+                          $campaignOutput[2][0] = 'campaign05';
+                          $campaignOutput[2][1] = 'サマー'; //ace 夏特
+                          $campaignOutput[2][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[2][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[2][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[2][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[2][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[2][7] = nl2br($campaign_csv[$ccc][1]);                        }
+                        //春特
+                        if($campaign_csv[$ccc][0] == '春特'){
+                          $campaignOutput[3][0] = 'campaign06';
+                          $campaignOutput[3][1] = 'スプリング'; //ace 夏特
+                          $campaignOutput[3][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[3][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[3][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[3][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[3][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[3][7] = nl2br($campaign_csv[$ccc][1]);                        }
+                        //ゴールド
+                        if($campaign_csv[$ccc][0] == 'ゴールド'){
+                          $campaignOutput[4][0] = 'campaign07';
+                          $campaignOutput[4][1] = 'リミテッド'; //ace ゴールド
+                          $campaignOutput[4][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[4][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[4][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[4][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[4][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[4][7] = nl2br($campaign_csv[$ccc][1]);                        }
+                        //プラチナ
+                        if($campaign_csv[$ccc][0] == 'プラチナ'){
+                          $campaignOutput[5][0] = 'campaign08';
+                          $campaignOutput[5][1] = 'エクストラ'; //ace プラチナ
+                          $campaignOutput[5][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[5][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[5][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[5][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[5][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[5][7] = nl2br($campaign_csv[$ccc][1]);
+                        }
+                        //年末一時帰宅
+                        if($campaign_csv[$ccc][0] == '年末一時帰宅'){
+                          $campaignOutput[6][0] = 'campaign09';
+                          $campaignOutput[6][1] = '年末一時帰宅'; //ace 年末一時帰宅
+                          $campaignOutput[6][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[6][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[6][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[6][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[6][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[6][7] = nl2br($campaign_csv[$ccc][1]);
+                        }
+
+                        //特割(I)
+                        if(mb_convert_kana($campaign_csv[$ccc][0],'a') == '特割(I)' || $campaign_csv[$ccc][0] == '特割' || $campaign_csv[$ccc][0] == '特割I'){
+                          $campaignOutput[7][0] = 'campaign10';
+                          $campaignOutput[7][1] = '特割I'; //ace 特割(I)
+                          $campaignOutput[7][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[7][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[7][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[7][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[7][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[7][7] = nl2br($campaign_csv[$ccc][1]);                        }
+
+                        //特割I・II
+                        if(mb_convert_kana($campaign_csv[$ccc][0],'a') == '特割I・II'){
+                          $campaignOutput[8][0] = 'campaign11';
+                          $campaignOutput[8][1] = '特割I・II'; //ace 特割(I)
+                          $campaignOutput[8][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[8][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[8][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[8][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[8][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[8][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //特割II
+                        if(mb_convert_kana($campaign_csv[$ccc][0],'a') == '特割II'){
+                          $campaignOutput[9][0] = 'campaign12';
+                          $campaignOutput[9][1] = '特割II'; //ace 特割(I)
+                          $campaignOutput[9][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[9][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[9][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[9][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[9][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[9][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //学生特割／特割
+                        if($campaign_csv[$ccc][0] == '学生特割／特割'){
+                          $campaignOutput[10][0] = 'campaign13';
+                          $campaignOutput[10][1] = '学生特割／特割'; //ace 学生特割
+                          $campaignOutput[10][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[10][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[10][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[10][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[10][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[10][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //学生特割
+                        if($campaign_csv[$ccc][0]  == '学生特割'){
+                          $campaignOutput[11][0] = 'campaign14';
+                          $campaignOutput[11][1] = '学生特割'; //ace 学生特割
+                          $campaignOutput[11][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[11][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[11][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[11][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[11][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[11][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //シングル特割
+                        if($campaign_csv[$ccc][0] == 'シングル特割'){
+                          $campaignOutput[12][0] = 'campaign15';
+                          $campaignOutput[12][1] = 'シングル特割'; //ace シングル特割
+                          $campaignOutput[12][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[12][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[12][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[12][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[12][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[12][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //曜日限定シングル特割
+                        if($campaign_csv[$ccc][0] == '曜日限定シングル特割'){
+                          $campaignOutput[13][0] = 'campaign16';
+                          $campaignOutput[13][1] = '曜日限定シングル特割'; //ace 曜日限定シングル特割
+                          $campaignOutput[13][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[13][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[13][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[13][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[13][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[13][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //自炊シングル特割
+                        if($campaign_csv[$ccc][0] == '自炊シングル特割'){
+                          $campaignOutput[14][0] = 'campaign17';
+                          $campaignOutput[14][1] = '自炊シングル特割'; //ace 自炊シングル特割
+                          $campaignOutput[14][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[14][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[14][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[14][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[14][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[14][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //曜日限定特割
+                        if($campaign_csv[$ccc][0] == '曜日限定特割'){
+                          $campaignOutput[15][0] = 'campaign18';
+                          $campaignOutput[15][1] = '曜日限定特割'; //ace 曜日限定特割
+                          $campaignOutput[15][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[15][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[15][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[15][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[15][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[15][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //シングルオフ特
+                        if($campaign_csv[$ccc][0] == 'シングルオフ特'){
+                          $campaignOutput[16][0] = 'campaign19';
+                          $campaignOutput[16][1] = 'シングルオフ特'; //ace ツイン特別
+                          $campaignOutput[16][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[16][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[16][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[16][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[16][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[16][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //限定割／特割
+                        if($campaign_csv[$ccc][0] == '限定割／特割'){
+                          $campaignOutput[17][0] = 'campaign20';
+                          $campaignOutput[17][1] = '限定割／特割'; //ace 限定割／特割
+                          $campaignOutput[17][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[17][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[17][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[17][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[17][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[17][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //一時帰宅（一時帰宅交通費支給）
+                        if($campaign_csv[$ccc][0] == '一時帰宅（一時帰宅交通費支給）'){
+                          $campaignOutput[17][0] = 'campaign21';
+                          $campaignOutput[17][1] = '一時帰宅（一時帰宅交通費支給）'; //ace 一時帰宅（一時帰宅交通費支給）
+                          $campaignOutput[17][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[17][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[17][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[17][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[17][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[17][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //一時帰宅（一時帰宅交通費自己負担）
+                        if($campaign_csv[$ccc][0] == '一時帰宅（一時帰宅交通費自己負担）'){
+                          $campaignOutput[18][0] = 'campaign22';
+                          $campaignOutput[18][1] = '一時帰宅（一時帰宅交通費自己負担）'; //ace 一時帰宅（一時帰宅交通費支給）
+                          $campaignOutput[18][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[18][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[18][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[18][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[18][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[18][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //二輪同時特別
+                        if($campaign_csv[$ccc][0] == '二輪同時特別' || $campaign_csv[$ccc][0] == '二輪同時特割'){
+                          $campaignOutput[19][0] = 'campaign23';
+                          $campaignOutput[19][1] = '二輪同時特別'; //ace 二輪同時特別
+                          $campaignOutput[19][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[19][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[19][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[19][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[19][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[19][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //オフ特
+                        if($campaign_csv[$ccc][0] == 'オフ特'){
+                          $campaignOutput[20][0] = 'campaign24';
+                          $campaignOutput[20][1] = 'オフ特'; //ace オフ特
+                          $campaignOutput[20][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[20][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[20][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[20][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[20][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[20][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+
+                        //女性限定/特割II
+                        if(mb_convert_kana($campaign_csv[$ccc][0],'a') == '女性限定特割II'){
+                          $campaignOutput[21][0] = 'campaign25';
+                          $campaignOutput[21][1] = '女性限定/特割II'; //ace 女性限定/特割II
+                          $campaignOutput[21][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[21][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[21][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[21][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[21][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[21][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //卒業日一時帰宅
+                        if($campaign_csv[$ccc][0] == '卒業日一時帰宅'){
+                          $campaignOutput[22][0] = 'campaign26';
+                          $campaignOutput[22][1] = '二輪同時特別'; //ace 卒業日一時帰宅
+                          $campaignOutput[22][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[22][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[22][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[22][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[22][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[22][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //オフシーズン一時帰宅
+                        if($campaign_csv[$ccc][0] == 'オフシーズン一時帰宅'){
+                          $campaignOutput[23][0] = 'campaign27';
+                          $campaignOutput[23][1] = 'オフシーズン一時帰宅'; //ace オフシーズン一時帰宅
+                          $campaignOutput[23][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[23][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[23][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[23][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[23][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[23][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //シングルユース
+                        if($campaign_csv[$ccc][0] == 'シングルユース'){
+                          $campaignOutput[24][0] = 'campaign28';
+                          $campaignOutput[24][1] = 'ひとりでオススメ'; //ace ひとりでオススメ
+                          $campaignOutput[24][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[24][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[24][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[24][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[24][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[24][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+
+                        //グループユース
+                        if($campaign_csv[$ccc][0] == 'グループユース'){
+                          $campaignOutput[25][0] = 'campaign29';
+                          $campaignOutput[25][1] = 'グループでオススメ'; //ace グループユース
+                          $campaignOutput[25][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[25][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[25][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[25][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[25][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[25][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+
+                        //自炊
+                        if($campaign_csv[$ccc][0] == '自炊'){
+                          $campaignOutput[26][0] = 'campaign30';
+                          $campaignOutput[26][1] = '自炊'; //ace 自炊
+                          $campaignOutput[26][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[26][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[26][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[26][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[26][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[26][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //フレンド
+                        if($campaign_csv[$ccc][0] == 'フレンド'){
+                          $campaignOutput[27][0] = 'campaign31';
+                          $campaignOutput[27][1] = 'フレンド'; //ace フレンド
+                          $campaignOutput[27][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[27][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[27][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[27][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[27][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[27][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                        //ツイン特別
+                        if($campaign_csv[$ccc][0] == 'ツイン特別'){
+                          $campaignOutput[28][0] = 'campaign32';
+                          $campaignOutput[28][1] = '２人でお得'; //ace ツイン特別
+                          $campaignOutput[28][2] = $campaign_csv[$ccc][2];
+                          $campaignOutput[28][3] = str_replace('##●##' , '<span>●</span>' ,$campaign_csv[$ccc][3]);
+                          $campaignOutput[28][4] = $campaign_csv[$ccc][4];
+                          $campaignOutput[28][5] = nl2br($campaign_csv[$ccc][5]);
+                          $campaignOutput[28][6] = nl2br($campaign_csv[$ccc][6]);
+                          $campaignOutput[28][7] = nl2br($campaign_csv[$ccc][1]);           
+                        }
+
+                     }
+
+                    else{
+                      break;
+                    }
+                  }
+
+
+                  for($ccc = 0; $ccc < 50 ;$ccc++){
+               
+                    if(!empty($campaignOutput[$ccc][0])) {
+                        $iiii++;
+                        if ( $iiii & 1 ) {
+                          //odd
+                          $oddEven=" odd";
+                        } else {
+                          //even
+                          $oddEven=" even";
+                        }
+                        if(!empty($campaignOutput[$ccc][4])){
+                          $price='<p class="atPrice">' . number_format(str_replace(',','',$campaignOutput[$ccc][4]))  . '円</p>                              
+                          <p class="atPriceTaxInc">税込' . number_format (round(str_replace(',','',$campaignOutput[$ccc][4]) * 1.08/10000*10000)) . '円</p>';
+                        }
+                        else{
+                          $price='<p class="atPrice"></p>
+                          <p class="atPriceTaxInc"></p>';
+
+                        }
+                        $campaignOutputAll .='
+                        <div class="col1of2 co'. $iiii . $oddEven . ' campaignWrapper ' . $campaignOutput[$ccc][0] . '">
+
+                          <div class="campaignNameWrapper">
+                            <p class="campaignName">' .  $campaignOutput[$ccc][1] . '</p>
+                            <p class="campaignSubtitle">' .  $campaignOutput[$ccc][2] . '</p>
+                          </div><!--/.campaignNameWrapper-->
+
+                          <div class="campaignPriceWrapper flex fWrap_wrap">
+                            <div class="campaignSubtitleWrapper col2of2">
+                              <p>
+                              ' . $campaignOutput[$ccc][7] . '
+                              </p>
+                            </div>
+                            <div class="co1 left">
+                              <p class="atCircle">AT車</p>
+                            </div><!--/.co1 left-->
+
+                            <div class="co2 right">
+                              '. $price .'
+                            </div><!--/.co2 right-->
+
+                          </div><!--/.campaignPriceWrapper-->
+
+                          <div class="campaignDetailWrapper">
+                            <p class="condition1">' . $campaignOutput[$ccc][5] . '</p>
+                            <p class="condition2">' . $campaignOutput[$ccc][6] . '</p>
+                            <p class="limitation">' . $campaignOutput[$ccc][3] . '</p>
+                          </div><!--/.campaignDetailWrapper-->
+
+                        </div><!--/.campaignWrapper-->
+                        ';
+
+                      }
+
+                      }
+                      echo'<div class="waribikiWrapper flex fWrap_wrap">';
+                      
+                      $meta_arr = get_post_meta($post->ID , 'waribiki' ,true);
+                      if (is_array($meta_arr)){
+                        foreach ($meta_arr as $meta_key => $meta_value) {
+                          if($meta_value === "hayawari"){
+                            echo '<div class="wpb_wrapper">
+                                    <p class="waribikiBtn"><a><span class="planName">早割</span><span class="taxInc">税込</span><span class="taxIncPrice">5,000</span><span class="taxInc">円割引</span></a></p>
+                                 </div>';
+                          }
+                          if($meta_value === "gakuwari"){
+                            echo '<div class="wpb_wrapper">
+                                    <p class="waribikiBtn"><a><span class="planName">学割</span><span class="taxInc">税込</span><span class="taxIncPrice">3,000</span><span class="taxInc">円割引</span></a></p>
+                                  </div>';
+                          }
+                          if($meta_value === "gwari"){
+                            echo '<div class="wpb_wrapper">
+                                    <p class="waribikiBtn"><a><span class="planName">G割</span><span class="taxInc">税込</span><span class="taxIncPrice">5,000</span><span class="taxInc">円割引</span></a></p>
+                                  </div>';
+                          }
+                        }
+                      }
+                      echo '</div>';
+
+                      //補足挿入
+                      $waribiki_hosoku = get_post_meta($post->ID , 'waribikihosoku' ,true);
+                      $waribiki_hosoku = nl2br($waribiki_hosoku);
+                      $waribiki_hosoku = '
+                        <div class="waribikihosoku">
+                          <p>
+                          '.$waribiki_hosoku.'
+                          </p>
+                        </div>
+                      ';
+                      echo $waribiki_hosoku;
+
+
+                      if(empty($campaignOutputAll)){
+                        $campaignOutputAll = "※キャンペーン情報は現在ございません。";
+                      }
+                    }
+
+                           echo '<div id="campaign"><div class="otokuTitle">お得なキャンペーン</div><div class="campaignInnter flex fWrap_wrap">'.$campaignOutputAll."</div><!--#campaignInner--></div><!--#campaign-->";
+
+
+                }           
+
+
+              ?>
+
+              <?php
+              //特記画像
+              // $tokki_img_path = get_stylesheet_directory().'/school/'.$slug_name.'/img';
+              // $tokki_img_path = file_search($tokki_img_path);
+              // $wppoint_tokki = NULL;
+              // for($tokki = 0; $tokki < count($tokki_img_path); $tokki++){
+              //   if(strpos($tokki_img_path[$tokki],'/tokki.jpg') !== false){
+              //     $wppoint_tokki = strpos($tokki_img_path[$tokki], '/wp-content');
+              //     $wppoint_tokki = substr($tokki_img_path[$tokki], $wppoint_tokki);
+              //   }
+              // }
+              // if(!empty($wppoint_tokki)){
+              //   $tokki_img = '
+              //     <div>
+              //       <img src="'.$wppoint_tokki.'" alt="'.$title.'特記事項">
+              //     </div>
+              //   ';
+              //   echo $tokki_img;
+              // }
+
+
+               $hosho_img_uri = get_stylesheet_directory_uri().'/school/'.$slug_name.'/img/hosho.png';
+               echo '<div class="hoshoImg">
+               <h3>保証内容</h3>
+               <div class="hoshoImgInner">
+               <img src="' . $hosho_img_uri . '" alt="" class="imgRes"></div></div>'
+              ?>
+
+              <!-- キャンペーン -->
+
+
+
+                <!-- 割引 start -->
+<!--                 <section>
+                  <h3 class="ttl02">割引</h3>
+                  
+                  <div class="waribiki">
+                     <?php //echo do_shortcode('[single_waribiki]'); ?>
+                  </div>
+                </section> -->
+                <!-- 割り引き end -->
+
+                <!-- うれしい特典 start -->
+<!--                 <section>
+                  <h3 class="ttl02">うれしい特典</h3>
+                  
+                  <div class="ureshiitokuten">
+                    <p>
+                      <?php //echo $ureshiitokuten; ?>
+
+                    </p>
+                  </div>
+                </section> -->
+                <!-- うれしい特典 end -->
+              <!-- </div> --><!-- // .main-sct-inner -->
+            </section><!-- // .main-sct -->
+            <!-- ////////////////////////////// おトク情報 end -->
+
+
+
+
+
+            <!-- ////////////////////////////// 入校日カレンダー start -->
+            <section id="calendar" class="main-sct color-green">
+              <h3 class="ttl01 icon-calendar"><i class="fa fa-calendar"></i>入校日カレンダー</h3>
+              <div class="main-sct-inner">
+
+                <?php echo do_shortcode('[csv2table table_id="sample-table"]'); ?>
+                <!--start スライダーカレンダー-->
+                
+
+
+                <?php 
+                //if(file_exists($filepath.'/notice.html'))readfile($filepath.'/notice.html');
+                ?>
+
+                <!-- ローカルナビ start -->
+                <ul id="footer-tabs-list">
+                  <!-- MENU TOGGLE -->
+                  <li id="li-for-panel-1">
+                    <label for="panel-1-ctrl">教習所について</label>
+                  </li><!--INLINE-BLOCK FIX-->
+                  <li id="li-for-panel-2">
+                    <label for="panel-2-ctrl">オトクな合宿プラン</label>
+                  </li><!--INLINE-BLOCK FIX-->
+                  <li id="li-for-panel-3">
+                    <label for="panel-3-ctrl">宿泊施設</label>
+                  </li><!--INLINE-BLOCK FIX-->
+                  <li id="li-for-panel-4" class="<?php if(!file_exists(get_stylesheet_directory().'/school/'.$slug_name.'/spot.csv')){echo 'none';} ?>">
+                    <label for="panel-4-ctrl">周辺スポット</label>
+                  </li><!--INLINE-BLOCK FIX-->
+              </ul>
+              <!-- ローカルナビ end -->
+
+              </div><!-- // .main-sct-inner -->
+            </section><!-- // .main-sct -->
+            <!-- ////////////////////////////// 入校日カレンダー end -->
+              </main>
+            </div>
+            <div id="panel-3">
+              <main id="hotel">
+               <div class="hotelWrapper">
+                <div class="hotelInner">
+                  <h3><i class="fa fa-bed"></i>宿泊施設詳細</h3>
+
+                    <?php 
+                        // $hotel_imgs = "";
+                        // $img_path = get_stylesheet_directory_uri() . '/school/' . $slug_name . '/img';
+                        // }
+
+                       //ホテル情報
+
+                      for($hhh = 1; $hhh < 50 ;$hhh++){
+                        // echo $ccc.'<br>';
+                         if(!empty($hotel_csv[$hhh][0])){
+                          $hotelOutput .='<div class="hotelContent">';
+                          // for($lll = 1; $lll < 50 ;$lll++){
+                            // if(!empty($hotel_csv[$hhh][$lll])){
+
+                          if( ($hotel_csv[$hhh][0]) == '〇' || ($hotel_csv[$hhh][0]) == '○' || ($hotel_csv[$hhh][0]) == '●'){
+
+                            for($pic = 1; $pic < 50 ;$pic++){
+
+
+                              $img_path = get_stylesheet_directory() . '/school/' . $slug_name . '/img/hotel' . sprintf('%02d', $hhh) . '_' . sprintf('%02d', $pic) . '.jpg';
+
+                              if (file_exists($img_path)){
+
+                                $img_path_uri = get_stylesheet_directory_uri() . '/school/' . $slug_name . '/img/hotel' . sprintf('%02d', $hhh) . '_' . sprintf('%02d', $pic) . '.jpg';
+                                $hotel_imgs .= '<li>
+                                   <img src="'.$img_path_uri.'" alt="'.$title.'の宿泊施設詳細" width="714" height="437">
+                                 </li>';
+                              }
+                            }
+
+                                  
+                            $hotelOutput .='<h4 class="ttl03">' . $hotel_csv[$hhh][2] . '</h4>
+                            <ul class="photo-slider">' . $hotel_imgs . '</ul>
+                            <div class="hotelInfo flex fWrap_wrap">
+                            
+                              <ul class="flex fWrap_wrap">
+
+                                <!--宿泊プラン-->
+                                <li class="flex col1of2">
+                                  <p class="label">宿泊プラン</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][1] . '
+                                  </p>
+                                </li>
+
+                                <!--学校から-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][3] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][3] . '
+                                  </p>
+                                </li>
+
+                                <!--部屋人数-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][4] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][4] . '
+                                  </p>
+                                </li>
+
+                                <!--バス/トイレ-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][5] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][5] . '
+                                  </p>
+                                </li>
+
+                                <!--テレビ-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][6] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][6] . '
+                                  </p>
+                                </li>
+
+                                <!--冷蔵庫-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][7] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][7] . '
+                                  </p>
+                                </li>
+
+                                <!--洗濯機-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][8] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][8] . '
+                                  </p>
+                                </li>
+
+                                <!--乾燥機-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][9] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][9] . '
+                                  </p>
+                                </li>
+
+                                <!--ネット環境-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][10] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][10] . '
+                                  </p>
+                                </li>
+
+                                <!--コンビニまで-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][11] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][11] . '
+                                  </p>
+                                </li>
+                                
+                                <!--朝食場所-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][12] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][12] . '
+                                  </p>
+                                </li>
+
+                                <!--昼食場所-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][13] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][13] . '
+                                  </p>
+                                </li>
+
+                                <!--夕食場所-->
+                                <li class="flex col1of2">
+                                  <p class="label">' . $hotel_csv[0][14] . '</p>
+                                  <p class="hotelDetail">' . $hotel_csv[$hhh][14] . '
+                                  </p>
+                                </li>
+                              </ul>
+                            </div><!--/.hotelInfo-->';
+
+
+
+                          //echo $lll . '=' . $hotel_csv[$hhh][$lll]."<br>";
+                        // }
+                      // }
+                        $hotelOutput .= '</div><!--hotelContent-->';
+                        }
+                        $hotel_imgs="";
+                        }
+                      }
+                      echo $hotelOutput;
+                      ?>
+                      </div><!--/.hotelInner -->
+                    </div><!--/.hotelWrapper -->
+                  </div><!-- hotelWrapper -->
+                </main>
+              </div><!--/#panel-3-->
+
+
+            <div id="panel-4">
+              <main id="spot">
+                  
+              <!-- ////////////////////////////// 周辺スポット start -->
+              <section class="main-sct">
+
+
+                <h3 class="ttl05"><i class="fa fa-map-marker" aria-hidden="true"></i>周辺スポット詳細</h3>
+                <div class="main-sct-inner">
+
+                  <div class="spot-box-wrap">
+                    <?php 
+                    for($i = 1; $i < count($spot_csv); $i++){
+                      $spot_imgs = "";
+                      $img_path = get_stylesheet_directory().'/school/'.$slug_name.'/img';
+                      $img_path = file_search($img_path);
+                      for($ii = 0; $ii < count($img_path); $ii++){
+                        if(strpos($img_path[$ii],'img/'.$spot_csv[$i][1]) !== false){
+                          $wppoint = strpos($img_path[$ii], '/wp-content');
+                          $wppoint = substr($img_path[$ii], $wppoint);
+                          $spot_imgs .= '<li>
+                                            <img src="'.$wppoint.'" alt="" width="714" height="437">
+                                          </li>';
+                        }
+                      }
+                      echo '
+                        <section class="main-sct spot-box">
+                          <h4 class="ttl03">'.$spot_csv[$i][0].'</h4>
+                          <ul class="photo-slider">
+                            '.$spot_imgs.'
+                          </ul>
+                          <section>
+                            <p>'.$spot_csv[$i][2].'</p>
+                          </section>
+                        </section>
+                      ';
+                    }
+                    ?>
+
+
+                  </div><!-- // .spot-box-wrap -->
+
+
+                </div><!-- // .main-sct-inner -->
+              </section><!-- // .main-sct -->
+              <!-- ////////////////////////////// 周辺スポット end -->
+
+
+
+              </main>
+            </div><!--/#panel-4-->
+          </div> <!-- /tabContainer -->
+          
+
+
+
+
+
+        <?php
+        // ループ開始
+        // while ( have_posts() ) : the_post();
+
+        //   // content-page.phpをロード
+        //   get_template_part( 'template-parts/content', 'page' );//
+
+        //   // コメント表示がオンになっていて、1つ以上のコメントがついている場合表示する
+        //   if ( comments_open() || get_comments_number() ) :
+        //     comments_template();
+        //   endif;
+        // // ループ終わり
+        // endwhile;
+        ?>
+           
+        <div class="entry">
+          <a href="/apply-2/?sec=<?php echo $title; ?>"><p>お申込み</p><i class="vc_btn3-icon fa fa-play-circle"></i></a>
+        </div><!-- /.entry -->
+        </div>     <!-- /#panels -->
+      </div><!-- /#main -->
+      <!--main ends here-->
+
+
+      <!--sidebar starts here-->
+      <!--sidebar-->
+      <div id="sidebar" class="sidebarContent">
+        <div class="sidebarWrapper">
+        <?php
+          if (is_page()) {
+            $parent_id = $post->post_parent; // 親ページのIDを取得
+            $parent_slug = get_post($parent_id)->post_name; // 親ページのスラッグを取得
+            }
+            dynamic_sidebar( 'untenmenkyouketsukecentersidebar' );
+          ?>
+        </div>
+      </div><!--sidebar-->
+
+  </div><!--contentsWrapper-->
+
+
+
+
+
+    
+        <?php
+        //コンテンツ
+        // ループ開始
+        // while ( have_posts() ) : the_post();
+
+          // content-page.phpをロード
+          // get_template_part( 'template-parts/content', 'page' );//
+
+          // コメント表示がオンになっていて、1つ以上のコメントがついている場合表示する
+          // if ( comments_open() || get_comments_number() ) :
+            // comments_template();
+          // endif;
+        // ループ終わり
+        // endwhile;
+        ?>
+
+
+
+  </div><!--#mainContents-->
+</div><!--#wholeContents-->
+
+
+<?php get_footer(); ?>

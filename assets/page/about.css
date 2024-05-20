@@ -1,0 +1,150 @@
+
+
+
+/***************TB****************/
+
+@media screen and (max-width:768px) {
+
+}
+
+
+/***************TB****************/
+
+
+/***************SP****************/
+
+
+@media screen and (max-width:480px) {
+
+    .redWrapper h3.h2Style3 {
+        font-size: 1rem;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 1rem 0.2rem;
+        position: relative;
+        color: #ffffff;
+        margin: 1rem 0 .3rem!important;
+        border-left: 1rem solid #FF5722;
+        border-right: 1rem solid #FF5722;
+        background-color: #ffa386;
+    }
+}
+
+
+
+
+.str_red{
+    color:#f00;
+}
+
+body .vc_section .h2StyleAbout{
+    font-weight:bold;
+    text-align:center;
+    line-height:1.5;
+    margin:2rem 0;
+}
+
+.backYstrR{
+    background-color:#FFF542;
+    color:#f00;
+    font-weight:bold;
+    font-size:1rem;
+}
+body #wholeContents.twoColumnpage p{
+    line-height:2.5;
+}
+
+body .bodyInner .vc_section{
+    background-image:url(/wp-content/uploads/2018/03/about_bg.gif);
+    margin:0;
+    padding: 0 1rem;
+}
+div#wholeContents.twoColumnpage .entry-content section:first-of-type{
+    margin:0;
+}
+div#wholeContents.twoColumnpage .entry-content section:last-of-type{
+    margin: 0 0 1rem 0;
+}
+body .entry-content > div:first-child + .vc_section{
+    padding-top: 3rem;
+    border-radius:1rem 1rem 0 0;
+}
+body .entry-content > section:last-child{
+    padding-bottom:2.5rem;
+    border-radius:0 0 1rem 1rem;
+}
+
+body .vc_section > div{
+    background-color:#fff;
+    padding: 0rem 1.5rem;
+}
+body .vc_section:not(:last-child) > div{
+    background-image:url(/wp-content/uploads/2018/03/about_border.gif);
+    background-repeat:no-repeat;
+    background-position:bottom;
+    background-size:45%;
+    padding-bottom:4rem;
+}
+body .entry-content > div:first-child + .vc_section > div:first-child{
+    background-image:none;
+    padding-bottom:0;
+}
+body .entry-content > div:first-child + .vc_section > div:first-child + div{
+    padding-top:0.5rem;
+}
+body .vc_section:not(:first-child) > div{
+    padding-top: 2.3rem;
+}
+div#wholeContents.twoColumnpage .wpb_single_image.negativemargin1{
+    margin: 0px -2.5rem;
+    margin-top: -8rem;
+}
+
+div#wholeContents.twoColumnpage .wpb_single_image.negativemargin2{
+    margin: 0 -2.5rem;
+}
+
+@media screen and (max-width:768px){
+    div#wholeContents.twoColumnpage .entry-content section:first-of-type{
+        margin-top: 2rem;
+    }
+    body .vc_section .h2StyleAbout{
+        text-align:left;
+    }
+    div#wholeContents.twoColumnpage .wpb_single_image.negativemargin1{
+        margin-top: -5rem;
+    }
+    div#wholeContents.twoColumnpage .wpb_single_image.negativemargin2{
+        margin: 0 -3rem;
+    }
+    body .vc_section:last-child > div{
+        padding-bottom:0;
+    }
+    body .vc_section:not(:last-child) > div{
+        padding-bottom:2rem;
+        padding-top: 0rem;
+    }
+    body .entry-content > div:first-child + .vc_section{
+        padding-top: 4rem;
+    }
+}
+
+
+@media screen and (max-width:480px){
+    div#wholeContents.twoColumnpage .entry-content section:first-of-type{
+        margin-top:1rem;
+    }
+    body .entry-content > div:first-child + .vc_section{
+        padding-top: 4.5rem;
+    }
+    body .vc_section .h2StyleAbout{
+        font-size:1.1rem;
+    }
+    body .vc_section > div{
+        padding:1rem;
+    }
+    div#wholeContents.twoColumnpage .wpb_single_image.negativemargin1{
+        margin:0 -2rem;
+        margin-top:-5rem;
+    }
+}

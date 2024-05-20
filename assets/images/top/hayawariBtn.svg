@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-6 {
+        fill: #6c8e11;
+      }
+
+      .cls-2 {
+        font-size: 13px;
+        font-family: rounded-mplus-2c-heavy, "Rounded M+ 2c";
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .cls-3 {
+        fill: #666;
+        font-size: 8px;
+        font-family: rounded-mplus-1c-regular, "Rounded M+ 1c";
+        letter-spacing: -0.08em;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ化_1531" data-name="グループ化 1531" transform="translate(-888 -5496)">
+    <g id="グループ化_635" data-name="グループ化 635" transform="translate(-15)">
+      <g id="グループ化_628" data-name="グループ化 628" transform="translate(-2 -3.271)">
+        <g id="パス_975" data-name="パス 975" class="cls-1" transform="translate(665.635 5606.972)">
+          <path class="cls-5" d="M 279.3648986816406 -76.70022583007812 L 249.3648986816406 -76.70022583007812 L 249.3648986816406 -106.7002258300781 L 279.3648986816406 -106.7002258300781 L 279.3648986816406 -76.70022583007812 Z"/>
+          <path class="cls-6" d="M 278.3648986816406 -77.70022583007812 L 278.3648986816406 -105.7002258300781 L 250.3648986816406 -105.7002258300781 L 250.3648986816406 -77.70022583007812 L 278.3648986816406 -77.70022583007812 M 280.3648986816406 -75.70022583007812 L 248.3648986816406 -75.70022583007812 L 248.3648986816406 -107.7002258300781 L 280.3648986816406 -107.7002258300781 L 280.3648986816406 -75.70022583007812 Z"/>
+        </g>
+        <text id="早割" class="cls-2" transform="translate(917 5520.466)"><tspan x="0" y="0">早割</tspan></text>
+      </g>
+      <text id="最大5_000円引_税込_" data-name="最大5,000円引
+（税込）" class="cls-3" transform="translate(928 5538)"><tspan x="-24.472" y="0">最大5,000円引</tspan><tspan x="-15.04" y="9">（税込）</tspan></text>
+    </g>
+    <rect id="長方形_822" data-name="長方形 822" class="cls-4" width="48" height="54" transform="translate(889 5496)"/>
+  </g>
+</svg>

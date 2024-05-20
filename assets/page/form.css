@@ -1,0 +1,381 @@
+@charset "utf-8";
+.marginBottom2{
+  margin-bottom:2rem;
+}
+.mainform,
+[class^="subform"]{
+    border:1px solid #e1e1e1;
+}
+.strRed{
+  color:#f00;
+  width:100%;
+}
+
+.wpcf7c-elm-step1{
+  margin-top:1rem;
+}
+.hitoriFlag.hide ~ div{
+  display:none;
+}
+.confBtn{
+  margin-top:1rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.wpcf7-not-valid-tip{
+  margin-top:0.1rem;
+}
+
+[type="radio"]{
+  margin-top:0;
+}
+.wpcf7-form-control-wrap{
+  margin:0 0.5rem;
+}
+
+span.wpcf7-list-item{
+  margin:0;
+  margin-right:0.5rem;
+}
+
+.wpcf7c-elm-step1,
+.wpcf7c-elm-step1 select{
+  font-size:0.9rem;
+}
+.blockTitle{
+    border-top:1px solid #009BEC;
+  background-color:#E7F7FF;
+  padding:0.5rem 1rem;
+  margin:2rem 0 1rem 0;
+}
+.blockTitle > span{
+    font-size:1.1rem;
+    font-weight:bold;
+}
+.row{
+    display:flex;
+    border-bottom:1px solid #e1e1e1;
+    background-color:#E7F7FF;
+}
+
+.row > .leftName{
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  width:calc((100% / 7) * 2 - 0.01px);
+  min-height: 70px;
+  height:100%;
+  padding:1rem;
+}
+.row > .rightVal{
+    width:calc((100% / 7) * 5 - 0.01px);
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    padding: 0.5rem 0.5rem;
+    background-color:#fff;
+}
+
+.rightVal span{
+    display:inline-block;
+}
+.subform1_2-bikou{
+  width:100%;
+}
+
+.rightVal select{
+    display:inline-block;
+    margin-right:0.5rem;
+}
+
+.rightVal select,
+.rightVal input{
+  border-radius:0.2rem;
+}
+
+.blockBottom{
+    padding:1.5rem 0.5rem;
+}
+.lsBlueCircle br{
+  display:none;
+}
+.lsBlueCircle{
+    display:inline-block;
+    font-size:0.9rem;
+    letter-spacing:1px;
+    margin:0.5rem;
+}
+.lsBlueCircle:before{
+    content:"";
+    display:inline-block;
+    width:0.5rem;
+    height:0.5rem;
+    border-radius:100%;
+    margin-right:0.2rem;
+    background-color:#009BEC;
+}
+
+.firstChoice .rightVal [role="alert"],
+.secondCohice .rightVal [role="alert"]{
+  position:absolute;
+  width:auto;
+  white-space:nowrap;
+  bottom: -1.2rem;
+  left:0;
+}
+
+.secondCohice .rightVal [role="alert"],
+.firstChoice .rightVal [role="alert"]{
+  left:-5rem;
+}
+.birthday .rightVal [role="alert"]{
+  position:absolute;
+  width:auto;
+  white-space:nowrap;
+  left: -13rem;
+  bottom: -1.2rem;
+}
+
+.shobun{
+  padding:1rem;
+  border-bottom:1px solid #e1e1e1;
+  background-color:#E7F7FF;
+  font-weight:bold;
+  letter-spacing:0;
+}
+.name > .rightVal,
+.hurigana > .rightVal{
+   flex-wrap:nowrap;
+}
+
+.streetAddres > .rightVal > span{
+  margin-bottom:0.7rem;
+}
+.streetAddres .subform1_2-yuubinbangou > input{
+  width:30%;
+}
+
+.streetAddres .subform1_2-todouhuken{
+  width:35%;
+}
+
+.license > .rightVal .wpcf7-checkbox > span{
+  width:50%;
+  margin:0;
+}
+.license > .rightVal .wpcf7-checkbox > span > label{
+  display:inline-block;
+  width:100%;
+  padding:0.5rem;
+}
+
+.birthday .rightVal{
+  padding: 0.5rem 1rem;
+}
+
+.secondCohice .rightVal,
+.firstChoice .rightVal,
+.birthday .rightVal{
+  padding-bottom:1rem;
+}
+.Tkaiin > .rightVal{
+  flex-wrap:nowrap;
+}
+.dokode > .rightVal > .wpcf7-form-control-wrap,
+.dokode > .rightVal .wpcf7-checkbox{
+  width:100%;
+}
+.dokode > .rightVal .wpcf7-checkbox > span{
+  display:inline-block;
+  width:50%;
+  margin:0;
+  margin-bottom: 0.5rem;
+}
+.mumenkyo  .subform1_2-shobun1,
+.teishi .subform1_2-shobun2,
+.torikeshi  .subform1_2-shobun3{
+  margin-bottom:0.5rem;
+}
+
+
+.confBtn input{
+  cursor:pointer;
+  color:#fff;
+  background-color:#FF9D00;
+  border:1px solid #FF9D00 !important;
+  padding: 1rem;
+  width: 44%;
+  font-size: 1.1rem;
+  margin: 0px 3%;
+  transition:background-color 0.2s ease,color 0.2s ease;
+}
+.Pc .confBtn input:hover{
+  background-color:#fff;
+  color:#FF9D00;
+}
+.confBtn input.wpcf7c-btn-back{
+  background-color:#555;
+  border-color:#555 !important;
+}
+.Pc .confBtn .wpcf7c-btn-back:hover{
+  background-color:#fff;
+  color:#555;
+}
+.wpcf7-form{
+  margin-bottom:5rem;
+}
+
+.wpcf7c-conf{
+  background-color:#dfdfdf;
+  border-color:#ccc;
+}
+@media screen and (max-width:768px){
+  .row{
+      flex-wrap:wrap;
+  }
+  .row > .rightVal,
+  .row > .leftName{
+    width:100%;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+  }
+  .birthday .rightVal{
+    padding-bottom: 1.5rem;
+  }
+
+}
+@media screen and (max-width:480px){
+  .birthday .rightVal [role="alert"]{
+    left: -14rem;
+  }
+  .confBtn input{
+    width: 100%;
+    margin:auto;
+  }
+}
+
+div.wpcf7 .ajax-loader{
+  display:none;
+}
+a.linkBlue {
+    color: #0075c1;
+}
+
+span.attenRed {
+    color: #e60012;
+}
+
+
+.doui_wrap{
+  /* padding:0 1rem */
+}
+
+
+.custom-wpcf7c-confirmed .doui_wrap{
+  display:none;
+}
+.kiyakudesc{
+  margin-bottom:2rem;
+}
+.kiyakuBox{
+  margin-bottom:1rem;
+}
+
+.kiyakuBox,
+.privacy {
+    margin-top: 0.5rem;
+    padding:0.5rem;
+    height:15rem;
+    overflow:auto;
+    border:1px solid #aaa;
+}
+.privacy{
+  font-size:0.9rem;
+  margin-bottom:2rem;
+}
+.privacy li{
+  margin-bottom:1.5rem;
+}
+.privacy  strong{
+  display:block;
+}
+
+.warn {
+    /*border: 1px solid #e60012;*/
+    margin-bottom: 40px;
+    /*padding: 15px 20px;*/
+}
+
+.warn li {
+    color: #e60012;
+    text-indent: -1em;
+    margin-left: 1em;
+    font-size: .9rem;
+}
+
+.warn li:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+.kiyakuBox .textBox {
+}
+
+.kiyakuBox .textBox:nth-child(n+2) {
+    margin-top: 2.5rem;
+}
+
+.kiyakuBox .textBox h4 {
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.kiyakuBox .textBox .text {
+    margin-top: 1.25rem;
+}
+
+.kiyakuBox .textBox .text p:nth-child(n+2) {
+    margin-top: 0.9375rem;
+}
+
+.kiyakuBox .textBox .text p.notice {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+
+.kiyakuBox .textBox .text ul.notice02 li {
+    text-indent: -3em;
+    margin-left: 3em;
+    font-size: .9rem;
+}
+.kiyakuBox li{
+    line-height: 1.7;
+}
+.kiyakuBox .textBox .text ul.notice02 li:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+
+
+.privacy-sec-table th{
+  width:5rem;
+}
+
+.sslSetting{
+  width:50%;
+  margin:0 auto;
+  margin-top:0.8rem;
+  line-height:1.3;
+}
+@media screen and (max-width:480px){
+.sslSetting{
+  width: 100%;
+}
+}
+
+.maxContent{
+  margin-right:-1rem;
+  margin-left:-1rem;
+}

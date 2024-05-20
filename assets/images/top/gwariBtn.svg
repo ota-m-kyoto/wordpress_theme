@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-6 {
+        fill: #e32810;
+      }
+
+      .cls-2 {
+        font-size: 13px;
+        font-family: rounded-mplus-2c-heavy, "Rounded M+ 2c";
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .cls-3 {
+        fill: #666;
+        font-size: 8px;
+        font-family: rounded-mplus-1c-regular, "Rounded M+ 1c";
+        letter-spacing: -0.08em;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="グループ化_1533" data-name="グループ化 1533" transform="translate(-1004 -5496)">
+    <g id="グループ化_633" data-name="グループ化 633" transform="translate(-14)">
+      <g id="グループ化_630" data-name="グループ化 630" transform="translate(112 -3.271)">
+        <g id="パス_975" data-name="パス 975" class="cls-1" transform="translate(665.635 5606.972)">
+          <path class="cls-5" d="M 279.3648986816406 -76.70022583007812 L 249.3648986816406 -76.70022583007812 L 249.3648986816406 -106.7002258300781 L 279.3648986816406 -106.7002258300781 L 279.3648986816406 -76.70022583007812 Z"/>
+          <path class="cls-6" d="M 278.3648986816406 -77.70022583007812 L 278.3648986816406 -105.7002258300781 L 250.3648986816406 -105.7002258300781 L 250.3648986816406 -77.70022583007812 L 278.3648986816406 -77.70022583007812 M 280.3648986816406 -75.70022583007812 L 248.3648986816406 -75.70022583007812 L 248.3648986816406 -107.7002258300781 L 280.3648986816406 -107.7002258300781 L 280.3648986816406 -75.70022583007812 Z"/>
+        </g>
+        <text id="_割" data-name="Ｇ割" class="cls-2" transform="translate(916 5520.466)"><tspan x="0" y="0">Ｇ</tspan><tspan y="0">割</tspan></text>
+      </g>
+      <text id="割引は詳細_でチェック_" data-name="割引は詳細
+でチェック!" class="cls-3" transform="translate(1042 5538)"><tspan x="-18.72" y="0">割引</tspan><tspan y="0">は</tspan><tspan y="0">詳細</tspan><tspan x="-19.688" y="9">でチェック!</tspan></text>
+    </g>
+    <g id="グループ化_1529" data-name="グループ化 1529">
+      <rect id="長方形_821" data-name="長方形 821" class="cls-4" width="48" height="54" transform="translate(1004 5496)"/>
+    </g>
+  </g>
+</svg>

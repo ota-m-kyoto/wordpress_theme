@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.spot_row1{
+  margin-bottom: 1rem;
+}
+.spot_row2{
+  padding:0 2rem;
+  margin-bottom: 1rem;
+}
+.spot_row3{
+  padding:0 1rem;
+  font-size:0.9rem;
+  line-height:1.5;
+}
+
+.swiper-container-horizontal{
+  padding-bottom:2.5rem;
+}
+
+.spot_block{
+  padding-bottom:1rem;
+  margin-bottom:1rem;
+  border-bottom:1px solid #F1F1F1;
+}
+.spot_block:last-child{
+  padding-bottom:0;
+  margin-bottom:0;
+  border-bottom:none;
+}

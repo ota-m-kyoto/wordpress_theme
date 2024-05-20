@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+
+div#wholeContents.twoColumnpage .co2{
+    padding:1rem 0;
+}
+
+
+@media screen and (max-width:768px){
+    .vc_row{
+        flex-wrap:wrap;
+    }
+    div#wholeContents.twoColumnpage .co2{
+        padding:0;
+    }
+    .lead{
+        margin-bottom:0.5rem;
+    }
+    .lead > div > p{
+        font-size:1rem;
+    }
+    #wholeContents.twoColumnpage .wpb_single_image{
+        padding:0 0.3rem;
+    }
+}

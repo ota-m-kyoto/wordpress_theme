@@ -1,0 +1,137 @@
+@charset "utf-8";
+.mb20 {
+    margin-bottom: 1.25rem !important;
+}
+
+.mb30 {
+    margin-bottom: 1.875rem!important;
+}
+
+.mt10 {
+    margin-top: 0.625rem !important;
+}
+
+.mt15 {
+    margin-top: 0.9375rem !important;
+}
+
+.mt20 {
+    /* margin-top: 1.25rem !important; */
+}
+
+.mt25 {
+    margin-top: 1.5625rem !important;
+}
+
+.mt30 {
+    margin-top: 1.875rem !important;
+}
+body .bodyInner section{
+    margin-bottom:0;
+}
+.policy_block ~ . {
+    padding: 0 1rem;
+}
+
+#main .pad {
+    padding: 0 1rem;
+}
+
+.ttl04 {
+    font-size: 1.125rem;
+    margin-bottom: .5em !important;
+    color: #009bec;
+    font-weight: bold;
+}
+
+/**/
+table span {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+table th {
+    font-weight: bold !important;
+}
+
+#wholeContents.twoColumnpage table {
+    margin-top: 1.5625rem;
+}
+
+.tableArea p.atten {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+
+.attentionArea {
+    margin-top: 0.9375rem;
+}
+
+.cautionBox {
+    border: 1px solid #e1e1e1;
+    margin-top: 20px;
+    padding: 15px 15px 20px;
+}
+
+.cautionBox h4 {
+    color: #e40079;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.cautionBox h4:before {
+    content: "■";
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.cautionBox p:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+.cautionBox ul {
+    margin-top: 20px;
+}
+
+.cautionBox li {
+    text-indent: -0.5em;
+    margin-left: 1em;
+    font-size: 0.9rem;
+}
+
+.cautionBox li:before {
+    content: "・";
+    display: inline-block;
+    margin-right: 1px;
+}
+
+.cautionBox li:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width:768px){
+    table,
+    tbody,
+    tr,
+    th,
+    td{
+        display:block;
+    }
+
+    table > thead{
+        display:none;
+    }
+    #wholeContents.twoColumnpage th{
+        text-align:center;
+        border:none;
+    }
+    #wholeContents.twoColumnpage td{
+        padding:1rem !important;
+        border:none;
+    }
+    table{
+        border:1px solid #e1e1e1;
+    }
+}

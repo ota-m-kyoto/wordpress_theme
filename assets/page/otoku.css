@@ -1,0 +1,762 @@
+@charset "utf-8";
+.eyecatch{
+    background-color: #ffd800;
+}
+#wholeContents.twoColumnpage   div#lead p{
+    border-color:#f00;
+}
+.twoColumnpage div#main > article{
+    background-color:#E5EBF4;
+    border-radius:1rem;
+    padding:1.5rem;
+    margin-bottom:5rem;
+}
+.vc_section{
+    padding:1rem;
+    -webkit-border-image: url("img/campaign_line.png") 32 32 round;
+    border-image: url("/wp-content/uploads/2018/03/campaign_line.png") 32 32 round;
+    border-style:solid;
+    border-width:2rem;
+}
+.square {
+    /* width: 90%; */
+    margin: 1rem auto;
+    text-align: center;
+    background: #CADFF4;
+    color: #333;
+    padding: .5rem;
+    border-radius: .4rem;
+    margin: 0;
+    margin-bottom:1rem;
+    }
+.square h2{
+    color: #1c7ead;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+div#wholeContents.twoColumnpage .co2 p{
+    text-align:inherit  ;
+}
+
+#contentsWrapper .greenBtn{
+    width:100%;
+    margin-bottom:0px;
+}
+
+
+div#wholeContents.twoColumnpage  .dropmenu{
+    /* margin-bottom: 1rem; */
+    /* padding-bottom:.5rem; */
+}
+div#wholeContents.twoColumnpage [class*="waribikiBtn"] .dropmenu label {
+   font-size: 1rem;
+    width: 100%;
+    margin: 0rem auto;
+    text-align:center;
+    padding: 1rem .5rem;
+   background-size: 26px 26px;
+    border-radius:.4rem;
+    display: block;
+    transition: background .4s ease ,color .4s ease;
+    }
+
+div#wholeContents.twoColumnpage [class*="waribikiBtn"] .dropmenu li:last-child a {
+    border-bottom:none;
+}
+
+div#wholeContents.twoColumnpage .waribikiBtn1 .dropmenu label{
+    background-color: #00BCD4;
+    background-image: 
+  linear-gradient(-45deg, rgba(130, 217, 228, 0.41) 25%, transparent 25%, transparent 50%, rgba(130, 217, 228, 0.41)  50%, rgba(130, 217, 228, 0.41)  75%, transparent 75%, transparent 100%), 
+  linear-gradient(45deg, rgba(130, 217, 228, 0.41)  25%, transparent 25%, transparent 50%,  rgba(130, 217, 228, 0.41)  50%, rgba(130, 217, 228, 0.41)  75%, transparent 75%, transparent 100%);
+    color:#fff;
+    border:1px solid #2196F3;
+}
+
+div#wholeContents.twoColumnpage .waribikiBtn1 .dropmenu label:hover {
+        background-color: #e8fcff;
+        color: #0a497b;
+}
+
+div#wholeContents.twoColumnpage .waribikiBtn1 .dropmenu a {
+    background-color: transparent;
+    border:none;
+    color:#00a1b7;
+    border-bottom: 1px dotted;
+}
+div#wholeContents.twoColumnpage .waribikiBtn2 .dropmenu label {
+    color:#fff;
+    background-color: #E91E63;
+    background-image: 
+    linear-gradient(-45deg, rgba(255, 171, 200, 0.41) 25%, transparent 25%, transparent 50%, rgba(255, 171, 200, 0.41)  50%, rgba(255, 171, 200, 0.41)  75%, transparent 75%, transparent 100%),     
+    linear-gradient(45deg, rgba(255, 171, 200, 0.41)  25%, transparent 25%, transparent 50%,  rgba(255, 171, 200, 0.41)  50%, rgba(255, 171, 200, 0.41)  75%, transparent 75%, transparent 100%);   
+    border:1px solid #a50b3f;
+    }
+
+div#wholeContents.twoColumnpage .waribikiBtn2 .dropmenu label:hover {
+        background-color: #ffe7ef;
+        color: #a50b3f;
+}
+
+div#wholeContents.twoColumnpage .waribikiBtn2 .dropmenu a {
+    background-color: transparent;
+    border:none;
+    color:#E91E63;
+    border-bottom: 1px dotted;
+}
+
+
+
+
+
+div#wholeContents.twoColumnpage .waribikiBtn3 .dropmenu label {
+    color:#fff;
+    background-color: #2196F3;
+    background-image: 
+    linear-gradient(-45deg, rgba(167, 216, 255, 0.41) 25%, transparent 25%, transparent 50%, rgba(167, 216, 255, 0.41)  50%, rgba(167, 216, 255, 0.41)  75%, transparent 75%, transparent 100%),           
+    linear-gradient(45deg, rgba(167, 216, 255, 0.41)  25%, transparent 25%, transparent 50%,  rgba(167, 216, 255, 0.41)  50%, rgba(167, 216, 255, 0.41)  75%, transparent 75%, transparent 100%);
+    border: 1px solid #0474ce;
+    }
+
+div#wholeContents.twoColumnpage .waribikiBtn3 .dropmenu label:hover {
+        background-color: #cbe8ff;
+        color: #0474ce;
+}
+
+div#wholeContents.twoColumnpage .waribikiBtn3 .dropmenu a {
+    background-color: transparent;
+    border:none;
+    color:#2196F3;
+    border-bottom: 1px dotted;
+}
+
+
+
+
+
+
+div#wholeContents.twoColumnpage .waribikiBtn a {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0rem auto;
+    text-align:center;
+    padding: 1rem .5rem;
+    background: #ff5a00 url(/wp-content/uploads/2018/03/option_bg.png) repeat left top;
+    color:#fff;
+    display: block;
+}
+
+
+
+div#wholeContents.twoColumnpage .plan .waribikiBtn p {
+    padding: 1rem 0;
+}
+div#wholeContents.twoColumnpage .waribikiBtn a span{
+}
+div#wholeContents.twoColumnpage .waribikiBtn a span.planName{
+    display: block;
+    font-size:1.5rem;
+    margin:.4rem 0;
+    color:#f2ff77;
+    transition: color .4s ease;
+}
+div#wholeContents.twoColumnpage .waribikiBtn a span.taxInc{
+    color:#fff;
+    transition: color .4s ease;
+}
+div#wholeContents.twoColumnpage .waribikiBtn a span.taxIncPrice{
+    font-size:1.5rem;
+    color: #fff;
+    display:inline-block;
+    margin:0 .1rem;
+    transition: color .4s ease;
+}
+
+div#wholeContents.twoColumnpage .waribikiBtn a:hover {
+    /*background-color: #fff;*/
+}
+
+div#wholeContents.twoColumnpage .waribikiBtn a:hover span.taxInc,
+div#wholeContents.twoColumnpage .waribikiBtn a:hover span.taxIncPrice,
+div#wholeContents.twoColumnpage .waribikiBtn a:hover span.planName{
+
+    /*color:#000;*/
+}
+
+
+div#wholeContents.twoColumnpage .plan p{
+    padding:1rem;
+}
+
+.plan .vc_btn3-container{
+    margin-bottom: 0;
+}
+
+
+div#wholeContents.twoColumnpage p.btn {
+    padding:1rem;
+}
+
+
+div#wholeContents.twoColumnpage .entry-content section.vc_section{
+    margin: 0;
+}
+
+
+#course > div:first-child{
+    margin-bottom:1rem;
+}
+
+#plan .left {
+    padding-right: .5rem;
+}
+
+#plan .center {
+    padding: 0 .25rem;
+}
+#plan .right {
+    /* padding-left: .5rem; */
+}
+
+
+#wholeContents.twoColumnpage .atLabel > div {
+    width: 4rem;
+    height: 4rem;
+    padding-top: 1.3rem;
+    font-size: .8rem;
+    letter-spacing: 0px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 100%;
+    border: 1px solid #e2e2e2;
+}
+
+.atLabel {
+    padding: 1rem;
+}
+
+.wpb_text_column.wpb_content_element.taxExc {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f00;
+}
+
+body section .colBox > .vc_column-inner >div{
+    background-color:#fff;
+}
+/***1***/
+
+.bgStripe1 h3{
+    }
+body #plan .bgStripe1 .atLabel>div.vc_column-inner {
+}
+
+
+
+body #plan .bgStripe1 .taxExc {
+/*     color:#9c27b0; */
+}
+
+
+body #plan .bgStripe1 > div.vc_column-inner >div{
+    /*     border-top: 4px solid #9c27b0;
+    border-bottom: 4px solid #9c27b0; */
+    }
+body #plan .bgStripe1 figure{
+/*     border-bottom: 4px solid #9c27b0; */
+}
+
+/***1***/
+/***2***/
+
+.bgStripe2 h3{
+/*     background-color: #cbff8e;
+    background-image:
+    linear-gradient(45deg, #f9fff2 12%, transparent 0, transparent 88%, #f9fff2 0),
+    linear-gradient(135deg, transparent 37%, #f2ffe2 0, #f2ffe2 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #f9fff2 0, #f9fff2 63%, transparent 0); */
+/*     color: #588e1a; */
+/*     border-bottom: 4px solid #609620; */
+    }
+
+body #plan .bgStripe2 .atLabel>div.vc_column-inner {
+/*     border: 1px solid #73b724; */
+/*     background-color: #73b724; */
+}
+
+body #plan .bgStripe2 >div.vc_column-inner >div{
+/*     border-top: 4px solid #609620; */
+/*     border-bottom: 4px solid #609620; */
+}
+body #plan .bgStripe2 figure{
+/*     border-bottom: 4px solid #609620; */
+}
+body #plan .bgStripe2 .taxExc {
+/*     color:#609620; */
+}
+
+
+
+/***2***/
+/***3***/
+
+.bgStripe3 h3 {
+/*     background-color: #ffd24a;
+    background-image:
+    linear-gradient(45deg, #fff7de 12%, transparent 0, transparent 88%, #fff7de 0),
+    linear-gradient(135deg, transparent 37%, #ffefbf 0, #ffefbf 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #fff7de 0, #fff7de 63%, transparent 0);
+    color: #FF5722; */
+/*     text-shadow: 0px 1px 10px rgba(255, 255, 255, 0.59); */
+/*     border-bottom: 4px solid #FF9800; */
+    }
+body #plan .bgStripe3 .atLabel>div.vc_column-inner {
+/*     border: 1px solid #FF9800; */
+/*     background-color: #FF9800; */
+}
+body #plan .bgStripe3 .taxExc {
+/*     color:#ff5722; */
+}
+body #plan .bgStripe3 >div.vc_column-inner >div{
+/*      border-top: 4px solid #FF9800; */
+/*    border-bottom: 4px solid #FF9800; */
+}
+body #plan .bgStripe3 figure{
+/*     border-bottom: 4px solid #FF9800; */
+}
+
+/***3***/
+
+
+
+/***4***/
+
+.bgStripe4 h3 {
+/*     background-color: #f9b29b;
+    background-image:
+    linear-gradient(45deg, #fff2ee 12%, transparent 0, transparent 88%, #fff2ee 0),
+    linear-gradient(135deg, transparent 37%, #ffe1d7 0, #ffe1d7 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #fff2ee 0, #fff2ee 63%, transparent 0);
+    color: #ff1a00; */
+/*     text-shadow: 0px 1px 10px rgba(255, 255, 255, 0.59); */
+/*     border-bottom: 4px solid #ff1a00; */
+    }
+body #plan .bgStripe4 .atLabel>div.vc_column-inner {
+/*     border: 1px solid #ef3d2a; */
+/*     background-color: #ef3d2a; */
+    }
+body #plan .bgStripe4 .taxExc {
+/*     color:#ff1a00; */
+}
+body #plan .bgStripe4 >div.vc_column-inner >div{
+/*     border-top: 4px solid #ff1a00; */
+/*     border-bottom: 4px solid #ff1a00; */
+}
+body #plan .bgStripe4 figure{
+/*     border-bottom: 4px solid #ff1a00; */
+}
+/***4***/
+
+/***5***/
+
+.bgStripe5 h3 {
+/*     background-color: #f1afdd;
+    background-image: 
+    linear-gradient(45deg, #fff0fd 12%, transparent 0, transparent 88%, #fff0fd 0),
+    linear-gradient(135deg, transparent 37%, #f9d8f5 0, #f9d8f5 63%, transparent 0),     
+    linear-gradient(45deg, transparent 37%, #fff0fd 0, #fff0fd 63%, transparent 0);
+    color: #f737c2; */
+/*     border-bottom: 4px solid #e600a7; */
+    }
+
+body #plan .bgStripe5 .atLabel>div.vc_column-inner {
+/*     border: 1px solid #f963d0; */
+/*     background-color: #f963d0; */
+}
+
+
+body #plan .bgStripe5 .taxExc {
+/*     color:#ec37bb; */
+}
+body #plan .bgStripe5 >div.vc_column-inner >div{
+/*     border-top: 4px solid #e600a7; */
+/*     border-bottom: 4px solid #e600a7; */
+}
+body #plan .bgStripe5 figure{
+/*     border-bottom: 4px solid #e600a7; */
+}
+/***5***/
+
+
+
+/***6***/
+
+.bgStripe6 h3{
+/*     color: #2196F3; */
+/*     border-bottom: 4px solid #2196F3; */
+}
+
+
+body #plan .bgStripe6 .atLabel>div.vc_column-inner {
+/*     border: 1px solid #53a7ea; */
+/*     background-color: #53a7ea; */
+}
+
+
+body #plan .bgStripe6 .taxExc {
+/*     color:#2196f3; */
+}
+
+body #plan .bgStripe6 >div.vc_column-inner >div{
+/*     border-top: 4px solid #2196f3; */
+/*     border-bottom: 4px solid #2196f3; */
+}
+body #plan .bgStripe6 figure{
+/*     border-bottom: 4px solid #2196f3; */
+}
+/***6**/
+
+/***7***/
+
+.bgStripe7 h3{
+
+/* background-color: #CDDC39;
+
+background-image: 
+linear-gradient(45deg, #ebefc7 12%, transparent 0, transparent 88%, #ebefc7 0),      
+linear-gradient(135deg, transparent 37%, #f7fdc5 0, #f7fdc5 63%, transparent 0),      
+linear-gradient(45deg, transparent 37%, #ebefc7 0, #ebefc7 63%, transparent 0); */
+
+/* color: #88940e; */
+/* border-bottom: 4px solid #CDDC39; */
+}
+
+
+body #plan .bgStripe7 .atLabel>div.vc_column-inner {
+/*     border: 1px solid #CDDC39; */
+/*     background-color: #CDDC39; */
+}
+
+
+body #plan .bgStripe7 .taxExc {
+/*     color: #88940e; */
+}
+
+body #plan .bgStripe7 >div.vc_column-inner >div{
+/*     border-top: 4px solid #CDDC39; */
+/*     border-bottom: 4px solid #CDDC39; */
+}
+body #plan .bgStripe7 figure{
+/*     border-bottom: 4px solid #CDDC39; */
+}
+/***7***/
+
+/***8***/
+
+.bgStripe8 h3{
+
+
+/*   background-color: #9670da;
+  background-image:
+    linear-gradient(45deg, #e0cfff 12%, transparent 0, transparent 88%, #e0cfff 0),
+    linear-gradient(135deg, transparent 37%, #673AB7 0, #673AB7 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #e0cfff 0, #e0cfff 63%, transparent 0); */
+/*     border-bottom: 4px solid #673AB7; */
+}
+
+
+body #plan .bgStripe8 .atLabel>div.vc_column-inner {
+/*     border: 1px solid #673AB7; */
+/*     background-color: #673AB7; */
+}
+
+
+body #plan .bgStripe9 .taxExc {
+/*     color:#673AB7; */
+}
+
+body #plan .bgStripe8 >div.vc_column-inner >div{
+/*     border-top: 4px solid #673AB7; */
+/*     border-bottom: 4px solid #673AB7; */
+}
+body #plan .bgStripe8 figure{
+/*     border-bottom: 4px solid #673AB7; */
+}
+/***8***/
+/***9***/
+
+.bgStripe9 h3{
+
+/* background-color: #ff71b4;
+
+background-image:
+    linear-gradient(45deg, #ffc5cf 12%, transparent 0, transparent 88%, #ffc5cf 0),
+    linear-gradient(135deg, transparent 37%, #ff1b86 0, #ff1b86 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #ffc5cf 0, #ffc5cf 63%, transparent 0); */
+/* border-bottom: 4px solid #ff1b86; */
+}
+
+
+body #plan .bgStripe9 .atLabel>div.vc_column-inner {
+/*     border: 1px solid #ff1b86; */
+/*     background-color: #ff1b86; */
+}
+
+
+body #plan .bgStripe9 .taxExc {
+/*     color:#ff1b86; */
+}
+
+body #plan .bgStripe9 >div.vc_column-inner >div{
+/*     border-top: 4px solid #ff1b86; */
+/*     border-bottom: 4px solid #ff1b86; */
+}
+body #plan .bgStripe9 figure{
+/*     border-bottom: 4px solid #ff1b86; */
+}
+/***9***/
+
+.colBox .dropmenu li a{
+/*     color:#555555; */
+}
+.dropmenu li a::after{
+    
+}
+body section .row1 h3{
+    font-size:1rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.8rem 0 .5rem;
+    /* text-shadow: 0px 1px 10px rgba(255, 255, 255, 0.59); */
+}
+body section .row1 .comment{
+    padding: 0;
+    letter-spacing:0;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color:#DF60B5;
+    font-weight:bold;
+    min-height: 7.6rem;
+    padding: .8rem 1rem!important;
+}
+body section .row1,
+body section .row2{
+    margin-bottom: 1rem;
+}
+body #wholeContents #plan .atPrice ,
+body #wholeContents #plan .atLabel,
+#wholeContents.twoColumnpage .atLabel
+ {
+    padding: 0.5rem 0;}
+    .atLabel{
+    width: 30%;
+}
+
+#wholeContents.twoColumnpage .left .atLabel .vc_column-inner,
+#wholeContents.twoColumnpage .right .atLabel .vc_column-inner{
+    padding-right: 0;
+    padding-top: 1.05rem;
+    font-size: 1rem;
+    padding-left: 0;
+}
+#wholeContents.twoColumnpage .atLabel .vc_column-inner *{
+    font-size: 1.1rem;
+    font-weight:bold;
+    color:#333 ;
+    letter-spacing:3;
+}
+body #plan .btn{
+    width: 80%;
+    margin:auto;
+    display: block;
+    margin-bottom: 2rem;
+}
+body #plan .moreCourse .btn{
+    
+    width: 60%;
+    margin:auto;
+    display: block;
+    margin-bottom: 0rem;
+}
+body #plan .btn a{
+    padding: 0.2rem;
+    border-width: 1px;
+}
+body #plan .moreCourse .btn a{
+    padding: 0.8rem;
+    border-width: 1px;
+    font-size:1.1rem;
+}
+body #plan .btn a i{
+    position:absolute;
+    top:calc(50% - .55rem);
+    right:0.5rem;
+}
+body #plan .moreCourse .btn a i{
+    position:absolute;
+    top:calc(50% - 0.4rem);
+    right:0.5rem;
+    font-size:1.3rem;
+}
+#plan .atPrice {
+    padding-top: 1.1rem;
+    padding-left: 0;
+}
+
+
+div#wholeContents.twoColumnpage  #plan .btn a {
+    display: block;
+    font-size: 0.9rem;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 0.4rem 0 0.4rem;
+}
+
+div#wholeContents.twoColumnpage #plan .btn a i{
+    font-size:1rem;
+    color:#444;
+    transform: translateY(0);
+    height: inherit;
+    right: .5rem;
+    position: absolute;
+    top: 0.6rem;
+}
+
+
+#wholeContents.twoColumnpage .atLabel p {
+    letter-spacing: -0.4px;
+    line-height: 1.5rem;
+    /* padding: 0 1rem; */
+    font-size: 0.8rem!important;
+    padding: 0;
+}
+div#wholeContents.twoColumnpage section .taxExc p{
+    font-size: 1.6rem!important;
+    padding-top: 1rem!important;
+    padding: 1rem 0 0;
+}
+div#wholeContents.twoColumnpage #plan .taxInc {
+    padding:.2rem 0;
+}
+
+div#wholeContents.twoColumnpage .taxInc p{
+    padding: 0;
+}
+
+.dropmenu {
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 0; */
+}
+
+body .dropmenu li a {
+    font-size: 0.8rem;
+    padding: .5rem 1.2rem .5rem .5rem;
+}
+.colBox .vc_column-inner > .wpb_wrapper > div:not(:first-child){
+    padding: 0.5rem;
+    margin: 0;
+}
+
+
+
+
+#wholeContents.twoColumnpage .wpb_single_image {
+    margin:1rem 0;
+    padding: 0 0rem;
+}
+
+#plan .wpb_single_image{
+    display:none;
+}
+
+/***************TB****************/
+
+@media screen and (max-width:768px) {
+body #wholeContents #plan .atLabel, #wholeContents.twoColumnpage .atLabel{
+    width: 27%;
+}
+body #wholeContents #plan .atLabel, #wholeContents.twoColumnpage .atLabel >div{
+    margin:0;
+}
+body #wholeContents #plan .atPrice,
+.atLabelWrapper .right{
+    width: 70%;
+}
+.colBox {
+    margin-bottom: 2rem;
+}
+}
+
+
+/***************TB****************/
+
+
+/***************SP****************/
+
+
+@media screen and (max-width:480px) {
+#wholeContents.twoColumnpage .left .vc_column-inner {
+    padding-right: 0rem;
+}
+#wholeContents.twoColumnpage .right .vc_column-inner {
+    padding-left: 0rem;
+}
+div#wholeContents.twoColumnpage .entry-content section.vc_section {
+    padding: 0;
+}
+.square h2 {
+    color: #1c7ead;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+div#wholeContents.twoColumnpage .dropmenu {
+    /*margin-bottom: 2rem;*/
+}
+div#wholeContents.twoColumnpage #plan .taxExc p {
+    font-size: 1.6rem;
+    padding-top: .5rem;
+}
+div#wholeContents.twoColumnpage .wpb_single_image {
+    margin: 0rem 0 0;
+    padding: 0 0rem;
+}
+body #plan .row1>div{
+    margin-bottom:2rem;
+}
+#wholeContents.twoColumnpage .center .vc_column-inner {
+    padding: 0 ;
+}
+.dropmenu {
+    width: 80%;
+    margin: 0 auto;
+    /* padding: 0; */
+}
+.dropmenu label {
+    display: block;
+    margin: 0 0 2px 0;
+    padding: 0.7rem 0;
+    line-height: 1;
+    color: #fff;
+    background: #007bbb;
+    cursor: pointer;
+    color: #50485B;
+    border: 1px solid #50485B;
+    background-color: transparent;
+    font-size: 1.2rem;
+    text-align: center;
+}
+div#wholeContents.twoColumnpage #plan .comment p {
+    text-align: center;
+    line-height: 1.3rem;
+    font-size: .9rem;
+}
+
+
+body #plan .row1{
+    margin-bottom: 0rem;
+}
+}
+

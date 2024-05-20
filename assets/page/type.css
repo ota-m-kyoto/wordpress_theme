@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+
+#wholeContents.twoColumnpage tbody > tr:first-child > th{
+    min-width:0;
+    padding: 0.5rem 1.4rem !important;
+    text-align: center;
+}
+
+#wholeContents.twoColumnpage tbody > tr:not(:first-child) > th{
+    width:9rem;
+}
+
+.borderBox{
+    border:1px solid #e1e1e1;
+    padding:1rem
+}
+.policy_block ~ div{
+    padding: 0 0.3rem;
+    margin:1rem 0;
+}
+
+
+
+#wholeContents.twoColumnpage .bluedot{
+    display:flex;
+    align-items:center;
+    line-height:1;
+    margin-bottom: 0.3rem;
+}
+.pinkWrapper .bluedot:before{
+    background-color:#E62E8B;
+}
+
+.greenWrapper .bluedot:before{
+    background-color:#6FBA2C;
+}
+
+
+#wholeContents.twoColumnpage p strong{
+    margin-bottom:0;
+    line-height: 1;
+}
+.bluedot + p,
+.bluedot + div{
+    margin-bottom:1rem;
+    padding-left: 0.9rem;
+}
+#wholeContents.twoColumnpage .dot{
+    display:flex;
+    line-height:1;
+    margin-bottom:0.5rem;
+}
+#wholeContents.twoColumnpage .dot{
+    line-height:1.5;
+}
+#wholeContents.twoColumnpage .dot:before{
+    content:"";
+    display:block;
+    width:0.5rem;
+    height:0.5rem;
+    background-color:#000;
+    transform:rotate(45deg);
+    margin-top:0.5rem;
+    margin-right:0.3rem;
+}
+.sp-item{
+    display:none;
+}
+
+
+#wholeContents.twoColumnpage table:last-of-type{
+    margin:0;
+}
+
+#wholeContents.twoColumnpage .licenseImage{
+    padding:0;
+    margin-top:0;
+}
+
+/***************TB****************/
+
+@media screen and (max-width:768px) {
+    #wholeContents.twoColumnpage th,
+    #wholeContents.twoColumnpage tbody > tr:first-child > th{
+        padding:1rem 0.5rem !important;
+        text-align:center;
+    }
+    #wholeContents.twoColumnpage table:last-of-type{
+        width:100%;
+    }
+    #wholeContents.twoColumnpage .blueWrapper td{
+        padding:0 !important;
+    }
+    .type-table02{
+        text-align:center;
+    }
+
+
+    .type-table01,
+    .type-table01 tbody,
+    .type-table01 th,
+    .type-table01 tr,
+    .type-table01 td{
+        display:block;
+    }
+    #wholeContents.twoColumnpage .type-table01 td{
+        padding:0.5rem !important;
+    }
+    .type-table01{
+        border:1px solid #e1e1e1;
+    }
+    #wholeContents.twoColumnpage .type-table01 th,
+    #wholeContents.twoColumnpage .type-table01 td{
+        border:none;
+    }
+    #wholeContents.twoColumnpage .type-table01 > tbody > tr:not(:first-child) > th{
+        width:100%;
+    }
+}
+
+
+/***************TB****************/
+

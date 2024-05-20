@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+#main .rowBlock{
+    border:1px solid #E1E1E1;
+    margin-bottom:1rem;
+    padding: 2.5rem 0rem;
+    padding-left:4rem;
+}
+.flexBox{
+    display:flex;
+    align-items:center;
+}
+.startBlockTitle h3{
+    font-size:1.4rem;
+    font-weight:bold;
+    letter-spacing:0;
+}
+
+#wholeContents.twoColumnpage .YellowText p{
+    font-size:1.1rem;
+    font-weight:bold;
+    color:#F6AB00;
+}
+
+#wholeContents.twoColumnpage .blueText p{
+    font-size:1.1rem;
+    font-weight:bold;
+    color:#0099D9;
+}
+
+div#wholeContents.twoColumnpage .wpb_single_image{
+    margin:0;
+    padding:0;
+}
+.startLeft {
+    width:40%;
+    margin-right:1rem;
+}
+body{
+    counter-reset: count;
+}
+.rowBlock{
+    position:relative;
+}
+.rowBlock:after{
+    position:absolute;
+    top:0.5rem;
+    left:0.5rem;
+    font-size:1.5rem;
+    color:#fff;
+    counter-increment: count;
+    content: counter(count);
+}
+.rowBlock:before{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:block;
+    width:0px;
+    height:0px;
+    border-style: solid;
+    border-width: 5rem 5rem 0 0;
+    border-color: #007bff transparent transparent transparent;
+}
+
+.green.rowBlock:before{
+    border-color: #6FBA2C transparent transparent transparent;
+}
+.Yellow.rowBlock:before{
+    border-color: #F6AB00 transparent transparent transparent;
+}
+.pink.rowBlock:before{
+    border-color: #E85298 transparent transparent transparent;
+}
+.egreen.rowBlock:before{
+    border-color: #00ADA9 transparent transparent transparent;
+}
+.blue.rowBlock:before{
+    border-color: #0099D9 transparent transparent transparent;
+}
+.red.rowBlock:before{
+    border-color: #E95532 transparent transparent transparent;
+}
+
+#main .marginBottom1{
+    margin-bottom:1rem;
+}
+#main .marginBottom05{
+    margin-bottom:0.5rem;
+}
+
+@media screen and (max-width:768px){
+    .rowBlock:before{
+
+    }
+    .flexBox {
+        flex-wrap:wrap;
+    }
+    .startLeft{
+        width:40%;
+        margin-bottom:0.5rem;
+    }
+    #main .rowBlock{
+        padding-right:1rem;
+    }
+}
+@media screen and (max-width:480px){
+    .startLeft{
+        width:70%;
+    }
+}
+
+
+
+
+
+.stepBox  .stepNumber {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+.stepBox.right  .stepNumber{
+    position: absolute;
+/*  left: 0.5rem; */
+    top: 0;
+}
+.stepBox .lead{
+    padding: 0rem 3rem 0;
+}
+
+.stepBox >.vc_column-inner >div{
+    position: relative;
+}
+
+#wholeContents.twoColumnpage .stepBox  .stepNumber p{
+    /* display: inline-block; */
+    padding: 0 0.3rem;
+}
+#wholeContents.twoColumnpage .bigNum{
+    font-size: 1.5rem;
+}
+.stepBox  .stepNumber > .wpb_wrapper{
+    position:relative;
+}
+.stepBox  .stepNumber > .wpb_wrapper:before{
+    content:"";
+    display:block;
+    position:absolute;
+    z-index:-1;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5.5rem 5.5rem 0 0;
+    border-color: #000 transparent transparent transparent;
+}
+.stepBox  .stepNumber p > span{
+    display:block;
+    font-size:1.5rem;
+}
+.stepBox .description{
+    padding: 0.2rem 3rem;
+}
+#wholeContents.twoColumnpage .stepBox  .wpb_single_image{
+    margin-top:2rem;
+    padding:0 5rem;
+    margin-bottom: 1rem;
+}
+div#wholeContents.twoColumnpage .stepBox .description p{
+    font-size:.8rem;
+    line-height: 1.2rem;
+}
+.row .stepBox{
+    margin-bottom: 1rem;
+}
+.stepBox .lead,{
+    padding: .5rem 1rem 0 1rem;
+}
+.stepBox>.vc_column-inner >div,
+.stepBox>.vc_column-inner  {
+    height: 100%;}
+
+.stepBox .vc_column-inner >div {
+    padding-bottom: 2rem;
+}
+#wholeContents.twoColumnpage .stepBox > div > .wpb_wrapper{
+    border:1px solid #ddd;
+}
+/* #wholeContents.twoColumnpage .stepBox > div > .wpb_wrapper:hover{
+    background-color:#f9f9f9;
+} */
+/*green*/
+.greenWrapper .stepNumber p {
+    background: #6FBA2C;
+    color: #fff;    
+}
+.greenWrapper>.vc_column-inner >div {
+    border:1px solid #6FBA2C;
+}
+.greenWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #6FBA2C transparent transparent transparent;
+}
+/*green*/
+
+
+/*yellow*/
+.yellowWrapper .stepNumber p {
+    background: #F6AB00;
+    color: #fff;    
+}
+.yellowWrapper>.vc_column-inner >div{
+    border:1px solid #F6AB00;
+}
+.yellowWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #F6AB00 transparent transparent transparent;
+}
+/*green*/
+
+/*red*/
+.redWrapper .stepNumber p {
+    background: #EA5532;
+    color: #fff;
+}
+.redWrapper>.vc_column-inner >div{
+    border: 1px solid #EA5532;
+}
+.redWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #EA5532 transparent transparent transparent;
+}
+/*red*/
+
+/*blue*/
+.blueWrapper .stepNumber p {
+    background: #04a9f4;
+    color: #fff;
+}
+.blueWrapper>.vc_column-inner >div{
+    border: 1px solid #04a9f4;
+}
+
+.blueWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #04a9f4 transparent transparent transparent;
+}
+/*blue*/
+
+/*purple*/
+.purpleWrapper .stepNumber p {
+    background: #7900de;
+    color: #fff;
+}
+.purpleWrapper>.vc_column-inner >div{
+    border: 1px solid #7900de;
+}
+.purpleWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #7900de transparent transparent transparent;
+}
+/*purple*/
+
+/*orange*/
+.orangeWrapper .stepNumber p {
+    background: #FF9800;
+    color: #fff;
+}
+.orangeWrapper>.vc_column-inner >div{
+    border: 1px solid #FF9800;
+}
+.orangeWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #FF9800 transparent transparent transparent;
+}
+/*orange*/
+/*pink*/
+.pinkWrapper .stepNumber p {
+    background: #f35b8f;
+    color: #fff;
+}
+.pinkWrapper>.vc_column-inner >div{
+    border: 1px solid #f35b8f;
+}
+
+.pinkWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #f35b8f transparent transparent transparent;
+}
+/*pink*/
+/*turquoise */
+.turquoiseWrapper .stepNumber p {
+    background: #00ADA9;
+    color: #fff;
+}
+.turquoiseWrapper>.vc_column-inner >div{
+    border: 1px solid #00ADA9;
+}
+.turquoiseWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #00ADA9 transparent transparent transparent;
+}
+/*turquoise*/
+/*brownWrapper  */
+.brownWrapper .stepNumber p {
+    background: #c07e40;
+    color: #fff;
+}
+.brownWrapper>.vc_column-inner >div{
+    border: 1px solid #c07e40;
+}
+.brownWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #c07e40 transparent transparent transparent;
+}
+/*brownWrapper*/
+
+/*azukiWrapper  */
+.azukiWrapper .stepNumber p {
+    background: #895b8a;
+    color: #fff;
+}
+.azukiWrapper>.vc_column-inner >div{
+    border: 1px solid #895b8a;
+}
+.azukiWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #895b8a transparent transparent transparent;
+}
+/*azukiWrapper*/
+
+
+/*goldWrapper   */
+.goldWrapper .stepNumber p {
+    background: #A29500;
+    color: #fff;
+}
+.goldWrapper>.vc_column-inner >div{
+    border: 1px solid #A29500;
+}
+.goldWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #A29500 transparent transparent transparent;
+}
+/*goldWrapper*/
+
+
+/*deepblueWrapper   */
+.deepblueWrapper .stepNumber p {
+    background: #0041A2;
+    color: #fff;
+}
+.deepblueWrapper>.vc_column-inner >div{
+    border: 1px solid #0041A2;
+}
+.deepblueWrapper .stepNumber > .wpb_wrapper:before{
+    border-color: #0041A2 transparent transparent transparent;
+}
+/*deepblueWrapper*/
+
+
+@media screen and (max-width:768px){
+    .vc_section > div{
+        flex-wrap:wrap;
+    }
+    #wholeContents.twoColumnpage .stepBox .wpb_single_image{
+        padding:0 1rem;
+    }
+
+    #wholeContents.twoColumnpage .stepBox .wpb_single_image > figure,
+    #wholeContents.twoColumnpage .stepBox .wpb_single_image > figure > div,
+    #wholeContents.twoColumnpage .stepBox .wpb_single_image > figure > div > img{
+        width:100%;
+    }
+}

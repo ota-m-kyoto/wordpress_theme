@@ -1,0 +1,29 @@
+#wholeContents.twoColumnpage p strong{
+    display: inline;
+}
+a {
+    color: #36c;
+    transition: background .4s ease, color .4s ease;
+}
+
+.singlePost{
+    min-height: 530px;
+}
+
+#main article{
+    padding-top:1rem;
+}
+
+.mainWrapper{
+    margin-bottom:2rem;
+}
+.paging{
+    display:flex;
+    justify-content: center;
+}
+.paging > div a{
+    display:inline-block;
+    padding:0.5rem 0.7rem 0.4rem 0.7rem;
+    border:1px solid #000;
+    margin:0 1rem;
+}

@@ -1,0 +1,141 @@
+@charset "utf-8"; .mb20 {
+    margin-bottom: 1.25rem;
+}
+
+.wpb_text_column .mb30 {
+    margin-bottom: 1.875rem;
+}
+
+.wpb_text_column .mt10 {
+    margin-top: 0.625rem;
+}
+
+.wpb_text_column .mt15 {
+    margin-top: 0.9375rem;
+}
+
+.wpb_text_column .mt20 {
+    margin-top: 1.25rem;
+}
+
+.wpb_text_column .mt25 {
+    margin-top: 1.5625rem;
+}
+
+.wpb_text_column .mt30 {
+    margin-top: 1.875rem;
+}
+
+.policy_block ~ . {
+    padding: 0 1rem;
+}
+
+
+#main .paddingBox {
+    padding: 0 1rem;
+}
+
+.bluedot:before {
+    content: "";
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #009BEC;
+    border-radius: 100%;
+    margin-right: 0.3rem;
+}
+
+/**/
+.warn {
+    border: 1px solid #e60012;
+    margin-bottom: 40px;
+    padding: 15px 20px;
+}
+
+.warn li {
+    color: #e60012;
+    text-indent: -1em;
+    margin-left: 1em;
+    font-size: .9rem;
+}
+
+.warn li:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+/**/
+a.linkBlue {
+    color: #0075c1;
+}
+
+span.attenRed {
+    color: #e60012;
+}
+
+.kiyakuBox {
+    margin-top: 1.875rem;
+    padding: 0 1rem;
+}
+
+.kiyakuBox .textBox {
+}
+
+.kiyakuBox .textBox:nth-child(n+2) {
+    margin-top: 2.5rem;
+}
+
+.kiyakuBox .textBox h4 {
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.kiyakuBox .textBox .text {
+    margin-top: 1.25rem;
+}
+
+.kiyakuBox .textBox .text p:nth-child(n+2) {
+    margin-top: 0.9375rem;
+}
+
+.kiyakuBox .textBox .text p.notice {
+    text-indent: -1em;
+    margin-left: 1em;
+}
+
+.kiyakuBox .textBox .text ul.notice02 li {
+    text-indent: -3em;
+    margin-left: 3em;
+    font-size: .9rem;
+}
+#wholeContents li{
+    line-height: 1.7;
+}
+.kiyakuBox .textBox .text ul.notice02 li:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+.consentButton {
+    margin-top: 1.875rem;
+    text-align: center;
+}
+
+.consentButton p:nth-child(3) {
+    margin-top: 1.25rem;
+}
+
+.consentButton p.button {
+    margin-top: 1.25rem;
+}
+
+.consentButton p.button a {
+    background-color: #ff8800;
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.25rem;
+    width:100%;
+    max-width: 600px;
+    position: relative;
+    padding: 18px 30px;
+    text-align: center;
+}

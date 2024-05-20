@@ -1,0 +1,38 @@
+div#wholeContents.twoColumnpage .entry-content section:first-of-type {
+    margin: 0 0 0rem 0;
+}
+
+body #wholeContents .arrow {
+    margin: 2rem 0;
+}
+
+
+
+/***************TB****************/
+
+@media screen and (max-width:768px) {
+
+}
+
+
+/***************TB****************/
+
+
+/***************SP****************/
+
+
+@media screen and (max-width:480px) {
+body #wholeContents .arrow {
+    margin: 0rem 0;
+}
+
+div#wholeContents.twoColumnpage table {
+    margin: 0rem auto .5rem;
+}
+
+
+div#wholeContents.twoColumnpage div#shintaiJouken th {
+    width: 22%;
+    font-weight: normal;
+}
+}

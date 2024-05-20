@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+
+.marginBottom1{
+    margin-bottom:1rem;
+}
+
+.ft_content{
+    padding: 1rem;
+}
+
+#wholeContents.twoColumnpage .ft_content strong{
+    display:inline-block;
+}
+
+@media screen and (max-width:768px){
+    .ft_content{
+        padding: 1rem 0.3rem;
+    }
+}
